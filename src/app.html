@@ -1,0 +1,523 @@
+<title>TechVocab Pro</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Layout: one centered column (max 760px), sticky top bar, screens swapped in place. Single dark look kept from the original TechVocab Pro. */
+:root{
+  --bg:#080C18; --surface:#0F1629; --surface-2:#0A0F20; --border:#1A2A45;
+  --text:#C8D8F0; --dim:#8A9EBE; --muted:#5A7090;
+  --cyan:#00BFFF; --amber:#F59E0B; --green:#10B981; --red:#EF4444; --purple:#C084FC; --pink:#F472B6;
+  --f-display:'Orbitron','Arial Black',system-ui,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  --r:10px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--text)}
+body{margin:0;font-family:var(--f-mono);font-size:14px;line-height:1.5;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit}
+button:focus-visible,.tile:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 32px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;align-items:center;gap:10px;padding-block:12px;border-bottom:1px solid var(--border);margin-bottom:16px}
+.brand{font-family:var(--f-display);font-size:15px;letter-spacing:3px;color:var(--cyan);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.ibtn{position:relative;background:transparent;border:1px solid var(--border);border-radius:8px;min-width:42px;height:40px;padding:0 10px;cursor:pointer;color:var(--dim);font-size:15px;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.ibtn small{font-size:11px;letter-spacing:1px;font-weight:700}
+.dot{position:absolute;top:-4px;right:-4px;width:11px;height:11px;border-radius:50%;background:var(--amber);border:2px solid var(--bg)}
+.label{font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--r)}
+.bdg{display:inline-block;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;letter-spacing:1px;border:1px solid}
+.stat{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;padding:10px 14px;margin-bottom:20px;font-size:12px;color:var(--dim)}
+.stat b{color:var(--cyan);font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:8px}
+.tile{cursor:pointer;padding:12px 8px;text-align:center;transition:transform .15s,border-color .15s,background .15s;user-select:none}
+.tile:active{transform:scale(.97)}
+.tile .ic{font-size:20px;margin-bottom:4px}
+.tile .nm{font-size:12px;font-weight:700;line-height:1.3;margin-bottom:3px}
+.tile .ct{font-size:11px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{cursor:pointer;border-radius:6px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:1px;border:1px solid;background:transparent}
+.sub{padding:14px;margin-top:14px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.toggle{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13px;color:var(--dim);cursor:pointer}
+.toggle input{width:20px;height:20px;accent-color:var(--green)}
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:18px}
+.mode{cursor:pointer;padding:20px 14px;text-align:center;background:var(--surface);border:1px solid;border-radius:var(--r)}
+.mode:disabled{opacity:.4;cursor:not-allowed}
+.mode .ic{font-size:26px;margin-bottom:8px}
+.mode .t{font-family:var(--f-display);font-size:12px;letter-spacing:2px;margin-bottom:6px}
+.mode .d{font-size:12px;color:var(--muted);line-height:1.5}
+.btn{cursor:pointer;background:transparent;border:1px solid;border-radius:8px;padding:11px 16px;font-size:12px;font-weight:700;letter-spacing:1.5px;min-height:44px}
+.btn:disabled{opacity:.3;cursor:default}
+.btn.fill{background:var(--cyan);border-color:var(--cyan);color:#04121F}
+.warn{color:var(--red);font-size:12px;text-align:center;margin-top:10px}
+/* progress */
+.bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:16px}
+.bar>div{height:100%;transition:width .35s ease}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-size:13px;color:var(--dim);flex-wrap:wrap}
+.hdr b{font-variant-numeric:tabular-nums}
+/* flashcard */
+.flip{perspective:1200px;margin-bottom:16px;touch-action:pan-y}
+.inner{position:relative;width:100%;height:min(62vh,480px);min-height:380px;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.inner.on{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--r);background:var(--surface);border:1px solid var(--border);cursor:pointer}
+.front{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px 20px;gap:10px}
+.back{transform:rotateY(180deg);padding:18px 18px 24px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.term{font-family:var(--f-display);font-size:clamp(18px,5vw,26px);line-height:1.35;word-break:break-word;text-wrap:balance}
+.ipa{font-size:15px;color:var(--cyan);font-style:italic;word-break:break-word}
+.hint{position:absolute;bottom:10px;right:14px;font-size:11px;color:var(--muted)}
+.speak{background:transparent;border:1px solid var(--cyan);color:var(--cyan);border-radius:20px;padding:6px 14px;font-size:12px;cursor:pointer;min-height:36px}
+.sec{margin-bottom:14px}
+.sec .k{font-size:11px;letter-spacing:1.5px;margin-bottom:4px;font-weight:700}
+.sec .v{font-size:14px;line-height:1.65}
+.box{background:var(--surface-2);border:1px solid;border-radius:8px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6}
+.ex{border-top:1px solid var(--border);padding-top:10px;font-style:italic;color:var(--dim);font-size:13px;line-height:1.75}
+.ctrls{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:8px}
+.ctrls .btn{padding:10px 4px;font-size:11px;letter-spacing:1px}
+.meter{display:inline-flex;align-items:center;gap:6px}
+.meter i{display:inline-block;width:14px;height:4px;border-radius:1px}
+/* quiz */
+.q{padding:22px 16px;text-align:center;margin-bottom:14px}
+.opts{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.opt{cursor:pointer;text-align:left;border-radius:8px;padding:14px;width:100%;line-height:1.5;display:flex;gap:10px;background:var(--surface);border:1px solid var(--border);font-size:14px;min-height:52px}
+.opt:disabled{cursor:default}
+.opt .l{color:var(--muted);font-weight:700;min-width:18px}
+.opt.ok{border-color:var(--green);background:rgba(16,185,129,.1);color:var(--green)}
+.opt.ko{border-color:var(--red);background:rgba(239,68,68,.1);color:var(--red)}
+.fb{padding:12px 14px;margin-bottom:12px;font-size:13px;line-height:1.6}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:14px}
+.seg button{background:transparent;border:0;padding:9px 14px;font-size:12px;cursor:pointer;color:var(--dim);font-weight:700;letter-spacing:1px;min-height:40px}
+.seg button.on{background:var(--border);color:var(--cyan)}
+/* results */
+.big{font-family:var(--f-display);font-size:76px;line-height:1;margin:10px 0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}
+.three .panel{padding:14px 6px;text-align:center}
+.three .n{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.three .s{font-size:10px;color:var(--muted);letter-spacing:1px}
+/* list */
+.search{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font:inherit;font-size:16px;padding:12px 14px;margin-bottom:12px}
+.li{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start}
+.li:last-child{border-bottom:0}
+.li .m{flex:1;min-width:0}
+.li .tt{font-weight:700;word-break:break-word}
+.li .es{font-size:13px;color:var(--dim);margin-top:2px}
+.li .st{font-size:11px;color:var(--muted);margin-top:4px}
+/* update */
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0;font-variant-numeric:tabular-nums;word-break:break-word}
+.newlist{max-height:240px;overflow-y:auto;font-size:13px;margin:8px 0 0;padding-left:18px;color:var(--dim)}
+.msg{padding:12px 14px;border-radius:8px;font-size:13px;margin-top:12px;border:1px solid}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--surface);border:1px solid var(--cyan);color:var(--text);padding:12px 18px;border-radius:10px;font-size:13px;z-index:20;max-width:calc(100% - 32px);box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.fade{animation:fd .25s ease both}
+@keyframes fd{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.inner,.bar>div,.tile{transition:none}.fade{animation:none}}
+@media (min-width:600px){.inner{height:440px}}
+</style>
+
+<div id="app" class="wrap"></div>
+<div id="toast" class="toast" hidden></div>
+
+<script id="seed" type="application/json">__SEED__</script>
+<script>
+"use strict";
+/* ===================== Storage helpers ===================== */
+const LS={
+  get(k,d){try{const v=localStorage.getItem("tvp:"+k);return v==null?d:JSON.parse(v);}catch(e){return d;}},
+  set(k,v){try{localStorage.setItem("tvp:"+k,JSON.stringify(v));return true;}catch(e){return false;}}
+};
+const DATA_URL_DEFAULT="vocab.json";
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $=s=>document.querySelector(s);
+function cmpVer(a,b){const x=String(a).split(/[.\-]/).map(Number),y=String(b).split(/[.\-]/).map(Number);for(let i=0;i<Math.max(x.length,y.length);i++){const d=(x[i]||0)-(y[i]||0);if(d)return d;}return 0;}
+function shuffle(a){const r=[...a];for(let i=r.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[r[i],r[j]]=[r[j],r[i]];}return r;}
+function valid(d){return d&&d.version&&d.CATS&&Array.isArray(d.V)&&d.V.length>0&&d.V.every(v=>v.id&&v.term&&v.cat&&v.es);}
+
+/* ===================== Data ===================== */
+const SEED=JSON.parse(document.getElementById("seed").textContent);
+let D=(()=>{const c=LS.get("data",null);return valid(c)&&cmpVer(c.version,SEED.version)>=0?c:SEED;})();
+const P={ // progress
+  mastered:new Set(LS.get("mastered",[])),
+  stats:LS.get("stats",{}) // id -> [correct, wrong]
+};
+function saveP(){LS.set("mastered",[...P.mastered]);LS.set("stats",P.stats);}
+const prefs=LS.get("prefs",{});
+const S={
+  screen:"home",
+  selCats:new Set(prefs.cats||Object.keys(D.CATS)),
+  selPreps:new Set(prefs.preps||Object.keys(D.PREPS)),
+  selConn:new Set(prefs.conn||Object.keys(D.CONN_CATS)),
+  onlyPending:!!prefs.onlyPending,
+  quizDir:prefs.quizDir||"en-es",
+  deck:[],fc:0,flipped:false,
+  quiz:null,
+  q:"",
+  upd:{status:"idle",remote:null,diff:null,msg:""},
+  dataUrl:LS.get("dataUrl",DATA_URL_DEFAULT),
+  lastCheck:LS.get("lastCheck",null)
+};
+function sanitizeSel(){
+  for(const [set,src] of [[S.selCats,D.CATS],[S.selPreps,D.PREPS],[S.selConn,D.CONN_CATS]]){
+    for(const k of [...set]) if(!src[k]) set.delete(k);
+    if(!set.size) Object.keys(src).forEach(k=>set.add(k));
+  }
+}
+sanitizeSel();
+function savePrefs(){LS.set("prefs",{cats:[...S.selCats],preps:[...S.selPreps],conn:[...S.selConn],onlyPending:S.onlyPending,quizDir:S.quizDir});}
+
+function inFilters(v){
+  if(!S.selCats.has(v.cat))return false;
+  if(v.cat==="phrasal"&&v.prep&&!S.selPreps.has(v.prep))return false;
+  if(v.cat==="connectors"&&v.connCat&&!S.selConn.has(v.connCat))return false;
+  return true;
+}
+function pool(){return D.V.filter(v=>inFilters(v)&&(!S.onlyPending||!P.mastered.has(v.id)));}
+function weakPool(){return D.V.filter(v=>{const s=P.stats[v.id];return s&&s[1]>0&&s[1]>=s[0]&&!P.mastered.has(v.id);});}
+const cat=v=>D.CATS[v.cat]||{label:v.cat,color:"#94A3B8",icon:"•"};
+
+/* ===================== UI bits ===================== */
+const bdg=(c,txt)=>`<span class="bdg" style="color:${c};border-color:${c}55;background:${c}1A">${txt}</span>`;
+function meter(reg){const r=D.REGISTERS[reg];if(!r)return"";const lv={formal:4,diplomatic:3,neutral:2,conversational:1}[reg]||0;
+  return `<span class="meter">${[1,2,3,4].map(i=>`<i style="background:${i<=lv?r.color:"var(--border)"}"></i>`).join("")}<span style="font-size:11px;color:${r.color};letter-spacing:1px">${esc(r.label)}</span></span>`;}
+let toastT;
+function toast(t){const el=$("#toast");el.textContent=t;el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,2600);}
+function topBar(right){
+  const pend=S.upd.status==="available";
+  return `<div class="top">
+    <div class="brand" data-a="home" role="button" tabindex="0">TECHVOCAB PRO</div>
+    ${right||""}
+    <button class="ibtn" data-a="list" aria-label="Buscar términos">⌕</button>
+    <button class="ibtn" data-a="update" aria-label="Actualizaciones">⟳${pend?'<span class="dot"></span>':""}</button>
+  </div>`;
+}
+
+/* ===================== Speech ===================== */
+let voice=null;
+function pickVoice(){try{const vs=speechSynthesis.getVoices();voice=vs.find(v=>/en[-_]GB/i.test(v.lang))||vs.find(v=>/^en/i.test(v.lang))||null;}catch(e){}}
+try{if("speechSynthesis" in window){pickVoice();speechSynthesis.onvoiceschanged=pickVoice;}}catch(e){}
+function speak(text){
+  try{const t=String(text).replace(/\s*\/\s*/g,", ").replace(/\.\.\./g," ");const u=new SpeechSynthesisUtterance(t);u.lang="en-GB";if(voice)u.voice=voice;u.rate=.9;speechSynthesis.cancel();speechSynthesis.speak(u);}
+  catch(e){toast("La lectura en voz alta no está disponible en este navegador");}
+}
+const canSpeak=(()=>{try{return "speechSynthesis" in window;}catch(e){return false;}})();
+
+/* ===================== Screens ===================== */
+function renderHome(){
+  const p=pool();
+  const weak=weakPool();
+  const cnt=k=>D.V.filter(v=>v.cat===k&&(k!=="phrasal"||!v.prep||S.selPreps.has(v.prep))&&(k!=="connectors"||!v.connCat||S.selConn.has(v.connCat))).length;
+  const tiles=Object.entries(D.CATS).map(([k,c])=>{const on=S.selCats.has(k);
+    return `<div class="tile panel" role="button" tabindex="0" aria-pressed="${on}" data-a="cat" data-k="${k}" style="border-color:${on?c.color+"66":"var(--border)"};background:${on?c.color+"12":"var(--surface)"}">
+      <div class="ic" style="color:${c.color}">${esc(c.icon)}</div>
+      <div class="nm" style="color:${on?"var(--text)":"var(--muted)"}">${esc(c.label)}</div>
+      <div class="ct">${cnt(k)} términos</div></div>`;}).join("");
+  const preps=S.selCats.has("phrasal")?`<div class="panel sub" style="border-color:${"#C084FC"}33">
+      <div class="label" style="color:var(--purple)">⇄ Phrasal verbs · preposición</div>
+      <div class="chips">${Object.entries(D.PREPS).map(([k,pp])=>{const on=S.selPreps.has(k);const n=D.V.filter(v=>v.cat==="phrasal"&&v.prep===k).length;
+        return `<button class="chip" data-a="prep" data-k="${k}" aria-pressed="${on}" style="color:${on?pp.color:"var(--muted)"};border-color:${on?pp.color+"77":"var(--border)"};background:${on?pp.color+"18":"transparent"}">${k} <span style="opacity:.6">${n}</span></button>`;}).join("")}</div></div>`:"";
+  const conns=S.selCats.has("connectors")?`<div class="panel sub" style="border-color:#34D39933">
+      <div class="label" style="color:#34D399">↔ Connectors · categoría</div>
+      <div class="chips">${Object.entries(D.CONN_CATS).map(([k,r])=>{const on=S.selConn.has(k);const n=D.V.filter(v=>v.cat==="connectors"&&v.connCat===k).length;
+        return `<button class="chip" data-a="conn" data-k="${k}" aria-pressed="${on}" style="color:${on?r.color:"var(--muted)"};border-color:${on?r.color+"77":"var(--border)"};background:${on?r.color+"18":"transparent"}">${esc(r.icon)} ${esc(r.label)} <span style="opacity:.6">${n}</span></button>`;}).join("")}</div></div>`:"";
+  return topBar()+`<div class="fade">
+    <div class="stat panel">
+      <span><b>${p.length}</b> seleccionados</span>
+      <span><b>${D.V.length}</b> total</span>
+      <span style="color:var(--green)">★ <b style="color:var(--green)">${P.mastered.size}</b> dominadas</span>
+      <span>datos v<b>${esc(D.version)}</b></span>
+    </div>
+    <div class="label">▶ Categorías <span style="float:right;letter-spacing:1px;text-transform:none"><button class="chip" data-a="all" style="color:var(--dim);border-color:var(--border);padding:3px 9px;font-size:11px">Todas</button></span></div>
+    <div class="grid">${tiles}</div>
+    ${preps}${conns}
+    <label class="toggle"><input type="checkbox" id="onlyPending" ${S.onlyPending?"checked":""}> Ocultar las tarjetas ya dominadas</label>
+    <div class="modes">
+      <button class="mode" data-a="flash" style="border-color:#00BFFF44" ${p.length?"":"disabled"}><div class="ic" style="color:var(--cyan)">▣</div><div class="t" style="color:var(--cyan)">FLASHCARDS</div><div class="d">Tarjetas EN ↔ ES<br>con fonética y audio</div></button>
+      <button class="mode" data-a="quiz" style="border-color:#F59E0B44" ${p.length>=4?"":"disabled"}><div class="ic" style="color:var(--amber)">◆</div><div class="t" style="color:var(--amber)">QUIZ</div><div class="d">Opción múltiple<br>${p.length} preguntas</div></button>
+      <button class="mode" data-a="weak" style="border-color:#EF444444" ${weak.length>=4?"":"disabled"}><div class="ic" style="color:var(--red)">↺</div><div class="t" style="color:var(--red)">REPASO</div><div class="d">Tus fallos del quiz<br>${weak.length} términos</div></button>
+    </div>
+    ${p.length<4?'<div class="warn">Selecciona al menos 4 términos para el quiz</div>':""}
+  </div>`;
+}
+
+function renderFlash(){
+  const deck=S.deck;if(!deck.length){S.screen="home";return renderHome();}
+  S.fc=Math.max(0,Math.min(S.fc,deck.length-1));
+  const v=deck[S.fc],c=cat(v),pp=v.prep&&D.PREPS[v.prep],cc=v.connCat&&D.CONN_CATS[v.connCat],m=P.mastered.has(v.id);
+  const st=P.stats[v.id];
+  const front=`<div class="face front" style="border-color:${c.color}55">
+      <div class="label" style="margin:0">${esc(c.label)}</div>
+      ${pp?`<div style="font-family:var(--f-display);font-size:22px;letter-spacing:6px;color:${pp.color}">${v.prep}</div><div style="font-size:12px;color:${pp.color};opacity:.8">${pp.core.map(esc).join(" · ")}</div>`:""}
+      ${cc?`<div style="font-size:13px;color:${cc.color};letter-spacing:1px">${esc(cc.icon)} ${esc(cc.label.toUpperCase())}</div>${v.register?meter(v.register):""}`:""}
+      ${v.cat==="grammar"?bdg("#F472B6","⊢ GRAMMAR RULE"):""}
+      ${v.confusionWith?bdg("#F59E0B","⚠ vs "+esc(v.confusionWith)):""}
+      <div class="term" style="color:${c.color}">${esc(v.term)}</div>
+      ${v.ph?`<div class="ipa">${esc(v.ph)}</div>`:""}
+      ${bdg(c.color,esc(v.type||""))}
+      ${canSpeak?`<button class="speak" data-a="speak">🔊 Escuchar</button>`:""}
+      ${m?`<div style="color:var(--green);font-size:12px">★ DOMINADA</div>`:""}
+      <div class="hint">toca para girar ↻ · desliza ⇆</div>
+    </div>`;
+  const back=`<div class="face back" style="border-color:#00BFFF33">
+      <div class="row" style="justify-content:space-between;margin-bottom:14px">
+        <span class="ipa" style="font-size:13px">${esc(v.ph||"")}</span>${bdg(c.color,esc(c.icon)+" "+esc(v.type||""))}
+      </div>
+      <div class="sec"><div class="k" style="color:var(--cyan)">ENGLISH</div><div class="v">${esc(v.en)}</div></div>
+      <div class="sec"><div class="k" style="color:var(--amber)">ESPAÑOL</div><div class="v">${esc(v.es)}</div></div>
+      ${v.rule?`<div class="box" style="border-color:#F472B655;color:var(--pink)"><b style="font-size:11px;letter-spacing:1.5px">⊢ REGLA</b><br>${esc(v.rule)}${v.confusionWith?`<div style="color:var(--amber);margin-top:6px">⚠ No confundir con: ${esc(v.confusionWith)}</div>`:""}</div>`:""}
+      ${!v.rule&&v.confusionWith?`<div class="box" style="border-color:#F59E0B55;color:var(--amber)">⚠ No confundir con: <b>${esc(v.confusionWith)}</b></div>`:""}
+      ${cc?`<div class="box" style="border-color:${cc.color}44"><div class="row" style="justify-content:space-between;margin-bottom:4px"><b style="font-size:11px;letter-spacing:1.5px;color:${cc.color}">${esc(cc.icon)} ${esc(cc.label.toUpperCase())}</b>${v.register?meter(v.register):""}</div><div style="color:${cc.color}">${esc(cc.desc)}</div>${v.structure?`<div style="color:var(--dim);font-style:italic;border-top:1px solid var(--border);margin-top:6px;padding-top:6px"><b style="font-style:normal;font-size:11px;color:${cc.color}">ESTRUCTURA</b> ${esc(v.structure)}</div>`:""}</div>`:""}
+      ${pp?`<div class="box" style="border-color:${pp.color}44"><b style="font-size:11px;letter-spacing:1.5px;color:${pp.color}">⇄ LÓGICA · ${v.prep}</b><div style="color:${pp.color};font-style:italic;margin:4px 0 6px">${esc(pp.logic)}</div><div class="chips" style="gap:5px">${pp.core.map(x=>bdg(pp.color,esc(x))).join("")}</div></div>`:""}
+      ${v.note?`<div class="box" style="border-color:#C084FC44"><b style="font-size:11px;letter-spacing:1.5px;color:var(--purple)">◎ NOTA</b><div style="color:var(--dim)">${esc(v.note)}</div></div>`:""}
+      <div class="k" style="color:var(--purple);font-size:11px;letter-spacing:1.5px;margin-bottom:4px;font-weight:700">EJEMPLO EN CONTEXTO</div>
+      <div class="ex" style="border:0;padding:0">"${esc(v.ex)}" ${canSpeak?`<button class="speak" data-a="speakex" style="margin-left:4px;padding:3px 10px;min-height:28px">🔊</button>`:""}</div>
+      ${st?`<div style="margin-top:12px;font-size:11px;color:var(--muted)">Quiz: ✓${st[0]} · ✗${st[1]}</div>`:""}
+    </div>`;
+  return topBar()+`<div class="hdr"><button class="btn" data-a="home" style="border-color:var(--border);color:var(--dim);padding:8px 12px;min-height:38px">← INICIO</button>
+      <span><b style="color:var(--cyan)">${S.fc+1}</b> / ${deck.length} ${P.mastered.size?`<span style="color:var(--green);margin-left:8px">★ ${P.mastered.size}</span>`:""}</span></div>
+    <div class="bar"><div style="width:${(S.fc+1)/deck.length*100}%;background:var(--cyan)"></div></div>
+    <div class="flip" id="flip"><div class="inner${S.flipped?" on":""}" id="inner">${front}${back}</div></div>
+    <div class="ctrls">
+      <button class="btn" data-a="prev" style="border-color:var(--muted);color:var(--dim)" ${S.fc===0?"disabled":""}>◀ ANT.</button>
+      <button class="btn" data-a="flip" style="border-color:var(--cyan);color:var(--cyan)">${S.flipped?"↑ TÉRMINO":"↓ DEF."}</button>
+      <button class="btn" data-a="master" style="border-color:${m?"var(--green)":"var(--muted)"};color:${m?"var(--green)":"var(--dim)"}">${m?"★ DOM.":"☆ MARCAR"}</button>
+      <button class="btn" data-a="next" style="border-color:var(--muted);color:var(--dim)" ${S.fc===deck.length-1?"disabled":""}>SIG. ▶</button>
+    </div>
+    <div class="row" style="justify-content:center">
+      <button class="btn" data-a="shuffle" style="border-color:var(--muted);color:var(--dim)">⇀ MEZCLAR</button>
+      <button class="btn" data-a="quiz" style="border-color:var(--amber);color:var(--amber)" ${pool().length>=4?"":"disabled"}>◆ QUIZ</button>
+    </div>`;
+}
+
+function buildQ(card,from){
+  const dist=shuffle(from.filter(v=>v.id!==card.id&&v.es!==card.es));
+  const same=dist.filter(v=>v.cat===card.cat);const pick=[...same,...dist.filter(v=>v.cat!==card.cat)].slice(0,3);
+  return{card,opts:shuffle([...pick,card]),sel:null};
+}
+function startQuiz(list){
+  if(list.length<4)return;
+  const ref=list.length>=8?list:D.V;
+  S.quiz={deck:shuffle(list),i:0,c:0,t:0,ref,wrong:[]};
+  S.quiz.cur=buildQ(S.quiz.deck[0],ref);
+  S.screen="quiz";
+}
+function renderQuiz(){
+  const Q=S.quiz,{card:v,opts,sel}=Q.cur,c=cat(v),pp=v.prep&&D.PREPS[v.prep],cc=v.connCat&&D.CONN_CATS[v.connCat];
+  const enes=S.quizDir==="en-es";
+  const qtext=enes?`<div class="term" style="color:${c.color}">${esc(v.term)}</div>${v.ph?`<div class="ipa" style="margin-top:6px">${esc(v.ph)}</div>`:""}`
+                  :`<div style="font-size:16px;line-height:1.55;color:var(--text)">${esc(v.es)}</div>`;
+  return topBar()+`<div class="hdr"><button class="btn" data-a="home" style="border-color:var(--border);color:var(--dim);padding:8px 12px;min-height:38px">← INICIO</button>
+      <span>P. <b style="color:var(--amber)">${Q.i+1}</b> / ${Q.deck.length}</span>
+      <span><b style="color:var(--green)">✓${Q.c}</b> · <b style="color:var(--red)">✗${Q.t-Q.c}</b></span></div>
+    <div class="bar"><div style="width:${(Q.i+1)/Q.deck.length*100}%;background:var(--amber)"></div></div>
+    <div style="text-align:center"><div class="seg" role="group" aria-label="Dirección del quiz">
+      <button data-a="dir" data-k="en-es" class="${enes?"on":""}">EN → ES</button><button data-a="dir" data-k="es-en" class="${enes?"":"on"}">ES → EN</button></div></div>
+    <div class="panel q fade" style="border-color:${c.color}44">
+      <div class="label">${enes?"¿Qué significa?":"¿Cómo se dice en inglés?"}</div>
+      ${pp?`<div style="font-family:var(--f-display);font-size:16px;letter-spacing:4px;color:${pp.color};margin-bottom:8px">${v.prep}</div>`:""}
+      ${qtext}
+      <div class="row" style="justify-content:center;margin-top:12px">${bdg(c.color,esc(c.icon)+" "+esc(c.label))}${canSpeak&&enes?`<button class="speak" data-a="speak">🔊</button>`:""}</div>
+    </div>
+    <div class="opts">${opts.map((o,i)=>{let cl="";if(sel){if(o.id===v.id)cl="ok";else if(sel===o.id)cl="ko";}
+      return `<button class="opt ${cl}" data-a="ans" data-k="${o.id}" ${sel?"disabled":""}><span class="l">${"ABCD"[i]}.</span><span>${esc(enes?o.es:o.term)}</span></button>`;}).join("")}</div>
+    ${sel?`<div class="fade"><div class="panel fb" style="border-color:${sel===v.id?"#10B98155":"#EF444455"}">
+        ${sel===v.id?`<b style="color:var(--green)">✓ CORRECTO</b>`:`<b style="color:var(--red)">✗ INCORRECTO</b> · correcta: <b style="color:var(--amber)">${esc(enes?v.es:v.term)}</b>`}
+        ${v.rule?`<div style="color:var(--pink);margin-top:6px">⊢ ${esc(v.rule)}</div>`:""}
+        ${cc?`<div style="color:${cc.color};margin-top:6px">${esc(cc.icon)} ${esc(cc.label)}: ${esc(v.structure||cc.desc)}</div>`:""}
+        ${pp?`<div style="color:${pp.color};margin-top:6px">⇄ ${v.prep}: ${esc(pp.logic)}</div>`:""}
+        <div style="margin-top:8px;color:var(--dim);font-style:italic">"${esc(v.ex)}"</div></div>
+      <div style="text-align:center"><button class="btn" data-a="nextq" style="border-color:var(--amber);color:var(--amber);padding:12px 28px">${Q.i+1>=Q.deck.length?"VER RESULTADOS →":"SIGUIENTE →"}</button></div></div>`:""}`;
+}
+function renderResults(){
+  const Q=S.quiz,pct=Q.t?Math.round(Q.c/Q.t*100):0;
+  const r=pct>=90?["EXCELENTE","var(--cyan)"]:pct>=70?["BIEN","var(--green)"]:pct>=50?["APROBADO","var(--amber)"]:["REPASA","var(--red)"];
+  return topBar()+`<div class="fade" style="text-align:center;max-width:460px;margin:20px auto 0">
+    <div class="label">Resultado · quiz</div>
+    <div class="big" style="color:${r[1]}">${pct}<span style="font-size:30px">%</span></div>
+    <span class="bdg" style="color:${r[1]};border-color:currentColor;font-size:13px;padding:5px 16px">${r[0]}</span>
+    <div class="three">
+      <div class="panel"><div class="n" style="color:var(--green)">${Q.c}</div><div class="s">CORRECTAS</div></div>
+      <div class="panel"><div class="n" style="color:var(--red)">${Q.t-Q.c}</div><div class="s">INCORRECTAS</div></div>
+      <div class="panel"><div class="n" style="color:var(--amber)">${Q.t}</div><div class="s">TOTALES</div></div>
+    </div>
+    ${Q.wrong.length?`<div class="panel" style="text-align:left;padding:12px 14px;margin-bottom:16px"><div class="label">Para repasar</div>${Q.wrong.map(id=>{const v=D.V.find(x=>x.id===id);return v?`<div style="font-size:13px;margin-bottom:6px"><b>${esc(v.term)}</b> <span style="color:var(--dim)">— ${esc(v.es)}</span></div>`:""}).join("")}</div>`:""}
+    <div class="row" style="justify-content:center">
+      ${Q.wrong.length>=4?`<button class="btn" data-a="redo" style="border-color:var(--red);color:var(--red)">↺ FALLOS</button>`:""}
+      <button class="btn" data-a="quiz" style="border-color:var(--amber);color:var(--amber)">◆ REPETIR</button>
+      <button class="btn" data-a="flash" style="border-color:var(--cyan);color:var(--cyan)">▣ FLASHCARDS</button>
+    </div></div>`;
+}
+function norm(s){return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");}
+function renderList(){
+  return topBar()+`<div class="fade"><input id="q" class="search" type="search" placeholder="Buscar en inglés o español…" value="${esc(S.q)}" autocomplete="off">
+    <div id="results" class="panel">${listItems()}</div></div>`;
+}
+function listItems(){
+  const q=norm(S.q.trim());
+  const items=D.V.filter(v=>!q||norm(v.term+" "+v.es+" "+v.en+" "+(v.ex||"")).includes(q)).slice(0,150);
+  if(!items.length)return `<div class="li" style="color:var(--muted)">Ningún término coincide con «${esc(S.q)}».</div>`;
+  return items.map(v=>{const c=cat(v),m=P.mastered.has(v.id),s=P.stats[v.id];
+    return `<div class="li"><span style="color:${c.color};font-size:16px;line-height:1.4">${esc(c.icon)}</span><div class="m">
+      <div class="tt" style="color:${c.color}">${esc(v.term)} ${v.ph?`<span class="ipa" style="font-size:12px;font-weight:400">${esc(v.ph)}</span>`:""}</div>
+      <div class="es">${esc(v.es)}</div>
+      <div class="st">${esc(c.label)}${m?' · <span style="color:var(--green)">★ dominada</span>':""}${s?` · quiz ✓${s[0]} ✗${s[1]}`:""}</div></div>
+      <button class="ibtn" data-a="open" data-k="${v.id}" aria-label="Abrir tarjeta">▣</button></div>`;}).join("")+(items.length===150?`<div class="li" style="color:var(--muted)">Mostrando 150 resultados. Escribe más para afinar.</div>`:"");
+}
+function fmtDate(t){if(!t)return"nunca";try{return new Date(t).toLocaleString("es-ES",{dateStyle:"medium",timeStyle:"short"});}catch(e){return String(t);}}
+function renderUpdate(){
+  const U=S.upd;
+  const cl=(D.changelog||[]).slice(0,5);
+  let body="";
+  if(U.status==="checking")body=`<div class="msg" style="border-color:var(--border);color:var(--dim)">Buscando actualizaciones…</div>`;
+  else if(U.status==="available"){const d=U.diff;
+    body=`<div class="msg" style="border-color:#F59E0B66;color:var(--text)"><b style="color:var(--amber)">Nueva versión v${esc(U.remote.version)}</b> (${esc(U.remote.updated||"")})
+      ${U.remote.notes?`<div style="color:var(--dim);margin-top:4px">${esc(U.remote.notes)}</div>`:""}
+      <div style="margin-top:8px">+${d.added.length} nuevos · ${d.changed.length} modificados · ${d.removed.length} retirados · total ${U.remote.V.length}</div>
+      ${d.added.length?`<ul class="newlist">${d.added.slice(0,60).map(v=>`<li><b>${esc(v.term)}</b> — ${esc(v.es)}</li>`).join("")}</ul>`:""}
+      <div class="row" style="margin-top:12px"><button class="btn fill" data-a="apply">INSTALAR ACTUALIZACIÓN</button><button class="btn" data-a="dismiss" style="border-color:var(--border);color:var(--dim)">MÁS TARDE</button></div></div>`;}
+  else if(U.msg)body=`<div class="msg" style="border-color:${U.status==="error"?"#EF444466":"#10B98166"};color:${U.status==="error"?"var(--red)":"var(--green)"}">${esc(U.msg)}</div>`;
+  return topBar()+`<div class="fade">
+    <div class="label">Contenido instalado</div>
+    <div class="panel" style="padding:14px"><dl class="kv" style="margin:0">
+      <dt>Versión</dt><dd>v${esc(D.version)}</dd>
+      <dt>Fecha</dt><dd>${esc(D.updated||"—")}</dd>
+      <dt>Términos</dt><dd>${D.V.length}</dd>
+      <dt>Dominadas</dt><dd>${P.mastered.size}</dd>
+      <dt>Última comprobación</dt><dd>${fmtDate(S.lastCheck)}</dd>
+    </dl></div>
+    <div class="row" style="margin-top:14px"><button class="btn fill" data-a="check" ${U.status==="checking"?"disabled":""}>⟳ BUSCAR ACTUALIZACIONES</button>
+      <label class="btn" style="border-color:var(--border);color:var(--dim);display:inline-flex;align-items:center" for="file">IMPORTAR ARCHIVO</label>
+      <input id="file" type="file" accept=".json,application/json" hidden></div>
+    ${body}
+    ${cl.length?`<div class="label" style="margin-top:22px">Novedades</div><div class="panel" style="padding:12px 14px">${cl.map(e=>`<div style="margin-bottom:8px;font-size:13px"><b style="color:var(--cyan)">v${esc(e.version)}</b> <span style="color:var(--muted)">${esc(e.date||"")}</span><div style="color:var(--dim)">${esc(e.notes||"")}</div></div>`).join("")}</div>`:""}
+    <details style="margin-top:22px"><summary class="label" style="cursor:pointer;margin:0">Opciones avanzadas</summary>
+      <div class="panel" style="padding:14px;margin-top:10px">
+        <label for="durl" style="font-size:12px;color:var(--dim)">Dirección del archivo de vocabulario</label>
+        <input id="durl" class="search" style="font-size:14px;margin:6px 0 10px" value="${esc(S.dataUrl)}" autocomplete="off" spellcheck="false">
+        <div class="row"><button class="btn" data-a="saveurl" style="border-color:var(--cyan);color:var(--cyan)">GUARDAR DIRECCIÓN</button>
+        <button class="btn" data-a="resetp" style="border-color:#EF444466;color:var(--red)">${S.confirmReset?"PULSA OTRA VEZ PARA CONFIRMAR":"BORRAR MI PROGRESO"}</button></div>
+        <div style="font-size:12px;color:var(--muted);margin-top:10px">Tu progreso (dominadas y aciertos) se guarda solo en este dispositivo y se conserva al actualizar el vocabulario.</div>
+      </div></details>
+  </div>`;
+}
+
+/* ===================== Update logic ===================== */
+function diff(oldD,newD){
+  const om=new Map(oldD.V.map(v=>[v.id,v])),nm=new Map(newD.V.map(v=>[v.id,v]));
+  return{added:newD.V.filter(v=>!om.has(v.id)),changed:newD.V.filter(v=>om.has(v.id)&&JSON.stringify(om.get(v.id))!==JSON.stringify(v)),removed:oldD.V.filter(v=>!nm.has(v.id))};
+}
+async function check(silent){
+  S.upd={status:"checking"};if(!silent)render();
+  try{
+    const url=S.dataUrl+(S.dataUrl.includes("?")?"&":"?")+"t="+Date.now();
+    const r=await fetch(url,{cache:"no-store"});
+    if(!r.ok)throw new Error("El servidor respondió "+r.status);
+    const nd=await r.json();
+    if(!valid(nd))throw new Error("El archivo descargado no tiene el formato esperado");
+    S.lastCheck=Date.now();LS.set("lastCheck",S.lastCheck);
+    offer(nd,silent);
+  }catch(e){
+    S.upd={status:silent?"idle":"error",msg:"No se pudo comprobar: "+(e.message||e)+". Revisa la conexión; la app sigue funcionando con el contenido instalado."};
+    if(!silent)render();
+  }
+}
+function offer(nd,silent){
+  if(cmpVer(nd.version,D.version)>0){S.upd={status:"available",remote:nd,diff:diff(D,nd)};if(silent){render();toast("Hay una actualización del vocabulario (v"+nd.version+")");}else render();}
+  else{S.upd={status:"ok",msg:"Ya tienes la última versión (v"+D.version+")."};if(!silent)render();}
+}
+function apply(){
+  const nd=S.upd.remote;if(!nd)return;
+  const n=diff(D,nd).added.length;
+  D=nd;LS.set("data",nd);sanitizeSel();
+  const known=new Set(D.V.map(v=>v.id));for(const id of [...P.mastered])if(!known.has(id))P.mastered.delete(id);saveP();
+  S.upd={status:"ok",msg:"Actualizado a v"+nd.version+". "+n+" términos nuevos disponibles."};render();
+}
+
+/* ===================== Render & events ===================== */
+function render(){
+  const app=$("#app");
+  const html={home:renderHome,flash:renderFlash,quiz:renderQuiz,results:renderResults,list:renderList,update:renderUpdate}[S.screen]();
+  app.innerHTML=html;
+  if(S.screen==="flash")bindSwipe();
+  if(S.screen==="list"){const q=$("#q");q.addEventListener("input",()=>{S.q=q.value;$("#results").innerHTML=listItems();});}
+  if(S.screen==="update"){$("#file").addEventListener("change",importFile);}
+  if(S.screen==="home"){$("#onlyPending").addEventListener("change",e=>{S.onlyPending=e.target.checked;savePrefs();render();});}
+}
+function go(screen){S.screen=screen;S.confirmReset=false;render();window.scrollTo(0,0);}
+function startFlash(list){S.deck=list;S.fc=0;S.flipped=false;go("flash");}
+function setFlip(on){S.flipped=on;const i=$("#inner");if(i)i.classList.toggle("on",on);const b=document.querySelector('[data-a="flip"]');if(b)b.textContent=on?"↑ TÉRMINO":"↓ DEF.";}
+function move(d){const n=S.fc+d;if(n<0||n>=S.deck.length)return;S.fc=n;S.flipped=false;render();}
+function toggleIn(set,k){if(set.has(k)&&set.size>1)set.delete(k);else set.add(k);savePrefs();render();}
+
+document.addEventListener("click",e=>{
+  const el=e.target.closest("[data-a]");if(!el)return;
+  const a=el.dataset.a,k=el.dataset.k;
+  switch(a){
+    case"home":go("home");break;
+    case"list":go("list");setTimeout(()=>{const q=$("#q");if(q&&!("ontouchstart" in window))q.focus();},0);break;
+    case"update":go("update");break;
+    case"cat":toggleIn(S.selCats,k);break;
+    case"prep":toggleIn(S.selPreps,k);break;
+    case"conn":toggleIn(S.selConn,k);break;
+    case"all":Object.keys(D.CATS).forEach(x=>S.selCats.add(x));Object.keys(D.PREPS).forEach(x=>S.selPreps.add(x));Object.keys(D.CONN_CATS).forEach(x=>S.selConn.add(x));savePrefs();render();break;
+    case"flash":startFlash(pool());break;
+    case"quiz":startQuiz(pool());render();window.scrollTo(0,0);break;
+    case"weak":startQuiz(weakPool());render();window.scrollTo(0,0);break;
+    case"redo":startQuiz(S.quiz.wrong.map(id=>D.V.find(v=>v.id===id)).filter(Boolean));render();break;
+    case"flip":setFlip(!S.flipped);break;
+    case"prev":move(-1);break;
+    case"next":move(1);break;
+    case"master":{const id=S.deck[S.fc].id;P.mastered.has(id)?P.mastered.delete(id):P.mastered.add(id);saveP();render();break;}
+    case"shuffle":S.deck=shuffle(S.deck);S.fc=0;S.flipped=false;render();toast("Tarjetas mezcladas");break;
+    case"speak":e.stopPropagation();speak(S.screen==="quiz"?S.quiz.cur.card.term:S.deck[S.fc].term);break;
+    case"speakex":e.stopPropagation();speak(S.deck[S.fc].ex);break;
+    case"open":{const i=D.V.findIndex(v=>v.id===k);S.deck=D.V;S.fc=i;S.flipped=false;go("flash");break;}
+    case"dir":S.quizDir=k;savePrefs();render();break;
+    case"ans":{const Q=S.quiz;if(Q.cur.sel)return;Q.cur.sel=k;const ok=k===Q.cur.card.id;Q.t++;if(ok)Q.c++;else Q.wrong.push(Q.cur.card.id);
+      const s=P.stats[Q.cur.card.id]||[0,0];s[ok?0:1]++;P.stats[Q.cur.card.id]=s;saveP();render();break;}
+    case"nextq":{const Q=S.quiz;Q.i++;if(Q.i>=Q.deck.length){go("results");return;}Q.cur=buildQ(Q.deck[Q.i],Q.ref);render();window.scrollTo(0,0);break;}
+    case"check":check(false);break;
+    case"apply":apply();break;
+    case"dismiss":S.upd={status:"idle"};render();break;
+    case"saveurl":{const v=$("#durl").value.trim()||DATA_URL_DEFAULT;S.dataUrl=v;LS.set("dataUrl",v);toast("Dirección guardada");break;}
+    case"resetp":if(!S.confirmReset){S.confirmReset=true;render();}else{P.mastered.clear();P.stats={};saveP();S.confirmReset=false;render();toast("Progreso borrado");}break;
+  }
+});
+document.addEventListener("keydown",e=>{
+  if(e.target.matches("input"))return;
+  if((e.key==="Enter"||e.key===" ")&&e.target.matches('[role="button"]')){e.preventDefault();e.target.click();return;}
+  if(S.screen==="flash"){if(e.key==="ArrowRight")move(1);else if(e.key==="ArrowLeft")move(-1);else if(e.key===" "){e.preventDefault();setFlip(!S.flipped);}}
+});
+function bindSwipe(){
+  const f=$("#flip");let x0=null,y0=null,t0=0;
+  f.addEventListener("touchstart",e=>{const t=e.touches[0];x0=t.clientX;y0=t.clientY;t0=Date.now();},{passive:true});
+  f.addEventListener("touchend",e=>{if(x0==null)return;const t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
+    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){f.dataset.swiped="1";move(dx<0?1:-1);}},{passive:true});
+  f.addEventListener("click",e=>{if(e.target.closest("[data-a]"))return;if(f.dataset.swiped){delete f.dataset.swiped;return;}
+    const back=e.target.closest(".back");if(back&&window.getSelection&&String(window.getSelection()).length)return;setFlip(!S.flipped);});
+}
+function importFile(e){
+  const file=e.target.files[0];if(!file)return;
+  const rd=new FileReader();
+  rd.onload=()=>{try{const nd=JSON.parse(rd.result);if(!valid(nd))throw new Error();
+      if(cmpVer(nd.version,D.version)<=0){S.upd={status:"error",msg:"Ese archivo es v"+nd.version+" y ya tienes v"+D.version+" o posterior."};render();return;}
+      S.upd={status:"available",remote:nd,diff:diff(D,nd)};render();}
+    catch(err){S.upd={status:"error",msg:"El archivo no es un vocabulario válido de TechVocab Pro."};render();}};
+  rd.readAsText(file);
+}
+
+/* ===================== Boot ===================== */
+render();
+// Silent check at start, at most every 6 h
+if(!S.lastCheck||Date.now()-S.lastCheck>6*3600e3)setTimeout(()=>check(true),800);
+// Service worker (only when hosted as a standalone PWA)
+try{
+  if("serviceWorker" in navigator&&document.documentElement.dataset.pwa==="1"){
+    navigator.serviceWorker.register("sw.js").then(reg=>{
+      reg.addEventListener("updatefound",()=>{const w=reg.installing;w&&w.addEventListener("statechange",()=>{
+        if(w.state==="installed"&&navigator.serviceWorker.controller)toast("Nueva versión de la app instalada. Ciérrala y ábrela para usarla.");});});
+      document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")reg.update().catch(()=>{});});
+    }).catch(()=>{});
+  }
+}catch(e){}
+</script>

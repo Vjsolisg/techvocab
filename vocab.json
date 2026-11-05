@@ -1,0 +1,3103 @@
+{
+ "version": "2026.11.05",
+ "updated": "2026-11-05",
+ "notes": "Versión inicial importada desde TechVocabPro.jsx",
+ "CATS": {
+  "general": {
+   "label": "General English",
+   "color": "#818CF8",
+   "icon": "◈"
+  },
+  "phrasal": {
+   "label": "Phrasal Verbs",
+   "color": "#C084FC",
+   "icon": "⇄"
+  },
+  "connectors": {
+   "label": "Connectors",
+   "color": "#34D399",
+   "icon": "↔"
+  },
+  "grammar": {
+   "label": "Grammar Rules",
+   "color": "#F472B6",
+   "icon": "⊢"
+  },
+  "vocabulary": {
+   "label": "Vocabulary+",
+   "color": "#FBBF24",
+   "icon": "◎"
+  },
+  "everyday": {
+   "label": "Everyday & Idioms",
+   "color": "#FB923C",
+   "icon": "☀"
+  },
+  "water": {
+   "label": "Water Treatment",
+   "color": "#00BFFF",
+   "icon": "◉"
+  },
+  "scrapping": {
+   "label": "ELV & Residuos",
+   "color": "#F59E0B",
+   "icon": "◆"
+  },
+  "communication": {
+   "label": "Comunicación Intl.",
+   "color": "#10B981",
+   "icon": "▸"
+  },
+  "documentation": {
+   "label": "Doc. Técnica",
+   "color": "#EC4899",
+   "icon": "▣"
+  },
+  "meetings": {
+   "label": "Reuniones / Meetings",
+   "color": "#A78BFA",
+   "icon": "◐"
+  }
+ },
+ "PREPS": {
+  "UP": {
+   "color": "#00BFFF",
+   "core": [
+    "completion",
+    "increase",
+    "improvement",
+    "final result"
+   ],
+   "logic": "Movement toward a higher point or limit"
+  },
+  "DOWN": {
+   "color": "#EF4444",
+   "core": [
+    "reduction",
+    "control",
+    "stopping",
+    "failure"
+   ],
+   "logic": "Movement toward a lower level or loss of energy"
+  },
+  "OUT": {
+   "color": "#10B981",
+   "core": [
+    "completion",
+    "exhaustion",
+    "exposure",
+    "exclusion"
+   ],
+   "logic": "Movement from inside to outside"
+  },
+  "OFF": {
+   "color": "#F59E0B",
+   "core": [
+    "separation",
+    "disconnection",
+    "cancellation"
+   ],
+   "logic": "Loss of contact or intentional separation"
+  },
+  "ON": {
+   "color": "#A78BFA",
+   "core": [
+    "continuation",
+    "contact",
+    "responsibility",
+    "focus"
+   ],
+   "logic": "Maintained contact without separation"
+  },
+  "IN": {
+   "color": "#EC4899",
+   "core": [
+    "involvement",
+    "inclusion",
+    "restriction",
+    "entry"
+   ],
+   "logic": "Being inside a system or activity"
+  },
+  "OVER": {
+   "color": "#818CF8",
+   "core": [
+    "transfer",
+    "review",
+    "repetition",
+    "excess",
+    "control"
+   ],
+   "logic": "Movement across or covering something"
+  },
+  "BACK": {
+   "color": "#F97316",
+   "core": [
+    "return",
+    "response",
+    "reversal",
+    "resistance",
+    "correction"
+   ],
+   "logic": "Movement to a previous state or sender"
+  },
+  "FOR": {
+   "color": "#6EE7B7",
+   "core": [
+    "purpose",
+    "benefit",
+    "support",
+    "politeness"
+   ],
+   "logic": "Movement toward a goal or beneficiary"
+  },
+  "WITH": {
+   "color": "#FCA5A5",
+   "core": [
+    "cooperation",
+    "alignment",
+    "handling",
+    "attitude"
+   ],
+   "logic": "Togetherness and association"
+  }
+ },
+ "REGISTERS": {
+  "formal": {
+   "color": "#818CF8",
+   "label": "FORMAL",
+   "icon": "■■■■",
+   "desc": "Professional writing, reports, official documents"
+  },
+  "diplomatic": {
+   "color": "#34D399",
+   "label": "DIPLOMATIC",
+   "icon": "■■■░",
+   "desc": "Soft contrast in meetings and professional emails"
+  },
+  "neutral": {
+   "color": "#94A3B8",
+   "label": "NEUTRAL",
+   "icon": "■■░░",
+   "desc": "Standard written and spoken English"
+  },
+  "conversational": {
+   "color": "#F59E0B",
+   "label": "CONVERSATIONAL",
+   "icon": "■░░░",
+   "desc": "Spoken English and informal written contexts"
+  }
+ },
+ "CONN_CATS": {
+  "addition": {
+   "color": "#34D399",
+   "label": "Addition",
+   "icon": "＋",
+   "desc": "Adding information and ideas"
+  },
+  "contrast": {
+   "color": "#818CF8",
+   "label": "Contrast",
+   "icon": "↔",
+   "desc": "Showing differences and oppositions"
+  },
+  "cause": {
+   "color": "#F59E0B",
+   "label": "Cause & Effect",
+   "icon": "→",
+   "desc": "Expressing reasons and results"
+  },
+  "purpose": {
+   "color": "#6EE7B7",
+   "label": "Purpose",
+   "icon": "⊙",
+   "desc": "Expressing goals and intentions"
+  },
+  "time": {
+   "color": "#00BFFF",
+   "label": "Time & Sequence",
+   "icon": "◷",
+   "desc": "Ordering events in time"
+  },
+  "condition": {
+   "color": "#F472B6",
+   "label": "Condition",
+   "icon": "?",
+   "desc": "Expressing conditions and consequences"
+  },
+  "comparison": {
+   "color": "#C084FC",
+   "label": "Comparison",
+   "icon": "≈",
+   "desc": "Showing similarities and differences"
+  },
+  "example": {
+   "color": "#FCA5A5",
+   "label": "Example & Clarif.",
+   "icon": "ex",
+   "desc": "Illustrating and clarifying ideas"
+  },
+  "emphasis": {
+   "color": "#FBBF24",
+   "label": "Emphasis",
+   "icon": "!",
+   "desc": "Highlighting importance"
+  },
+  "conclusion": {
+   "color": "#94A3B8",
+   "label": "Conclusion",
+   "icon": "∑",
+   "desc": "Summarising and concluding"
+  }
+ },
+ "V": [
+  {
+   "id": "g01",
+   "term": "draw someone in",
+   "type": "Phrasal Verb",
+   "cat": "general",
+   "en": "to attract and engage someone's interest",
+   "es": "Atraer y despertar el interés de alguien",
+   "ex": "Her technical presentation drew the investors in immediately.",
+   "ph": "/drɔː ˈsʌmwʌn ɪn/"
+  },
+  {
+   "id": "g02",
+   "term": "don't give much away",
+   "type": "Expresión Idiom.",
+   "cat": "general",
+   "en": "to avoid revealing information or emotions",
+   "es": "Evitar revelar información o emociones",
+   "ex": "During the negotiation he didn't give much away about the final price.",
+   "ph": "/dəʊnt ɡɪv mʌtʃ əˈweɪ/"
+  },
+  {
+   "id": "g03",
+   "term": "keep it to himself",
+   "type": "Expresión Idiom.",
+   "cat": "general",
+   "en": "to not share information or feelings with others",
+   "es": "No compartir información o sentimientos con otros",
+   "ex": "He knew about the problem but kept it to himself until the board meeting.",
+   "ph": "/kiːp ɪt tə hɪmˈself/"
+  },
+  {
+   "id": "g04",
+   "term": "stunt / publicity stunt",
+   "type": "Sustantivo",
+   "cat": "general",
+   "en": "a dramatic action designed to attract attention",
+   "es": "Acción dramática diseñada para atraer atención mediática",
+   "ex": "The environmental campaign was seen as a publicity stunt by some.",
+   "ph": "/stʌnt/ · /pʌbˈlɪsəti stʌnt/"
+  },
+  {
+   "id": "g05",
+   "term": "cash in on",
+   "type": "Phrasal Verb",
+   "cat": "general",
+   "en": "to profit from an opportunity or situation",
+   "es": "Sacar partido de una oportunidad o situación",
+   "ex": "They cashed in on the new recycling regulations early.",
+   "ph": "/kæʃ ɪn ɒn/"
+  },
+  {
+   "id": "g06",
+   "term": "word of mouth",
+   "type": "Noun Phrase",
+   "cat": "general",
+   "en": "information spread through personal communication",
+   "es": "Boca a boca — información difundida por comunicación personal",
+   "ex": "Our scrapping business grew mainly through word of mouth.",
+   "ph": "/ˌwɜːd əv ˈmaʊθ/"
+  },
+  {
+   "id": "g07",
+   "term": "go viral",
+   "type": "Verb Phrase",
+   "cat": "general",
+   "en": "to spread rapidly online reaching a large audience",
+   "es": "Difundirse rápidamente en internet",
+   "ex": "The video of our water treatment plant went viral online.",
+   "ph": "/ɡəʊ ˈvaɪrəl/"
+  },
+  {
+   "id": "g08",
+   "term": "hype",
+   "type": "Sust./Verbo",
+   "cat": "general",
+   "en": "exaggerated publicity intended to create excitement",
+   "es": "Publicidad exagerada para crear expectación",
+   "ex": "There is a lot of hype around new membrane filtration technologies.",
+   "ph": "/haɪp/"
+  },
+  {
+   "id": "g09",
+   "term": "live up to",
+   "type": "Phrasal Verb",
+   "cat": "general",
+   "en": "to meet expectations or standards set in advance",
+   "es": "Cumplir expectativas o estándares previos",
+   "ex": "The new treatment system lived up to its promised efficiency.",
+   "ph": "/lɪv ʌp tuː/"
+  },
+  {
+   "id": "g10",
+   "term": "notorious",
+   "type": "Adjetivo",
+   "cat": "general",
+   "en": "widely known for something bad or negative",
+   "es": "Conocido ampliamente por algo negativo",
+   "ex": "The site was notorious for its poor waste management practices.",
+   "ph": "/nəʊˈtɔːriəs/"
+  },
+  {
+   "id": "g11",
+   "term": "witty",
+   "type": "Adjetivo",
+   "cat": "general",
+   "en": "clever and humorous in a quick, intelligent way",
+   "es": "Ingenioso y agudo de forma inteligente y rápida",
+   "ex": "His witty remarks eased the tension in the technical meeting.",
+   "ph": "/ˈwɪti/"
+  },
+  {
+   "id": "g12",
+   "term": "sophisticated",
+   "type": "Adjetivo",
+   "cat": "general",
+   "en": "complex, refined, and intelligently designed",
+   "es": "Complejo, refinado e inteligentemente diseñado",
+   "ex": "The new SCADA system is highly sophisticated.",
+   "ph": "/səˈfɪstɪkeɪtɪd/"
+  },
+  {
+   "id": "g13",
+   "term": "evolve",
+   "type": "Verbo",
+   "cat": "general",
+   "en": "to develop gradually over time through change",
+   "es": "Desarrollarse gradualmente con el tiempo",
+   "ex": "Environmental regulations continue to evolve across the EU.",
+   "ph": "/ɪˈvɒlv/"
+  },
+  {
+   "id": "g14",
+   "term": "binge-watch",
+   "type": "Verbo",
+   "cat": "general",
+   "en": "to watch many episodes of a series consecutively",
+   "es": "Ver muchos episodios seguidos en una sentada",
+   "ex": "I binge-watched all the MBR technology webinars in one weekend.",
+   "ph": "/ˈbɪndʒ wɒtʃ/"
+  },
+  {
+   "id": "p01",
+   "term": "Full stop / Period  [ . ]",
+   "type": "Puntuación",
+   "cat": "general",
+   "en": "ends a declarative sentence",
+   "es": "Punto — termina una oración declarativa",
+   "ex": "The effluent met all discharge standards.",
+   "ph": "/ˌfʊl ˈstɒp/"
+  },
+  {
+   "id": "p02",
+   "term": "Colon  [ : ]",
+   "type": "Puntuación",
+   "cat": "general",
+   "en": "introduces explanations, lists, or quotations",
+   "es": "Dos puntos — introduce explicaciones, listas o citas",
+   "ex": "The process includes three stages: coagulation, flocculation, sedimentation.",
+   "ph": "/ˈkəʊlɒn/"
+  },
+  {
+   "id": "p03",
+   "term": "Semicolon  [ ; ]",
+   "type": "Puntuación",
+   "cat": "general",
+   "en": "connects closely related independent clauses",
+   "es": "Punto y coma — conecta dos cláusulas independientes relacionadas",
+   "ex": "The pH was within range; however, turbidity remained high.",
+   "ph": "/ˌsemiˈkəʊlɒn/"
+  },
+  {
+   "id": "p04",
+   "term": "Em dash  [ — ]",
+   "type": "Puntuación",
+   "cat": "general",
+   "en": "indicates interruption or a strong pause in text",
+   "es": "Raya — indica interrupción o pausa fuerte en el texto",
+   "ex": "The plant—despite its age—performed exceptionally well.",
+   "ph": "/ˈem dæʃ/"
+  },
+  {
+   "id": "p05",
+   "term": "Ellipsis  [ ... ]",
+   "type": "Puntuación",
+   "cat": "general",
+   "en": "shows omission or trailing off in text",
+   "es": "Puntos suspensivos — indica omisión o continuación",
+   "ex": "The report mentioned several issues... but no solutions were given.",
+   "ph": "/ɪˈlɪpsɪs/"
+  },
+  {
+   "id": "pv_up01",
+   "term": "use up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to consume or exhaust a resource completely",
+   "es": "Consumir o agotar un recurso por completo",
+   "ex": "We used up all the coagulant stock during the high-turbidity storm event.",
+   "ph": "/juːz ʌp/"
+  },
+  {
+   "id": "pv_up02",
+   "term": "eat up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to consume entirely; absorb too much time or resources",
+   "es": "Consumir o absorber por completo (tiempo, recursos, presupuesto)",
+   "ex": "Emergency maintenance ate up the entire quarterly maintenance budget.",
+   "ph": "/iːt ʌp/"
+  },
+  {
+   "id": "pv_up03",
+   "term": "clean up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to remove pollutants, improve or organise an area or process",
+   "es": "Limpiar, descontaminar o mejorar un proceso o zona",
+   "ex": "The team cleaned up the hydrocarbon spill within the containment bund.",
+   "ph": "/kliːn ʌp/"
+  },
+  {
+   "id": "pv_up04",
+   "term": "speed up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to increase the rate or pace of a process",
+   "es": "Acelerar el ritmo o la velocidad de un proceso",
+   "ex": "We need to speed up the permit renewal process before the deadline.",
+   "ph": "/spiːd ʌp/"
+  },
+  {
+   "id": "pv_up05",
+   "term": "bring up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to introduce a topic in a meeting or conversation",
+   "es": "Plantear o sacar a colación un tema en una reunión",
+   "ex": "She brought up the ASR disposal problem during the board meeting.",
+   "ph": "/brɪŋ ʌp/"
+  },
+  {
+   "id": "pv_up06",
+   "term": "come up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to arise or appear unexpectedly",
+   "es": "Surgir o aparecer de forma inesperada",
+   "ex": "A critical pump failure came up during the night shift.",
+   "ph": "/kʌm ʌp/"
+  },
+  {
+   "id": "pv_up07",
+   "term": "end up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to reach a final, often unplanned, outcome or situation",
+   "es": "Acabar o terminar en una situación, a menudo imprevista",
+   "ex": "If we delay the maintenance, we'll end up with a major compliance failure.",
+   "ph": "/end ʌp/"
+  },
+  {
+   "id": "pv_up08",
+   "term": "give up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to stop trying; to abandon an effort or goal",
+   "es": "Rendirse; abandonar un esfuerzo u objetivo",
+   "ex": "We never give up on achieving our effluent quality targets.",
+   "ph": "/ɡɪv ʌp/"
+  },
+  {
+   "id": "pv_up09",
+   "term": "dress up",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to wear smart or formal clothes; also to wear a costume or disguise",
+   "es": "Vestirse elegante o formal; también disfrazarse",
+   "ex": "We had to dress up for the dinner with the client.",
+   "note": "Contrario: 'dress down' (vestirse de forma informal). Clase 04/11/2026.",
+   "ph": "/dres ʌp/"
+  },
+  {
+   "id": "pv_up10",
+   "term": "shoot up (shot up)",
+   "type": "Phrasal Verb · UP",
+   "cat": "phrasal",
+   "prep": "UP",
+   "en": "to rise suddenly and quickly in amount, price or level",
+   "es": "Dispararse; subir de golpe (precios, valores, temperaturas)",
+   "ex": "Turbidity shot up from 5 to 80 NTU during the storm.",
+   "note": "Irregular: shoot – shot – shot. Más intenso: 'skyrocket'. Clase 04/11/2026.",
+   "ph": "/ʃuːt ʌp/ · /ʃɒt ʌp/"
+  },
+  {
+   "id": "pv_dn01",
+   "term": "slow down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to reduce speed, rate, or intensity of a process",
+   "es": "Reducir la velocidad o la intensidad de un proceso",
+   "ex": "We slowed down the sludge recirculation rate to improve settling performance.",
+   "ph": "/sləʊ daʊn/"
+  },
+  {
+   "id": "pv_dn02",
+   "term": "cut down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to reduce quantity, frequency, or size",
+   "es": "Reducir la cantidad, frecuencia o tamaño de algo",
+   "ex": "We need to cut down on chemical dosing costs by optimising the coagulation process.",
+   "ph": "/kʌt daʊn/"
+  },
+  {
+   "id": "pv_dn03",
+   "term": "turn down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to reject an offer, or to reduce intensity or volume",
+   "es": "Rechazar una oferta o reducir la intensidad/volumen de algo",
+   "ex": "The contractor turned down our initial budget proposal for the MBR upgrade.",
+   "ph": "/tɜːn daʊn/"
+  },
+  {
+   "id": "pv_dn04",
+   "term": "break down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to stop functioning; also to analyse something in detail",
+   "es": "Dejar de funcionar; también: analizar en detalle",
+   "ex": "The centrifuge broke down during peak sludge production on Friday night.",
+   "ph": "/breɪk daʊn/"
+  },
+  {
+   "id": "pv_dn05",
+   "term": "shut down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to stop operations completely, temporarily or permanently",
+   "es": "Cerrar o parar las operaciones de forma total o temporal",
+   "ex": "The plant was shut down for 48 hours due to an emergency electrical fault.",
+   "ph": "/ʃʌt daʊn/"
+  },
+  {
+   "id": "pv_dn06",
+   "term": "let down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to disappoint someone by failing to meet their expectations",
+   "es": "Decepcionar a alguien por no cumplir sus expectativas",
+   "ex": "The supplier let us down with a two-week delay on the membrane delivery.",
+   "ph": "/let daʊn/"
+  },
+  {
+   "id": "pv_dn07",
+   "term": "write down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to record something in writing for future reference",
+   "es": "Anotar o registrar algo por escrito para futura referencia",
+   "ex": "Write down all pressure readings during the hydraulic pressure test.",
+   "ph": "/raɪt daʊn/"
+  },
+  {
+   "id": "pv_dn08",
+   "term": "dress down",
+   "type": "Phrasal Verb · DOWN",
+   "cat": "phrasal",
+   "prep": "DOWN",
+   "en": "to wear casual or less formal clothes than usual",
+   "es": "Vestirse de forma informal o más relajada",
+   "ex": "On Fridays everyone at the office dresses down.",
+   "note": "Contrario de 'dress up'. Ojo: 'dress someone down' (con objeto) = reprender duramente. Clase 04/11/2026.",
+   "ph": "/dres daʊn/"
+  },
+  {
+   "id": "pv_out01",
+   "term": "run out (of)",
+   "type": "Phrasal Verb · OUT",
+   "cat": "phrasal",
+   "prep": "OUT",
+   "en": "to have nothing left of a resource or supply",
+   "es": "Quedarse sin existencias o suministro de algo",
+   "ex": "We ran out of ferric sulphate during the prolonged heavy rainfall event.",
+   "ph": "/rʌn aʊt (əv)/"
+  },
+  {
+   "id": "pv_out02",
+   "term": "find out",
+   "type": "Phrasal Verb · OUT",
+   "cat": "phrasal",
+   "prep": "OUT",
+   "en": "to discover or obtain information about something",
+   "es": "Averiguar o descubrir información sobre algo",
+   "ex": "We need to find out why the effluent turbidity is rising unexpectedly.",
+   "ph": "/faɪnd aʊt/"
+  },
+  {
+   "id": "pv_out03",
+   "term": "figure out",
+   "type": "Phrasal Verb · OUT",
+   "cat": "phrasal",
+   "prep": "OUT",
+   "en": "to understand or solve something after careful reflection",
+   "es": "Entender o resolver algo tras reflexión o análisis técnico",
+   "ex": "The team figured out the root cause of the membrane fouling issue.",
+   "ph": "/ˈfɪɡə aʊt/"
+  },
+  {
+   "id": "pv_out04",
+   "term": "rule out",
+   "type": "Phrasal Verb · OUT",
+   "cat": "phrasal",
+   "prep": "OUT",
+   "en": "to eliminate something as a possibility or option",
+   "es": "Descartar algo como posibilidad u opción técnica",
+   "ex": "We ruled out biological failure as the cause of the elevated BOD in the effluent.",
+   "ph": "/ruːl aʊt/"
+  },
+  {
+   "id": "pv_out05",
+   "term": "carry out",
+   "type": "Phrasal Verb · OUT",
+   "cat": "phrasal",
+   "prep": "OUT",
+   "en": "to execute or perform a task, plan, or inspection",
+   "es": "Ejecutar o llevar a cabo una tarea, plan o inspección",
+   "ex": "The depollution inspection was carried out by a certified ELV operator.",
+   "ph": "/ˈkæri aʊt/"
+  },
+  {
+   "id": "pv_out06",
+   "term": "phase out",
+   "type": "Phrasal Verb · OUT",
+   "cat": "phrasal",
+   "prep": "OUT",
+   "en": "to gradually eliminate or discontinue something over time",
+   "es": "Eliminar o retirar gradualmente algo con el tiempo",
+   "ex": "HFCs in vehicle air conditioning are being phased out under EU F-Gas Regulation.",
+   "ph": "/feɪz aʊt/"
+  },
+  {
+   "id": "pv_out07",
+   "term": "stand out",
+   "type": "Phrasal Verb · OUT",
+   "cat": "phrasal",
+   "prep": "OUT",
+   "en": "to be clearly noticeable or better than others",
+   "es": "Destacar o ser claramente superior o notable",
+   "ex": "Our depollution process stands out for its compliance record in Asturias.",
+   "ph": "/stænd aʊt/"
+  },
+  {
+   "id": "pv_off01",
+   "term": "turn off",
+   "type": "Phrasal Verb · OFF",
+   "cat": "phrasal",
+   "prep": "OFF",
+   "en": "to disconnect power or stop a device from operating",
+   "es": "Apagar o desconectar la alimentación de un equipo",
+   "ex": "Turn off the chemical dosing pump before performing any maintenance work.",
+   "ph": "/tɜːn ɒf/"
+  },
+  {
+   "id": "pv_off02",
+   "term": "call off",
+   "type": "Phrasal Verb · OFF",
+   "cat": "phrasal",
+   "prep": "OFF",
+   "en": "to cancel a planned event or activity",
+   "es": "Cancelar un evento o actividad planificada",
+   "ex": "The site audit was called off due to the red weather alert.",
+   "ph": "/kɔːl ɒf/"
+  },
+  {
+   "id": "pv_off03",
+   "term": "put off",
+   "type": "Phrasal Verb · OFF",
+   "cat": "phrasal",
+   "prep": "OFF",
+   "en": "to postpone or delay something to a later time",
+   "es": "Aplazar o posponer algo para más adelante",
+   "ex": "We cannot put off the ELV permit renewal any longer — the deadline is Friday.",
+   "ph": "/pʊt ɒf/"
+  },
+  {
+   "id": "pv_off04",
+   "term": "cut off",
+   "type": "Phrasal Verb · OFF",
+   "cat": "phrasal",
+   "prep": "OFF",
+   "en": "to disconnect or sever completely; to interrupt a supply",
+   "es": "Cortar o desconectar por completo; interrumpir el suministro",
+   "ex": "The power was cut off during the grid fault, stopping all treatment processes.",
+   "ph": "/kʌt ɒf/"
+  },
+  {
+   "id": "pv_off05",
+   "term": "lay off",
+   "type": "Phrasal Verb · OFF",
+   "cat": "phrasal",
+   "prep": "OFF",
+   "en": "to dismiss employees, usually for economic reasons",
+   "es": "Despedir a empleados, generalmente por razones económicas",
+   "ex": "The plant restructuring resulted in laying off 12 operational staff members.",
+   "ph": "/leɪ ɒf/"
+  },
+  {
+   "id": "pv_off06",
+   "term": "back off",
+   "type": "Phrasal Verb · OFF",
+   "cat": "phrasal",
+   "prep": "OFF",
+   "en": "to withdraw pressure or retreat from a position",
+   "es": "Dar marcha atrás; retirarse de una posición o aflojar la presión",
+   "ex": "The regulator backed off after reviewing our full compliance documentation.",
+   "ph": "/bæk ɒf/"
+  },
+  {
+   "id": "pv_off07",
+   "term": "pay off",
+   "type": "Phrasal Verb · OFF",
+   "cat": "phrasal",
+   "prep": "OFF",
+   "en": "to produce a positive result after effort or investment",
+   "es": "Dar sus frutos; producir un resultado positivo tras el esfuerzo",
+   "ex": "The investment in MBR technology paid off within the first five years.",
+   "ph": "/peɪ ɒf/"
+  },
+  {
+   "id": "pv_on01",
+   "term": "carry on",
+   "type": "Phrasal Verb · ON",
+   "cat": "phrasal",
+   "prep": "ON",
+   "en": "to continue doing something without stopping",
+   "es": "Continuar haciendo algo sin detenerse",
+   "ex": "We must carry on with the treatment process despite the heavy rainfall event.",
+   "ph": "/ˈkæri ɒn/"
+  },
+  {
+   "id": "pv_on02",
+   "term": "go on",
+   "type": "Phrasal Verb · ON",
+   "cat": "phrasal",
+   "prep": "ON",
+   "en": "to continue or to happen over a period of time",
+   "es": "Continuar o suceder durante un período de tiempo",
+   "ex": "The discharge violation went on for three days before it was detected by the SCADA.",
+   "ph": "/ɡəʊ ɒn/"
+  },
+  {
+   "id": "pv_on03",
+   "term": "work on",
+   "type": "Phrasal Verb · ON",
+   "cat": "phrasal",
+   "prep": "ON",
+   "en": "to develop, improve, or actively address something",
+   "es": "Trabajar en algo; desarrollar o mejorar activamente",
+   "ex": "We are working on improving our NRW reduction strategy this quarter.",
+   "ph": "/wɜːk ɒn/"
+  },
+  {
+   "id": "pv_on04",
+   "term": "count on",
+   "type": "Phrasal Verb · ON",
+   "cat": "phrasal",
+   "prep": "ON",
+   "en": "to rely on someone or something with confidence",
+   "es": "Contar con; confiar en alguien o algo con seguridad",
+   "ex": "We can count on the SCADA system to alert us to any process anomaly immediately.",
+   "ph": "/kaʊnt ɒn/"
+  },
+  {
+   "id": "pv_on05",
+   "term": "take on",
+   "type": "Phrasal Verb · ON",
+   "cat": "phrasal",
+   "prep": "ON",
+   "en": "to accept or assume a new task, challenge, or responsibility",
+   "es": "Asumir una nueva tarea, reto o responsabilidad",
+   "ex": "The new environmental manager took on the ELV compliance project last month.",
+   "ph": "/teɪk ɒn/"
+  },
+  {
+   "id": "pv_on06",
+   "term": "move on",
+   "type": "Phrasal Verb · ON",
+   "cat": "phrasal",
+   "prep": "ON",
+   "en": "to progress to the next stage or topic",
+   "es": "Pasar al siguiente punto o etapa; avanzar",
+   "ex": "Now that the audit report is finalised, let's move on to the next priority item.",
+   "ph": "/muːv ɒn/"
+  },
+  {
+   "id": "pv_on07",
+   "term": "put on",
+   "type": "Phrasal Verb · ON",
+   "cat": "phrasal",
+   "prep": "ON",
+   "en": "to place clothing or protective equipment on your body",
+   "es": "Ponerse una prenda o un equipo de protección",
+   "ex": "Put on your safety helmet before entering the treatment area.",
+   "note": "Contrario: 'take off'. Distinto de 'get dressed' (vestirse). Clase 04/11/2026.",
+   "ph": "/pʊt ɒn/"
+  },
+  {
+   "id": "pv_in01",
+   "term": "join in",
+   "type": "Phrasal Verb · IN",
+   "cat": "phrasal",
+   "prep": "IN",
+   "en": "to participate in an activity or discussion",
+   "es": "Unirse o participar en una actividad o discusión",
+   "ex": "All department heads should join in the environmental compliance training sessions.",
+   "ph": "/dʒɔɪn ɪn/"
+  },
+  {
+   "id": "pv_in02",
+   "term": "bring in",
+   "type": "Phrasal Verb · IN",
+   "cat": "phrasal",
+   "prep": "IN",
+   "en": "to involve someone new in a project or process",
+   "es": "Incorporar a alguien nuevo en un proyecto o proceso",
+   "ex": "We brought in an external specialist consultant for the environmental impact assessment.",
+   "ph": "/brɪŋ ɪn/"
+  },
+  {
+   "id": "pv_in03",
+   "term": "get involved in",
+   "type": "Phrasal Verb · IN",
+   "cat": "phrasal",
+   "prep": "IN",
+   "en": "to participate actively in something",
+   "es": "Involucrarse activamente en algo",
+   "ex": "All staff should get involved in the new ISO 14001 certification process.",
+   "ph": "/ɡet ɪnˈvɒlvd ɪn/"
+  },
+  {
+   "id": "pv_in04",
+   "term": "lock in",
+   "type": "Phrasal Verb · IN",
+   "cat": "phrasal",
+   "prep": "IN",
+   "en": "to make something fixed and unchangeable; to secure an agreement",
+   "es": "Fijar o asegurar un acuerdo de forma inamovible",
+   "ex": "The long-term supply contract locked in the chemical price for three years.",
+   "ph": "/lɒk ɪn/"
+  },
+  {
+   "id": "pv_in05",
+   "term": "kick in",
+   "type": "Phrasal Verb · IN",
+   "cat": "phrasal",
+   "prep": "IN",
+   "en": "to begin to have an effect or come into force",
+   "es": "Entrar en vigor; comenzar a surtir efecto",
+   "ex": "The new EU ELV directive requirements will kick in from January 2027.",
+   "ph": "/kɪk ɪn/"
+  },
+  {
+   "id": "pv_in06",
+   "term": "hand in",
+   "type": "Phrasal Verb · IN",
+   "cat": "phrasal",
+   "prep": "IN",
+   "en": "to submit something formally to an authority or supervisor",
+   "es": "Entregar formalmente algo a una autoridad o supervisor",
+   "ex": "Please hand in all depollution records before the scheduled compliance audit.",
+   "ph": "/hænd ɪn/"
+  },
+  {
+   "id": "pv_ov01",
+   "term": "send over",
+   "type": "Phrasal Verb · OVER",
+   "cat": "phrasal",
+   "prep": "OVER",
+   "en": "to transmit or send files, documents, or information",
+   "es": "Enviar documentos, archivos o información a alguien",
+   "ex": "Could you send over the latest effluent quality analysis report by this afternoon?",
+   "ph": "/send ˈəʊvə/"
+  },
+  {
+   "id": "pv_ov02",
+   "term": "go over",
+   "type": "Phrasal Verb · OVER",
+   "cat": "phrasal",
+   "prep": "OVER",
+   "en": "to review or examine something carefully and in detail",
+   "es": "Revisar o examinar algo detalladamente y con cuidado",
+   "ex": "Let's go over the tender documents together before submitting the bid.",
+   "ph": "/ɡəʊ ˈəʊvə/"
+  },
+  {
+   "id": "pv_ov03",
+   "term": "look over",
+   "type": "Phrasal Verb · OVER",
+   "cat": "phrasal",
+   "prep": "OVER",
+   "en": "to review something quickly and informally",
+   "es": "Revisar algo rápidamente y de forma informal",
+   "ex": "Can you look over the P&ID before the contractor arrives on site tomorrow?",
+   "ph": "/lʊk ˈəʊvə/"
+  },
+  {
+   "id": "pv_ov04",
+   "term": "do over",
+   "type": "Phrasal Verb · OVER",
+   "cat": "phrasal",
+   "prep": "OVER",
+   "en": "to redo something that was done incorrectly",
+   "es": "Repetir o rehacer algo que se hizo de forma incorrecta",
+   "ex": "The hydraulic calculations had errors, so we had to do them over entirely.",
+   "ph": "/duː ˈəʊvə/"
+  },
+  {
+   "id": "pv_ov05",
+   "term": "take over",
+   "type": "Phrasal Verb · OVER",
+   "cat": "phrasal",
+   "prep": "OVER",
+   "en": "to assume control, ownership, or responsibility from someone else",
+   "es": "Asumir el control, la propiedad o la responsabilidad de algo",
+   "ex": "The new operator will take over plant management from 1st March.",
+   "ph": "/teɪk ˈəʊvə/"
+  },
+  {
+   "id": "pv_ov06",
+   "term": "overcomplicate",
+   "type": "Phrasal Verb · OVER",
+   "cat": "phrasal",
+   "prep": "OVER",
+   "en": "to make something unnecessarily complex",
+   "es": "Complicar algo en exceso de forma innecesaria",
+   "ex": "Don't overcomplicate the BOQ — keep each item clear and measurable.",
+   "ph": "/ˌəʊvəˈkɒmplɪkeɪt/"
+  },
+  {
+   "id": "pv_bk01",
+   "term": "get back to",
+   "type": "Phrasal Verb · BACK",
+   "cat": "phrasal",
+   "prep": "BACK",
+   "en": "to reply to someone later when you have more information",
+   "es": "Volver a contactar cuando se tenga más información",
+   "ex": "I'll get back to you on the ELV regulation query by end of the week.",
+   "ph": "/ɡet bæk tuː/"
+  },
+  {
+   "id": "pv_bk02",
+   "term": "send back",
+   "type": "Phrasal Verb · BACK",
+   "cat": "phrasal",
+   "prep": "BACK",
+   "en": "to return something to where or whom it came from",
+   "es": "Devolver algo al lugar o persona de origen",
+   "ex": "The defective membrane modules were sent back to the manufacturer for replacement.",
+   "ph": "/send bæk/"
+  },
+  {
+   "id": "pv_bk03",
+   "term": "call back",
+   "type": "Phrasal Verb · BACK",
+   "cat": "phrasal",
+   "prep": "BACK",
+   "en": "to return a telephone call to someone",
+   "es": "Devolver una llamada telefónica a alguien",
+   "ex": "Please call back when you have the updated pressure test results available.",
+   "ph": "/kɔːl bæk/"
+  },
+  {
+   "id": "pv_bk04",
+   "term": "push back",
+   "type": "Phrasal Verb · BACK",
+   "cat": "phrasal",
+   "prep": "BACK",
+   "en": "to resist, oppose, or argue against a proposal",
+   "es": "Resistir, oponerse o rebatir una propuesta o decisión",
+   "ex": "The municipality pushed back on the proposed water tariff increase of 15%.",
+   "ph": "/pʊʃ bæk/"
+  },
+  {
+   "id": "pv_bk05",
+   "term": "roll back",
+   "type": "Phrasal Verb · BACK",
+   "cat": "phrasal",
+   "prep": "BACK",
+   "en": "to reverse a recent change or return to a previous state",
+   "es": "Revertir un cambio reciente o volver a un estado anterior",
+   "ex": "The contractor requested to roll back the last SCADA configuration update.",
+   "ph": "/rəʊl bæk/"
+  },
+  {
+   "id": "pv_bk06",
+   "term": "go back to",
+   "type": "Phrasal Verb · BACK",
+   "cat": "phrasal",
+   "prep": "BACK",
+   "en": "to revisit a topic, issue, or previous point in a discussion",
+   "es": "Volver a tratar un tema o punto anterior en una discusión",
+   "ex": "Let's go back to the issue of the elevated TSS in last week's effluent sample.",
+   "ph": "/ɡəʊ bæk tuː/"
+  },
+  {
+   "id": "pv_fo01",
+   "term": "ask for",
+   "type": "Phrasal Struct. · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "to request something formally or informally",
+   "es": "Solicitar algo de forma formal o informal",
+   "ex": "We asked for an extension of the ELV compliance implementation deadline.",
+   "ph": "/ɑːsk fɔː/"
+  },
+  {
+   "id": "pv_fo02",
+   "term": "apply for",
+   "type": "Phrasal Struct. · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "to formally request a permit, position, or grant",
+   "es": "Solicitar formalmente un permiso, puesto o subvención",
+   "ex": "We applied for a new discharge permit under the revised Water Framework Directive.",
+   "ph": "/əˈplaɪ fɔː/"
+  },
+  {
+   "id": "pv_fo03",
+   "term": "look for",
+   "type": "Phrasal Struct. · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "to search or try to find something or someone",
+   "es": "Buscar algo o a alguien de forma activa",
+   "ex": "We are looking for a certified ELV depollution operator for the Asturias facility.",
+   "ph": "/lʊk fɔː/"
+  },
+  {
+   "id": "pv_fo04",
+   "term": "cover for",
+   "type": "Phrasal Struct. · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "to take over someone's duties temporarily while absent",
+   "es": "Cubrir o sustituir a alguien en sus funciones de forma temporal",
+   "ex": "Ana is covering for the plant manager while he is on annual leave.",
+   "ph": "/ˈkʌvə fɔː/"
+  },
+  {
+   "id": "pv_fo05",
+   "term": "stand in for",
+   "type": "Phrasal Struct. · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "to act as a replacement for someone in a role or meeting",
+   "es": "Sustituir a alguien en un cargo o reunión específica",
+   "ex": "He stood in for the director at the EU Water Industry Forum in Brussels.",
+   "ph": "/stænd ɪn fɔː/"
+  },
+  {
+   "id": "pv_fo06",
+   "term": "for your reference",
+   "type": "Email Phrase · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "polite phrase providing supporting documents in an email",
+   "es": "Para su referencia — fórmula al adjuntar documentación de apoyo",
+   "ex": "I'm attaching the latest COD analysis data for your reference.",
+   "ph": "/fɔː jɔː ˈrefrəns/"
+  },
+  {
+   "id": "pv_fo07",
+   "term": "for approval",
+   "type": "Email Phrase · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "phrase indicating a document requires authorisation",
+   "es": "Para aprobación — indica que un documento requiere autorización",
+   "ex": "The tender technical specifications are attached for approval by the committee.",
+   "ph": "/fɔːr əˈpruːvl/"
+  },
+  {
+   "id": "pv_fo08",
+   "term": "for review",
+   "type": "Email Phrase · FOR",
+   "cat": "phrasal",
+   "prep": "FOR",
+   "en": "phrase requesting someone to check or assess a document",
+   "es": "Para revisión — solicita que alguien evalúe o revise un documento",
+   "ex": "Please find the draft EIA report attached for review and comments.",
+   "ph": "/fɔː rɪˈvjuː/"
+  },
+  {
+   "id": "pv_wi01",
+   "term": "work with",
+   "type": "Phrasal Verb · WITH",
+   "cat": "phrasal",
+   "prep": "WITH",
+   "en": "to collaborate or cooperate with someone toward a shared goal",
+   "es": "Colaborar o cooperar con alguien hacia un objetivo común",
+   "ex": "We work with a certified hazardous waste management company for all ELV fluids.",
+   "ph": "/wɜːk wɪð/"
+  },
+  {
+   "id": "pv_wi02",
+   "term": "coordinate with",
+   "type": "Phrasal Verb · WITH",
+   "cat": "phrasal",
+   "prep": "WITH",
+   "en": "to align actions or plans with another person or team",
+   "es": "Coordinarse con otra persona o equipo para alinear acciones",
+   "ex": "Please coordinate with the laboratory team on the weekly sampling schedule.",
+   "ph": "/kəʊˈɔːdɪneɪt wɪð/"
+  },
+  {
+   "id": "pv_wi03",
+   "term": "agree with",
+   "type": "Phrasal Verb · WITH",
+   "cat": "phrasal",
+   "prep": "WITH",
+   "en": "to share or support another person's opinion or position",
+   "es": "Estar de acuerdo con la opinión o posición de otra persona",
+   "ex": "I agree with the proposed changes to the chemical dosing protocol.",
+   "ph": "/əˈɡriː wɪð/"
+  },
+  {
+   "id": "pv_wi04",
+   "term": "deal with",
+   "type": "Phrasal Verb · WITH",
+   "cat": "phrasal",
+   "prep": "WITH",
+   "en": "to handle, manage, or resolve a problem or situation",
+   "es": "Manejar, gestionar o resolver un problema o situación",
+   "ex": "The operations team dealt with the emergency spill effectively within 2 hours.",
+   "ph": "/diːl wɪð/"
+  },
+  {
+   "id": "pv_wi05",
+   "term": "be comfortable with",
+   "type": "Phrasal Verb · WITH",
+   "cat": "phrasal",
+   "prep": "WITH",
+   "en": "to accept, approve, or feel at ease with something",
+   "es": "Estar conforme con algo; aceptarlo o sentirse cómodo con ello",
+   "ex": "Are you comfortable with the new effluent reporting format for the regulator?",
+   "ph": "/bi ˈkʌmftəbl wɪð/"
+  },
+  {
+   "id": "pv_wi06",
+   "term": "be tasked with",
+   "type": "Phrasal Verb · WITH",
+   "cat": "phrasal",
+   "prep": "WITH",
+   "en": "to be formally assigned a specific responsibility or task",
+   "es": "Ser formalmente asignado con una responsabilidad o tarea específica",
+   "ex": "Our team is tasked with achieving the EU ELV 95% recovery target this year.",
+   "ph": "/bi tɑːskt wɪð/"
+  },
+  {
+   "id": "cn01",
+   "term": "Nevertheless",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "formal",
+   "en": "Formal contrast connector — introduces a contradicting statement despite what was just acknowledged",
+   "es": "Sin embargo / No obstante (formal) — introduce una contradicción a pesar de lo reconocido",
+   "ex": "The treatment plant exceeded COD limits last quarter. Nevertheless, overall environmental compliance has improved significantly.",
+   "structure": "Statement A. Nevertheless, statement B.",
+   "ph": "/ˌnevəðəˈles/"
+  },
+  {
+   "id": "cn02",
+   "term": "Nonetheless",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "formal",
+   "en": "Formal contrast; very close to 'nevertheless' — used after acknowledging a clear fact",
+   "es": "No obstante / Aun así (formal) — muy similar a 'nevertheless'; reconoce un hecho y contrasta",
+   "ex": "The new ELV regulations impose significant operational costs. Nonetheless, we are committed to full compliance by January.",
+   "structure": "Statement A. Nonetheless, statement B.",
+   "ph": "/ˌnʌnðəˈles/"
+  },
+  {
+   "id": "cn03",
+   "term": "However",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "formal",
+   "en": "The most common formal contrast connector in professional and technical writing",
+   "es": "Sin embargo (formal) — el conector de contraste más frecuente en escritura profesional",
+   "ex": "Effluent BOD met the permit limit. However, TSS was slightly above the authorised threshold.",
+   "structure": "Statement A. However, statement B. / Statement A, however, statement B.",
+   "ph": "/haʊˈevə/"
+  },
+  {
+   "id": "cn04",
+   "term": "That being said",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "diplomatic",
+   "en": "Soft diplomatic contrast: acknowledges the previous point fully before introducing a nuanced counterpoint",
+   "es": "Dicho esto / No obstante (diplomático) — reconoce el punto previo y añade un matiz con suavidad",
+   "ex": "The ELV recycling rate meets current EU targets. That being said, further improvements are achievable with selective dismantling.",
+   "structure": "Statement A. That being said, statement B.",
+   "ph": "/ðæt ˌbiːɪŋ ˈsed/"
+  },
+  {
+   "id": "cn05",
+   "term": "Yet",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "neutral",
+   "en": "Neutral-formal contrast; indicates contradiction or a surprising counterpoint — common in formal writing",
+   "es": "Sin embargo / Pero (neutro-formal) — indica contradicción o sorpresa; frecuente en escritura",
+   "ex": "The process is well-established. Yet, recent performance data suggest room for further optimisation.",
+   "structure": "Statement A. Yet, statement B. / Statement A, yet statement B.",
+   "ph": "/jet/"
+  },
+  {
+   "id": "cn06",
+   "term": "But",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "neutral",
+   "en": "The most basic and universal contrast connector — natural in speech and informal writing",
+   "es": "Pero (neutro/coloquial) — el conector de contraste más básico y universal",
+   "ex": "The valve was inspected last month, but no signs of wear were detected.",
+   "structure": "Statement A, but statement B.",
+   "ph": "/bʌt/"
+  },
+  {
+   "id": "cn07",
+   "term": "Even so",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "conversational",
+   "en": "Conversational contrast — acknowledges a real obstacle or fact but introduces a positive counterpoint",
+   "es": "Aun así (coloquial) — reconoce un obstáculo real pero introduce un contrapunto positivo",
+   "ex": "The pump is approaching the end of its design life. Even so, it continues to perform within the design parameters.",
+   "structure": "Statement A. Even so, statement B.",
+   "ph": "/ˌiːvn ˈsəʊ/"
+  },
+  {
+   "id": "cn08",
+   "term": "Still",
+   "type": "Connector",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "register": "conversational",
+   "en": "Conversational contrast — indicates something remains valid or true despite the previous point",
+   "es": "Aun así / De todas formas (informal) — algo sigue siendo cierto pese a lo anterior",
+   "ex": "The membrane flux has dropped by 15%. Still, the system is consistently meeting effluent quality targets.",
+   "structure": "Statement A. Still, statement B.",
+   "ph": "/stɪl/"
+  },
+  {
+   "id": "cc_add01",
+   "term": "and",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Basic conjunction joining two equal ideas or items",
+   "es": "y — conjunción básica que une dos ideas o elementos de igual peso",
+   "ex": "The effluent was treated and discharged within the permitted limits.",
+   "ph": "/ænd/"
+  },
+  {
+   "id": "cc_add02",
+   "term": "also",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Adds an additional point to what has already been said",
+   "es": "también — añade un punto adicional a lo ya mencionado",
+   "ex": "The plant needs a new dosing pump. It also requires a membrane inspection this quarter.",
+   "ph": "/ˈɔːlsəʊ/"
+  },
+  {
+   "id": "cc_add03",
+   "term": "as well",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Placed at end of clause to add another point; informal alternative to 'also'",
+   "es": "también / además — al final de la cláusula; alternativa informal a 'also'",
+   "ex": "We need to renew the ELV permit. We should update the depollution records as well.",
+   "ph": "/æz ˈwel/"
+  },
+  {
+   "id": "cc_add04",
+   "term": "too",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Informal addition connector used at the end of a clause or sentence",
+   "es": "también — conector informal al final de la cláusula o frase",
+   "ex": "The COD results were satisfactory. The BOD levels were within limits too.",
+   "ph": "/tuː/"
+  },
+  {
+   "id": "cc_add05",
+   "term": "moreover",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Formal addition that strengthens or builds on the previous point",
+   "es": "además / es más (formal) — refuerza o desarrolla el punto anterior",
+   "ex": "The MBR system reduces energy consumption. Moreover, it produces effluent suitable for reuse.",
+   "ph": "/mɔːˈrəʊvə/"
+  },
+  {
+   "id": "cc_add06",
+   "term": "furthermore",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Formal addition introducing a new and separate supporting point",
+   "es": "además / asimismo (formal) — introduce un punto de apoyo nuevo y separado",
+   "ex": "The ELV facility meets all safety requirements. Furthermore, it exceeds the EU 85% recycling target.",
+   "ph": "/ˌfɜːðəˈmɔː/"
+  },
+  {
+   "id": "cc_add07",
+   "term": "in addition",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Formal addition connector introducing a supplementary idea or requirement",
+   "es": "además (formal) — introduce una idea o requisito suplementario",
+   "ex": "Fluids must be drained. In addition, pyrotechnic devices must be safely deactivated.",
+   "ph": "/ɪn əˈdɪʃn/"
+  },
+  {
+   "id": "cc_add08",
+   "term": "additionally",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Formal/neutral addition; similar to 'in addition' but more compact",
+   "es": "adicionalmente — similar a 'in addition', más compacto",
+   "ex": "The COD target was achieved. Additionally, turbidity was reduced by 97%.",
+   "ph": "/əˈdɪʃənəli/"
+  },
+  {
+   "id": "cc_add09",
+   "term": "not only ... but also",
+   "type": "Connector · Addition",
+   "cat": "connectors",
+   "connCat": "addition",
+   "en": "Emphatic addition showing two connected advantages or facts",
+   "es": "no solo ... sino también — enfatiza dos hechos o ventajas conectados",
+   "ex": "The MBR not only removes suspended solids but also eliminates pathogens from the effluent.",
+   "ph": "/nɒt ˈəʊnli ... bʌt ˈɔːlsəʊ/"
+  },
+  {
+   "id": "cc_con01",
+   "term": "although",
+   "type": "Connector · Contrast",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "en": "Introduces a subordinate clause expressing contrast or concession; formal and neutral",
+   "es": "aunque — introduce una cláusula subordinada de contraste o concesión",
+   "ex": "Although the pH was within range, the turbidity remained above the permit threshold.",
+   "ph": "/ɔːlˈðəʊ/"
+  },
+  {
+   "id": "cc_con02",
+   "term": "though",
+   "type": "Connector · Contrast",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "en": "Similar to 'although' but less formal; can also appear at the end of a sentence",
+   "es": "aunque — similar a 'although' pero menos formal; puede ir al final de la oración",
+   "ex": "The pump performed well, though the energy consumption was higher than expected.",
+   "ph": "/ðəʊ/"
+  },
+  {
+   "id": "cc_con03",
+   "term": "even though",
+   "type": "Connector · Contrast",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "en": "Stronger than 'although' — emphasises the contrast despite a strong opposing fact",
+   "es": "a pesar de que — más fuerte que 'although'; enfatiza el contraste ante un hecho opuesto fuerte",
+   "ex": "Even though the membrane was new, fouling occurred within just three weeks.",
+   "ph": "/ˌiːvn ˈðəʊ/"
+  },
+  {
+   "id": "cc_con04",
+   "term": "whereas",
+   "type": "Connector · Contrast",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "en": "Formal contrast showing a clear difference between two parallel facts or situations",
+   "es": "mientras que (formal) — diferencia clara entre dos hechos o situaciones paralelos",
+   "ex": "Ferric sulphate achieves rapid coagulation, whereas aluminium sulphate requires longer contact time.",
+   "ph": "/weərˈæz/"
+  },
+  {
+   "id": "cc_con05",
+   "term": "while (contrast)",
+   "type": "Connector · Contrast",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "en": "Expresses contrast between two parallel situations; similar to 'whereas'",
+   "es": "mientras que (contraste) — contraste entre dos situaciones paralelas; similar a 'whereas'",
+   "ex": "While the primary treatment met standards, the secondary stage showed significant underperformance.",
+   "ph": "/waɪl/"
+  },
+  {
+   "id": "cc_con06",
+   "term": "on the other hand",
+   "type": "Connector · Contrast",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "en": "Neutral contrast introducing an opposing or balancing viewpoint",
+   "es": "por otro lado — introduce un punto de vista opuesto o equilibrante",
+   "ex": "Biological treatment is cost-effective. On the other hand, it requires careful process monitoring.",
+   "ph": "/ɒn ði ˈʌðə hænd/"
+  },
+  {
+   "id": "cc_con07",
+   "term": "in contrast",
+   "type": "Connector · Contrast",
+   "cat": "connectors",
+   "connCat": "contrast",
+   "en": "Formal contrast highlighting a significant difference between two data sets or situations",
+   "es": "en contraste — diferencia significativa entre dos situaciones o conjuntos de datos",
+   "ex": "The influent BOD was 320 mg/L. In contrast, the treated effluent measured only 18 mg/L.",
+   "ph": "/ɪn ˈkɒntrɑːst/"
+  },
+  {
+   "id": "cc_cau01",
+   "term": "because",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Introduces the direct reason or cause of a result; clause follows",
+   "es": "porque — introduce la razón o causa directa de un resultado",
+   "ex": "The nitrification process slowed down because the dissolved oxygen dropped below 1.5 mg/L.",
+   "ph": "/bɪˈkɒz/"
+  },
+  {
+   "id": "cc_cau02",
+   "term": "because of",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Introduces a noun phrase as the cause; followed by a noun, not a clause",
+   "es": "debido a — introduce un sustantivo como causa (no una cláusula completa)",
+   "ex": "The treatment efficiency dropped because of an unexpected increase in influent organic load.",
+   "ph": "/bɪˈkɒz əv/"
+  },
+  {
+   "id": "cc_cau03",
+   "term": "since",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Introduces a reason — often implying the listener already knows the cause",
+   "es": "puesto que / ya que — introduce una razón conocida por el interlocutor",
+   "ex": "Since the pH was below 6.5, the nitrification bacteria became inactive immediately.",
+   "ph": "/sɪns/"
+  },
+  {
+   "id": "cc_cau04",
+   "term": "as (reason)",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Introduces a reason or simultaneous action; slightly more formal than 'because'",
+   "es": "ya que — introduce una razón o acción simultánea; más formal que 'because'",
+   "ex": "As the dissolved oxygen was insufficient, the biological degradation process stalled.",
+   "ph": "/æz/"
+  },
+  {
+   "id": "cc_cau05",
+   "term": "so",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Introduces the result or consequence of the previous statement; informal",
+   "es": "así que — introduce el resultado o consecuencia del enunciado anterior; informal",
+   "ex": "The membrane fouling was severe, so we initiated an emergency chemical cleaning cycle.",
+   "ph": "/səʊ/"
+  },
+  {
+   "id": "cc_cau06",
+   "term": "therefore",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Formal connector introducing a logical conclusion from the previous statement",
+   "es": "por lo tanto (formal) — conclusión lógica del enunciado anterior",
+   "ex": "The effluent TSS exceeded the permit limit. Therefore, the discharge was temporarily suspended.",
+   "ph": "/ˈðeəfɔː/"
+  },
+  {
+   "id": "cc_cau07",
+   "term": "thus",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Formal/academic connector meaning 'as a result of this' or 'in this way'",
+   "es": "así / por consiguiente (formal/académico) — 'como resultado de esto'",
+   "ex": "The sludge age was increased to 20 days, thus ensuring stable and complete nitrification.",
+   "ph": "/ðʌs/"
+  },
+  {
+   "id": "cc_cau08",
+   "term": "consequently",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Formal result connector showing one event directly caused another",
+   "es": "en consecuencia (formal) — un evento causó directamente otro",
+   "ex": "The primary pump failed during the night shift. Consequently, the plant operated at reduced capacity.",
+   "ph": "/ˈkɒnsɪkwəntli/"
+  },
+  {
+   "id": "cc_cau09",
+   "term": "as a result",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Neutral-formal connector introducing the direct outcome of the previous situation",
+   "es": "como resultado — introduce el resultado directo de la situación anterior",
+   "ex": "The coagulant dose was optimised. As a result, effluent turbidity dropped below 0.5 NTU.",
+   "ph": "/æz ə rɪˈzʌlt/"
+  },
+  {
+   "id": "cc_cau10",
+   "term": "due to",
+   "type": "Connector · Cause & Effect",
+   "cat": "connectors",
+   "connCat": "cause",
+   "en": "Introduces a noun phrase as the cause; formal and common in technical writing",
+   "es": "debido a (formal) — introduce un sustantivo como causa; frecuente en escritura técnica",
+   "ex": "The discharge permit was exceeded due to an unexpected storm inflow event.",
+   "ph": "/ˈdjuː tuː/"
+  },
+  {
+   "id": "cc_pur01",
+   "term": "to (+ infinitive)",
+   "type": "Connector · Purpose",
+   "cat": "connectors",
+   "connCat": "purpose",
+   "en": "The simplest way to express purpose; followed by the base verb",
+   "es": "para (+ infinitivo) — la forma más simple de expresar propósito",
+   "ex": "We installed a flow meter to monitor the influent discharge rate accurately.",
+   "ph": "/tuː/"
+  },
+  {
+   "id": "cc_pur02",
+   "term": "in order to",
+   "type": "Connector · Purpose",
+   "cat": "connectors",
+   "connCat": "purpose",
+   "en": "More formal alternative to 'to'; clearly emphasises the intended purpose",
+   "es": "para (formal) — alternativa más formal a 'to'; enfatiza el propósito intencionado",
+   "ex": "The SRT was extended to 25 days in order to achieve stable nitrification at low temperatures.",
+   "ph": "/ɪn ˈɔːdə tuː/"
+  },
+  {
+   "id": "cc_pur03",
+   "term": "so as to",
+   "type": "Connector · Purpose",
+   "cat": "connectors",
+   "connCat": "purpose",
+   "en": "Formal/neutral alternative to 'in order to'; used mainly in writing",
+   "es": "para (formal) — alternativa a 'in order to'; principalmente en escritura",
+   "ex": "The valve was closed slowly so as to avoid a water hammer event in the rising main.",
+   "ph": "/səʊ æz tuː/"
+  },
+  {
+   "id": "cc_pur04",
+   "term": "so that",
+   "type": "Connector · Purpose",
+   "cat": "connectors",
+   "connCat": "purpose",
+   "en": "Introduces a purpose clause with subject + verb; result is the intended goal",
+   "es": "para que — introduce una cláusula de propósito con sujeto + verbo",
+   "ex": "The aeration rate was increased so that dissolved oxygen remained above 2 mg/L at all times.",
+   "ph": "/səʊ ðæt/"
+  },
+  {
+   "id": "cc_pur05",
+   "term": "in order that",
+   "type": "Connector · Purpose",
+   "cat": "connectors",
+   "connCat": "purpose",
+   "en": "Formal alternative to 'so that'; used in legal or technical documents",
+   "es": "para que (formal) — alternativa a 'so that'; frecuente en documentos técnicos o legales",
+   "ex": "Records must be retained for five years in order that the regulator may inspect them at any time.",
+   "ph": "/ɪn ˈɔːdə ðæt/"
+  },
+  {
+   "id": "cc_tim01",
+   "term": "when",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Refers to a specific time or moment at which something happens",
+   "es": "cuando — se refiere a un momento específico en que algo ocurre",
+   "ex": "When the pH drops below 6.5, the dosing system activates automatically.",
+   "ph": "/wen/"
+  },
+  {
+   "id": "cc_tim02",
+   "term": "whenever",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Refers to any time or every time a condition is met; repeated action",
+   "es": "siempre que / cada vez que — cualquier momento en que se cumpla una condición",
+   "ex": "Whenever the turbidity exceeds 5 NTU, the coagulant dosing rate increases automatically.",
+   "ph": "/wenˈevə/"
+  },
+  {
+   "id": "cc_tim03",
+   "term": "while (time)",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Indicates two actions happening simultaneously; dual use: also means contrast",
+   "es": "mientras — dos acciones simultáneas (también indica contraste según contexto)",
+   "ex": "While the centrifuge was running, the maintenance team inspected the blower unit.",
+   "ph": "/waɪl/"
+  },
+  {
+   "id": "cc_tim04",
+   "term": "before",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Indicates that one action occurs prior to another in time",
+   "es": "antes de — indica que una acción ocurre con anterioridad a otra",
+   "ex": "Before starting the pump, always verify that the discharge valve is fully open.",
+   "ph": "/bɪˈfɔː/"
+  },
+  {
+   "id": "cc_tim05",
+   "term": "after",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Indicates that one action follows another in time",
+   "es": "después de — indica que una acción sigue a otra en el tiempo",
+   "ex": "After depollution is complete, the vehicle can be safely transferred to the shredder.",
+   "ph": "/ˈɑːftə/"
+  },
+  {
+   "id": "cc_tim06",
+   "term": "during",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Indicates that something happens within a specified time period",
+   "es": "durante — algo ocurre dentro de un período de tiempo específico",
+   "ex": "During the storm event, the influent flow exceeded three times the design capacity.",
+   "ph": "/ˈdjʊərɪŋ/"
+  },
+  {
+   "id": "cc_tim07",
+   "term": "then",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Indicates the next step or action in a sequence",
+   "es": "entonces / luego — indica el siguiente paso en una secuencia",
+   "ex": "First the fluids are drained. Then the battery and pyrotechnic devices are removed safely.",
+   "ph": "/ðen/"
+  },
+  {
+   "id": "cc_tim08",
+   "term": "next",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Introduces the following step or event in an ordered sequence",
+   "es": "a continuación — introduce el siguiente paso en una secuencia ordenada",
+   "ex": "First check the valve position. Next, confirm the pump speed setting on the SCADA screen.",
+   "ph": "/nekst/"
+  },
+  {
+   "id": "cc_tim09",
+   "term": "finally",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Introduces the last step in a sequence; also used to close an argument",
+   "es": "finalmente — introduce el último paso de una secuencia; también cierra un argumento",
+   "ex": "Finally, the vehicle is weighed and the Certificate of Destruction is issued to the owner.",
+   "ph": "/ˈfaɪnəli/"
+  },
+  {
+   "id": "cc_tim10",
+   "term": "eventually",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Refers to something that happens after a long time or series of events",
+   "es": "finalmente / con el tiempo — algo que ocurre tras un largo proceso o serie de eventos",
+   "ex": "After several optimisation trials, the plant eventually achieved stable phosphorus removal below 1 mg/L.",
+   "ph": "/ɪˈventʃuəli/"
+  },
+  {
+   "id": "cc_tim11",
+   "term": "meanwhile",
+   "type": "Connector · Time & Sequence",
+   "cat": "connectors",
+   "connCat": "time",
+   "en": "Indicates that two events are happening at the same time in parallel",
+   "es": "mientras tanto — dos eventos ocurren en paralelo al mismo tiempo",
+   "ex": "The main pump was being repaired. Meanwhile, the backup unit maintained full treatment capacity.",
+   "ph": "/ˈmiːnwaɪl/"
+  },
+  {
+   "id": "cc_cnd01",
+   "term": "if",
+   "type": "Connector · Condition",
+   "cat": "connectors",
+   "connCat": "condition",
+   "en": "Introduces a condition that must be true for the result to follow",
+   "es": "si — la condición debe cumplirse para que el resultado ocurra",
+   "ex": "If the effluent fails the quality check, the discharge valve closes automatically.",
+   "ph": "/ɪf/"
+  },
+  {
+   "id": "cc_cnd02",
+   "term": "unless",
+   "type": "Connector · Condition",
+   "cat": "connectors",
+   "connCat": "condition",
+   "en": "Means 'if not' — introduces the only condition that would prevent the result",
+   "es": "a menos que — 'si no'; la única condición que evitaría el resultado",
+   "ex": "The ELV permit cannot be renewed unless all depollution records are fully up to date.",
+   "ph": "/ənˈles/"
+  },
+  {
+   "id": "cc_cnd03",
+   "term": "as long as",
+   "type": "Connector · Condition",
+   "cat": "connectors",
+   "connCat": "condition",
+   "en": "Introduces a condition that must be maintained continuously for a result to occur",
+   "es": "siempre que — condición que debe mantenerse de forma continua",
+   "ex": "The biological process will remain stable as long as dissolved oxygen stays above 2 mg/L.",
+   "ph": "/æz ˈlɒŋ æz/"
+  },
+  {
+   "id": "cc_cnd04",
+   "term": "provided (that)",
+   "type": "Connector · Condition",
+   "cat": "connectors",
+   "connCat": "condition",
+   "en": "Formal condition connector meaning 'on the condition that'",
+   "es": "con tal de que (formal) — 'a condición de que'; frecuente en contratos y documentos",
+   "ex": "The contractor may begin work provided that all risk assessments have been approved.",
+   "ph": "/prəˈvaɪdɪd (ðæt)/"
+  },
+  {
+   "id": "cc_cnd05",
+   "term": "in case",
+   "type": "Connector · Condition",
+   "cat": "connectors",
+   "connCat": "condition",
+   "en": "Introduces a precautionary action — taken to prevent a possible future problem",
+   "es": "en caso de que — acción preventiva para evitar un posible problema futuro",
+   "ex": "Keep the backup generator fuelled in case the main grid supply fails overnight.",
+   "ph": "/ɪn ˈkeɪs/"
+  },
+  {
+   "id": "cc_cnd06",
+   "term": "otherwise",
+   "type": "Connector · Condition",
+   "cat": "connectors",
+   "connCat": "condition",
+   "en": "Introduces the negative consequence if the condition is not met; means 'if not'",
+   "es": "de lo contrario — consecuencia negativa si no se cumple la condición",
+   "ex": "The dosing pump must be calibrated monthly. Otherwise, the chemical dose will drift out of specification.",
+   "ph": "/ˈʌðəwaɪz/"
+  },
+  {
+   "id": "cc_cmp01",
+   "term": "like",
+   "type": "Connector · Comparison",
+   "cat": "connectors",
+   "connCat": "comparison",
+   "en": "Introduces a comparison using a noun or noun phrase (informal)",
+   "es": "como — introduce una comparación con un sustantivo (informal)",
+   "ex": "The secondary clarifier behaves like a settling tank under low-flow conditions.",
+   "ph": "/laɪk/"
+  },
+  {
+   "id": "cc_cmp02",
+   "term": "as (comparison)",
+   "type": "Connector · Comparison",
+   "cat": "connectors",
+   "connCat": "comparison",
+   "en": "Formal comparison connector; also used in 'as...as' equality structures",
+   "es": "como (formal) — comparación formal; también en estructuras 'tan...como'",
+   "ex": "The new membrane performed as expected during the first commissioning trial.",
+   "ph": "/æz/"
+  },
+  {
+   "id": "cc_cmp03",
+   "term": "as ... as",
+   "type": "Connector · Comparison",
+   "cat": "connectors",
+   "connCat": "comparison",
+   "en": "Expresses equal degree or quantity between two things",
+   "es": "tan ... como — expresa igualdad de grado o cantidad entre dos cosas",
+   "ex": "The MBR effluent quality was as consistent as predicted by the design hydraulic model.",
+   "ph": "/æz ... æz/"
+  },
+  {
+   "id": "cc_cmp04",
+   "term": "than",
+   "type": "Connector · Comparison",
+   "cat": "connectors",
+   "connCat": "comparison",
+   "en": "Used with comparative adjectives to show a difference in degree",
+   "es": "que — usado con adjetivos comparativos para indicar diferencia de grado",
+   "ex": "The RO permeate quality was significantly better than the target specification.",
+   "ph": "/ðæn/"
+  },
+  {
+   "id": "cc_cmp05",
+   "term": "similarly",
+   "type": "Connector · Comparison",
+   "cat": "connectors",
+   "connCat": "comparison",
+   "en": "Formal connector showing that two things are alike or share comparable features",
+   "es": "de manera similar (formal) — dos cosas comparten características comparables",
+   "ex": "The nitrification kinetics followed the Monod model. Similarly, denitrification matched the predicted rate.",
+   "ph": "/ˈsɪmələli/"
+  },
+  {
+   "id": "cc_cmp06",
+   "term": "likewise",
+   "type": "Connector · Comparison",
+   "cat": "connectors",
+   "connCat": "comparison",
+   "en": "Formal/neutral; means 'in the same way'; used to add a parallel point",
+   "es": "del mismo modo (formal) — añade un punto paralelo; 'de la misma manera'",
+   "ex": "Primary sedimentation achieved 65% TSS removal. Likewise, the flotation unit met its design target.",
+   "ph": "/ˈlaɪkwaɪz/"
+  },
+  {
+   "id": "cc_cmp07",
+   "term": "in the same way",
+   "type": "Connector · Comparison",
+   "cat": "connectors",
+   "connCat": "comparison",
+   "en": "Neutral connector indicating two processes or actions follow the same pattern",
+   "es": "de la misma manera — dos procesos o acciones siguen el mismo patrón",
+   "ex": "In the same way that a WTP reduces turbidity, an MBR eliminates suspended solids from wastewater.",
+   "ph": "/ɪn ðə seɪm ˈweɪ/"
+  },
+  {
+   "id": "cc_ex01",
+   "term": "for example",
+   "type": "Connector · Example",
+   "cat": "connectors",
+   "connCat": "example",
+   "en": "Introduces a specific instance or illustration of a general statement",
+   "es": "por ejemplo — introduce un caso o ilustración específica de una afirmación general",
+   "ex": "Several parameters must be monitored daily — for example, pH, dissolved oxygen, and turbidity.",
+   "ph": "/fər ɪɡˈzɑːmpl/"
+  },
+  {
+   "id": "cc_ex02",
+   "term": "for instance",
+   "type": "Connector · Example",
+   "cat": "connectors",
+   "connCat": "example",
+   "en": "Neutral/formal alternative to 'for example'; used in writing and speech",
+   "es": "por ejemplo — alternativa formal a 'for example'; oral y escrito",
+   "ex": "Hazardous ELV components, for instance airbags and refrigerants, require specialist handling.",
+   "ph": "/fər ˈɪnstəns/"
+  },
+  {
+   "id": "cc_ex03",
+   "term": "such as",
+   "type": "Connector · Example",
+   "cat": "connectors",
+   "connCat": "example",
+   "en": "Introduces specific examples within a list; followed directly by the example noun",
+   "es": "como por ejemplo — introduce ejemplos específicos en una lista; seguido de sustantivo",
+   "ex": "Precious metals such as platinum, palladium and rhodium are recovered from catalytic converters.",
+   "ph": "/ˈsʌtʃ æz/"
+  },
+  {
+   "id": "cc_ex04",
+   "term": "namely",
+   "type": "Connector · Example",
+   "cat": "connectors",
+   "connCat": "example",
+   "en": "Formal connector specifying exactly what was referred to; introduces a precise list",
+   "es": "es decir / a saber (formal) — especifica exactamente a qué se refería; lista precisa",
+   "ex": "Two parameters exceeded the discharge limit, namely BOD and total suspended solids.",
+   "ph": "/ˈneɪmli/"
+  },
+  {
+   "id": "cc_ex05",
+   "term": "that is  (i.e.)",
+   "type": "Connector · Example",
+   "cat": "connectors",
+   "connCat": "example",
+   "en": "Clarifies or rephrases what was just said; introduces a more precise restatement",
+   "es": "es decir (i.e.) — aclara o reformula lo dicho con mayor precisión",
+   "ex": "The membrane was operated at maximum flux, that is, 25 litres per square metre per hour.",
+   "ph": "/ðæt ˈɪz/ · /ˌaɪ ˈiː/"
+  },
+  {
+   "id": "cc_ex06",
+   "term": "in other words",
+   "type": "Connector · Example",
+   "cat": "connectors",
+   "connCat": "example",
+   "en": "Introduces a simpler or more accessible rephrasing of the previous statement",
+   "es": "en otras palabras — reformulación más simple del enunciado anterior",
+   "ex": "The COD/BOD ratio exceeded 0.5. In other words, the wastewater was not readily biodegradable.",
+   "ph": "/ɪn ˈʌðə wɜːdz/"
+  },
+  {
+   "id": "cc_emp01",
+   "term": "indeed",
+   "type": "Connector · Emphasis",
+   "cat": "connectors",
+   "connCat": "emphasis",
+   "en": "Formal emphasis connector confirming or strengthening a previous statement",
+   "es": "de hecho (formal) — confirma o refuerza un enunciado anterior con énfasis",
+   "ex": "The MBR system was efficient. Indeed, it exceeded all performance guarantees in the first year.",
+   "ph": "/ɪnˈdiːd/"
+  },
+  {
+   "id": "cc_emp02",
+   "term": "in fact",
+   "type": "Connector · Emphasis",
+   "cat": "connectors",
+   "connCat": "emphasis",
+   "en": "Introduces a surprising or stronger truth compared to what was expected",
+   "es": "de hecho — introduce una verdad sorprendente o más fuerte de lo esperado",
+   "ex": "The ELV process looked simple. In fact, it involves over 30 individual regulated steps.",
+   "ph": "/ɪn ˈfækt/"
+  },
+  {
+   "id": "cc_emp03",
+   "term": "above all",
+   "type": "Connector · Emphasis",
+   "cat": "connectors",
+   "connCat": "emphasis",
+   "en": "Highlights the single most important point among several mentioned",
+   "es": "sobre todo — destaca el punto más importante entre varios mencionados",
+   "ex": "The process must be safe, efficient, and cost-effective. Above all, it must comply with EU regulations.",
+   "ph": "/əˌbʌv ˈɔːl/"
+  },
+  {
+   "id": "cc_emp04",
+   "term": "especially",
+   "type": "Connector · Emphasis",
+   "cat": "connectors",
+   "connCat": "emphasis",
+   "en": "Highlights one particular element as more important than the others",
+   "es": "especialmente — destaca un elemento particular como más importante que los demás",
+   "ex": "Monitoring is critical for all process parameters, especially dissolved oxygen in the bioreactor.",
+   "ph": "/ɪˈspeʃəli/"
+  },
+  {
+   "id": "cc_emp05",
+   "term": "particularly",
+   "type": "Connector · Emphasis",
+   "cat": "connectors",
+   "connCat": "emphasis",
+   "en": "Formal emphasis; singles out one item as particularly relevant or significant",
+   "es": "particularmente (formal) — destaca un elemento como especialmente relevante",
+   "ex": "The regulation affects all treatment plants, particularly those discharging into sensitive water bodies.",
+   "ph": "/pəˈtɪkjələli/"
+  },
+  {
+   "id": "cc_sum01",
+   "term": "in conclusion",
+   "type": "Connector · Conclusion",
+   "cat": "connectors",
+   "connCat": "conclusion",
+   "en": "Formal connector opening the final summary or closing statement of a document",
+   "es": "en conclusión (formal) — introduce el resumen final o conclusión de un documento",
+   "ex": "In conclusion, the WWTP upgrade meets all current EU effluent quality standards.",
+   "ph": "/ɪn kənˈkluːʒn/"
+  },
+  {
+   "id": "cc_sum02",
+   "term": "to conclude",
+   "type": "Connector · Conclusion",
+   "cat": "connectors",
+   "connCat": "conclusion",
+   "en": "Formal connector used to introduce the final remark in a report or presentation",
+   "es": "para concluir (formal) — introduce la observación final de un informe o presentación",
+   "ex": "To conclude, selective dismantling is the most effective route to achieving the EU 95% ELV recovery target.",
+   "ph": "/tə kənˈkluːd/"
+  },
+  {
+   "id": "cc_sum03",
+   "term": "in summary",
+   "type": "Connector · Conclusion",
+   "cat": "connectors",
+   "connCat": "conclusion",
+   "en": "Introduces a brief overview of the key points already covered",
+   "es": "en resumen — introduce una visión general breve de los puntos ya tratados",
+   "ex": "In summary, the water treatment plant achieved all three performance targets this quarter.",
+   "ph": "/ɪn ˈsʌməri/"
+  },
+  {
+   "id": "cc_sum04",
+   "term": "to sum up",
+   "type": "Connector · Conclusion",
+   "cat": "connectors",
+   "connCat": "conclusion",
+   "en": "Informal/neutral way to introduce a final summary; common in spoken English",
+   "es": "en resumen (informal/neutro) — resumen final; muy común en inglés oral",
+   "ex": "To sum up, we need to replace two pumps, upgrade the SCADA system, and renew the operating permit.",
+   "ph": "/tə sʌm ˈʌp/"
+  },
+  {
+   "id": "cc_sum05",
+   "term": "overall",
+   "type": "Connector · Conclusion",
+   "cat": "connectors",
+   "connCat": "conclusion",
+   "en": "Introduces a general assessment taking all factors into account",
+   "es": "en general / en conjunto — evaluación general teniendo en cuenta todos los factores",
+   "ex": "Overall, the ELV depollution process met all regulatory requirements during the annual inspection.",
+   "ph": "/ˌəʊvərˈɔːl/"
+  },
+  {
+   "id": "gr01",
+   "term": "WHETHER",
+   "type": "Grammar Rule",
+   "cat": "grammar",
+   "en": "Use 'whether' for choices, alternatives, or indirect questions — NOT for conditions",
+   "es": "'Whether' para opciones, alternativas o preguntas indirectas — NO para condiciones",
+   "ex": "We need to determine whether the membrane should be replaced or cleaned in place.",
+   "rule": "✓ Whether OR... | ✓ Indirect questions | ✓ After prepositions | ✗ NOT for conditions",
+   "confusionWith": "IF (conditional)",
+   "ph": "/ˈweðə/"
+  },
+  {
+   "id": "gr02",
+   "term": "IF  (conditional)",
+   "type": "Grammar Rule",
+   "cat": "grammar",
+   "en": "Use 'if' for conditions — the result depends on the condition being true (NOT for choices)",
+   "es": "'If' para condiciones — el resultado depende de que la condición sea verdadera (NO para opciones)",
+   "ex": "If the pH drops below 6.5, the nitrification process will be inhibited.",
+   "rule": "✓ Conditions | ✓ Hypothetical situations | ✗ NOT for choices or alternatives",
+   "confusionWith": "WHETHER (choices & indirect questions)",
+   "ph": "/ɪf/"
+  },
+  {
+   "id": "gr03",
+   "term": "Past -ED pronunciation  /ɪd/ · /t/ · /d/",
+   "type": "Grammar Rule · Pronunciation",
+   "cat": "grammar",
+   "en": "The regular past ending -ed has three sounds, chosen by the final SOUND of the verb (not its last letter)",
+   "es": "La terminación -ed del pasado regular tiene tres sonidos según el SONIDO final del verbo (no la letra final)",
+   "ex": "The effluent was treated /ɪd/, the pump was checked /t/ and the tank was cleaned /d/.",
+   "rule": "/ɪd/ after /t/ or /d/ (wanted, ended) | /t/ after voiceless sounds (hoped, laughed, relaxed, washed, watched, liked) | /d/ after all other sounds (played, allowed, begged)",
+   "confusionWith": "Pronouncing every -ed as a syllable (play-ed ✗)",
+   "ph": "wanted /ˈwɒntɪd/ · hoped /həʊpt/ · played /pleɪd/"
+  },
+  {
+   "id": "voc01",
+   "term": "Noisy",
+   "type": "Adjetivo",
+   "cat": "vocabulary",
+   "en": "Producing or full of unwanted, loud, or unpleasant sound",
+   "es": "Ruidoso — que produce o está lleno de sonido no deseado o molesto",
+   "ex": "The old centrifuge is extremely noisy during the sludge dewatering cycle.",
+   "confusionWith": "NOSY (intrusive, curious about others)",
+   "ph": "/ˈnɔɪzi/"
+  },
+  {
+   "id": "voc02",
+   "term": "Nosy",
+   "type": "Adjetivo",
+   "cat": "vocabulary",
+   "en": "Too curious or interested in other people's private matters; intrusive",
+   "es": "Entrometido — excesivamente curioso sobre los asuntos privados ajenos",
+   "ex": "He was being rather nosy about the contractor's tender price, which was not his concern.",
+   "confusionWith": "NOISY (making loud sound)",
+   "ph": "/ˈnəʊzi/"
+  },
+  {
+   "id": "voc03",
+   "term": "Umpteen",
+   "type": "Adjetivo Informal",
+   "cat": "vocabulary",
+   "en": "A very large, indefinite number — used to express frustration at constant repetition",
+   "es": "Muchísimas (veces) — número indefinido muy grande; expresa frustración por repetición",
+   "ex": "I've updated the ELV compliance report umpteen times this month and the figures keep changing.",
+   "register": "informal",
+   "note": "Related form: 'umpteenth' → 'For the umpteenth time, please check the valve settings.'",
+   "ph": "/ˌʌmpˈtiːn/"
+  },
+  {
+   "id": "voc04",
+   "term": "Round about",
+   "type": "Adverbio Informal",
+   "cat": "vocabulary",
+   "en": "Approximately; around a certain number, time, or amount (British English informal)",
+   "es": "Aproximadamente; alrededor de — inglés británico informal",
+   "ex": "The full depollution process for one vehicle takes round about 45 minutes.",
+   "register": "informal · British English",
+   "note": "More formal equivalents: 'approximately', 'around', 'roughly'",
+   "ph": "/ˈraʊnd əbaʊt/"
+  },
+  {
+   "id": "voc05",
+   "term": "Bathe",
+   "type": "Verbo",
+   "cat": "vocabulary",
+   "en": "(1) To wash the whole body in water | (2) To clean or soak a wound | (3) Figurative: to be covered or flooded with light",
+   "es": "(1) Bañarse | (2) Limpiar o aplicar líquido en una herida | (3) Figurado: estar bañado de luz",
+   "ex": "The nurse bathed the wound carefully with saline. / The treatment plant was bathed in morning sunlight.",
+   "note": "Not to be confused with 'bath' (noun: the container) or 'bathroom'",
+   "ph": "/beɪð/"
+  },
+  {
+   "id": "voc06",
+   "term": "Skyrocket",
+   "type": "Verbo",
+   "cat": "vocabulary",
+   "en": "To rise extremely fast and by a very large amount (prices, costs, values)",
+   "es": "Dispararse por las nubes; subir como un cohete (precios, costes, valores)",
+   "ex": "Energy costs skyrocketed last winter.",
+   "note": "Ortografía: sky + rocket + ed (no 'skyroketed'). Regular: skyrocketed /ˈskaɪˌrɒkɪtɪd/. Más intenso que 'shoot up'. Clase 04/11/2026.",
+   "ph": "/ˈskaɪrɒkɪt/"
+  },
+  {
+   "id": "voc07",
+   "term": "Tout / touts",
+   "type": "Verbo / Sustantivo",
+   "cat": "vocabulary",
+   "en": "(verb) to promote or praise something strongly, often exaggerating | (noun) a person who pesters people to buy, or resells tickets at inflated prices",
+   "es": "(verbo) promocionar o alabar algo con insistencia, a veces exagerando | (sust.) captador insistente; revendedor de entradas",
+   "ex": "The supplier touts the new membrane as the most efficient on the market.",
+   "note": "Como verbo suele llevar matiz escéptico (parecido a 'hype'). Estructura: tout + objeto + as + cualidad. Clase 04/11/2026.",
+   "ph": "/taʊt/"
+  },
+  {
+   "id": "voc08",
+   "term": "Rich",
+   "type": "Adjetivo",
+   "cat": "vocabulary",
+   "en": "Having a lot of money; also (of things) containing a lot of something, e.g. rich soil",
+   "es": "Rico — con mucho dinero; también 'rico en' algo (suelo rico, rico en nutrientes)",
+   "ex": "He is rich because he sold his company.",
+   "confusionWith": "WEALTHY (riqueza acumulada y estable)",
+   "note": "Colectivo: 'the rich'. Sirve para personas y cosas. Clase 04/11/2026.",
+   "ph": "/rɪtʃ/"
+  },
+  {
+   "id": "voc09",
+   "term": "Wealthy",
+   "type": "Adjetivo",
+   "cat": "vocabulary",
+   "en": "Having a lot of money AND assets; richness that is accumulated, stable and lasting",
+   "es": "Adinerado, de gran patrimonio — riqueza acumulada, estable y duradera",
+   "ex": "A wealthy family owns the land around the reservoir.",
+   "confusionWith": "RICH (mucho dinero, más directo y común)",
+   "note": "Ortografía: wealthy (de 'wealth'), no 'welthy'. Más formal que 'rich'. Solo personas, familias o países. Colectivo: 'the wealthy'. Clase 04/11/2026.",
+   "ph": "/ˈwelθi/"
+  },
+  {
+   "id": "voc10",
+   "term": "Well off",
+   "type": "Adjetivo",
+   "cat": "vocabulary",
+   "en": "Having enough money to live comfortably; in a good financial position (milder than rich)",
+   "es": "Acomodado — con buena posición económica, sin lujos extremos",
+   "ex": "His family is quite well off, so he never worried about tuition fees.",
+   "confusionWith": "RICH / WEALTHY (más dinero)",
+   "note": "Escala: well off < rich < wealthy. Con guion antes de sustantivo: 'a well-off family'. Colectivo: 'the well-off'. Clase 04/11/2026.",
+   "ph": "/ˌwel ˈɒf/"
+  },
+  {
+   "id": "ev01",
+   "term": "stalls",
+   "type": "Sustantivo / Verbo",
+   "cat": "everyday",
+   "en": "(noun) market stands or booths | (verb) engine stops working | (verb) deliberately delays progress",
+   "es": "(sust.) puestos de mercado | (verb.) el motor se cala | (verb.) dar largas, retrasar a propósito",
+   "ex": "The car engine stalled at the lights. / The negotiation stalled because neither side would move.",
+   "note": "Three uses: physical stall (market), mechanical stall (engine), strategic stall (delay)",
+   "ph": "/stɔːlz/"
+  },
+  {
+   "id": "ev02",
+   "term": "awkward",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "(1) Socially uncomfortable or embarrassing | (2) Difficult to handle or deal with | (3) Clumsy in movement",
+   "es": "(1) Incómodo socialmente | (2) Difícil de manejar | (3) Torpe en movimiento",
+   "ex": "There was an awkward silence after he mentioned the failed project in front of the client.",
+   "note": "Key nuance: 'awkward' is milder and more neutral than 'cringe' — it does not imply disgust",
+   "ph": "/ˈɔːkwəd/"
+  },
+  {
+   "id": "ev03",
+   "term": "cringe",
+   "type": "Verbo / Adjetivo (informal)",
+   "cat": "everyday",
+   "en": "A strong feeling of embarrassment — often second-hand embarrassment watching someone else. Informal adj: 'cringeworthy'",
+   "es": "Vergüenza ajena intensa — o vergüenza propia muy fuerte. Adjetivo informal: 'cringeworthy'",
+   "ex": "I cringed when he tried to tell that joke in the meeting. It was so cringe.",
+   "note": "Stronger and more emotional than 'awkward'. Often implies the situation is painful to watch or remember",
+   "ph": "/krɪndʒ/"
+  },
+  {
+   "id": "ev04",
+   "term": "promising",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "Showing signs of future success or high potential; encouraging early results",
+   "es": "Prometedor — que muestra señales de éxito futuro o alto potencial",
+   "ex": "The pilot test results are promising — effluent quality exceeded the design specification.",
+   "note": "Positive word: use when something looks good but is not yet confirmed. NOT the same as 'guaranteed'",
+   "ph": "/ˈprɒmɪsɪŋ/"
+  },
+  {
+   "id": "ev05",
+   "term": "get your foot in the door",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "To gain an initial opportunity or entry-level position with potential to grow from there",
+   "es": "Meter el pie en la puerta — conseguir una primera oportunidad aunque sea modesta",
+   "ex": "He accepted a junior technician role to get his foot in the door at the water company.",
+   "note": "Often used for jobs, business, or relationships. Focus is on the START — not the final outcome",
+   "ph": "/ɡet jɔː fʊt ɪn ðə ˈdɔː/"
+  },
+  {
+   "id": "ev06",
+   "term": "drifted",
+   "type": "Verbo (pasado)",
+   "cat": "everyday",
+   "en": "(1) Moved slowly without control or direction | (2) Gradually changed in attitude, focus, or location | (3) Lost purpose over time",
+   "es": "(1) Moverse lentamente sin control | (2) Cambiar gradualmente de actitud o enfoque | (3) Perder el rumbo con el tiempo",
+   "ex": "After the plant closed, he drifted between temporary jobs for two years without a clear plan.",
+   "note": "Implies slowness and lack of intentional direction — different from 'moved' or 'changed' which imply choice",
+   "ph": "/ˈdrɪftɪd/"
+  },
+  {
+   "id": "ev07",
+   "term": "released",
+   "type": "Verbo (pasado)",
+   "cat": "everyday",
+   "en": "(1) Set free from confinement | (2) Made available to the public (film, report, product) | (3) Let go of pressure or tension",
+   "es": "(1) Puesto en libertad | (2) Publicado o lanzado al público | (3) Liberado (tensión, presión)",
+   "ex": "The environmental impact report was finally released after three months of internal review.",
+   "note": "Very common in professional contexts: 'The report was released', 'The update was released'",
+   "ph": "/rɪˈliːst/"
+  },
+  {
+   "id": "ev08",
+   "term": "flopped",
+   "type": "Verbo (pasado, informal)",
+   "cat": "everyday",
+   "en": "Failed badly or completely — especially a product, film, or plan that did not meet expectations at all",
+   "es": "Fracasó estrepitosamente — un producto, película o plan que no cumplió ninguna expectativa",
+   "ex": "The new water recycling product flopped — sales were less than 5% of the forecast in the first quarter.",
+   "note": "Stronger than 'failed'. Implies the failure was public, clear, and disappointing. Very informal.",
+   "ph": "/flɒpt/"
+  },
+  {
+   "id": "ev09",
+   "term": "back down to earth",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "To return to a realistic, practical view of a situation after being overly optimistic or idealistic",
+   "es": "Volver a la realidad — dejar de pensar de forma poco realista o demasiado optimista",
+   "ex": "After the audit results came in, the team came back down to earth about the project timeline.",
+   "note": "Often used after a period of excitement or overconfidence. Gentle, not harsh in tone.",
+   "ph": "/bæk daʊn tu ˈɜːθ/"
+  },
+  {
+   "id": "ev10",
+   "term": "stuck in a rut",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "Trapped in a boring, repetitive routine with no progress or change — stagnation in work or life",
+   "es": "Estancado en una rutina — atrapado en una monotonía sin avance ni cambio",
+   "ex": "After five years doing the same process checks, he felt completely stuck in a rut.",
+   "note": "A 'rut' is literally a groove worn into a road by wheels. Figuratively: you keep going the same way",
+   "ph": "/stʌk ɪn ə ˈrʌt/"
+  },
+  {
+   "id": "ev11",
+   "term": "scraping by",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "Barely managing to survive financially or cope with a situation — with the minimum necessary resources",
+   "es": "Arreglárselas a duras penas — sobrevivir con lo mínimo, a punto del límite",
+   "ex": "After the contract ended, the company was scraping by on emergency maintenance work alone.",
+   "note": "More desperate than 'getting by' — implies genuine struggle, not just modesty",
+   "ph": "/ˈskreɪpɪŋ baɪ/"
+  },
+  {
+   "id": "ev12",
+   "term": "skyscraper",
+   "type": "Sustantivo",
+   "cat": "everyday",
+   "en": "An extremely tall building, typically in an urban environment; a defining feature of modern city skylines",
+   "es": "Rascacielos — edificio extremadamente alto, típico del entorno urbano moderno",
+   "ex": "The new headquarters is a 45-floor skyscraper in the financial district of Madrid.",
+   "note": "Literal compound: 'scrape the sky'. No figurative common use — purely architectural",
+   "ph": "/ˈskaɪskreɪpə/"
+  },
+  {
+   "id": "ev13",
+   "term": "get by",
+   "type": "Phrasal Verb",
+   "cat": "everyday",
+   "en": "To manage to live, survive, or cope — especially with limited resources or in a difficult situation",
+   "es": "Arreglárselas — sobrevivir o manejarse, especialmente con recursos limitados",
+   "ex": "With the budget cuts, the maintenance team had to get by with half the usual spare parts stock.",
+   "note": "Neutral tone — implies adequacy, not comfort. Less desperate than 'scraping by'",
+   "ph": "/ɡet ˈbaɪ/"
+  },
+  {
+   "id": "ev14",
+   "term": "immediately clicked",
+   "type": "Verb Phrase",
+   "cat": "everyday",
+   "en": "For digital actions: fine and natural. For social 'clicked' (bonding with someone): use 'immediately clicked' carefully — 'we immediately clicked' sounds slightly unnatural; prefer 'we clicked straight away' or 'we hit it off immediately'",
+   "es": "Para acciones digitales: natural. Para conexión social: 'immediately clicked' suena algo forzado; mejor: 'we clicked straight away' o 'we hit it off immediately'",
+   "ex": "I clicked the button immediately. / We hit it off immediately — clicked is better without 'quickly/immediately' in social contexts.",
+   "note": "Key insight: adverb + 'clicked' works well for technology but sounds unnatural for social bonding",
+   "ph": "/ɪˈmiːdiətli klɪkt/"
+  },
+  {
+   "id": "ev15",
+   "term": "change clothes / get changed",
+   "type": "Verb Phrase",
+   "cat": "everyday",
+   "en": "to take off the clothes you are wearing and put on different ones",
+   "es": "Cambiarse de ropa",
+   "ex": "I got home from the plant and changed clothes before dinner.",
+   "note": "Se dice 'change clothes' o 'get changed', sin 'the'. Ortografía: clothes /kləʊðz/ (a menudo /kləʊz/), no 'clouths'. 'Change into' + prenda: 'She changed into something comfortable'. Clase 04/11/2026.",
+   "ph": "/tʃeɪndʒ kləʊðz/ · /ɡet tʃeɪndʒd/"
+  },
+  {
+   "id": "ev16",
+   "term": "get dressed",
+   "type": "Verb Phrase",
+   "cat": "everyday",
+   "en": "to put on your clothes, usually after waking up",
+   "es": "Vestirse (acción básica, al levantarse)",
+   "ex": "I got dressed and left for the plant at seven.",
+   "note": "'Get dressed' = vestirse por primera vez; 'change clothes' = cambiar la ropa que ya llevas. Clase 04/11/2026.",
+   "ph": "/ɡet drest/"
+  },
+  {
+   "id": "ev17",
+   "term": "hold your own",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "to defend yourself or perform well in a difficult situation, competing successfully against stronger or more experienced people",
+   "es": "Defenderse bien; no dejarse avasallar; estar a la altura frente a alguien más fuerte o experimentado",
+   "ex": "Despite being the youngest engineer, she can hold her own in technical meetings.",
+   "note": "El posesivo cambia con el sujeto: hold my/his/their own. Implica no perder, no necesariamente ganar. Distinto de 'stand your ground'. Clase 04/11/2026.",
+   "ph": "/həʊld jɔːr ˈəʊn/"
+  },
+  {
+   "id": "ev18",
+   "term": "in bulk",
+   "type": "Adverbial Phrase",
+   "cat": "everyday",
+   "en": "in large quantities; (of goods) loose or unpackaged, handled as a whole",
+   "es": "Al por mayor (comprar, vender) o a granel (transportar, almacenar)",
+   "ex": "We buy ferric sulphate in bulk to reduce the unit price.",
+   "note": "Sin artículo: 'in bulk', no 'in the bulk'. Distinto de 'the bulk of' (la mayor parte de) y 'bulky' (voluminoso). Colocaciones: bulk discount, bulk order, bulk storage. Clase 04/11/2026.",
+   "ph": "/ɪn ˈbʌlk/"
+  },
+  {
+   "id": "ev19",
+   "term": "better off",
+   "type": "Adjetivo / Expresión",
+   "cat": "everyday",
+   "en": "in a better situation (financially or otherwise); used to say what would be more advantageous",
+   "es": "En mejor situación; te convendría más (hacer algo)",
+   "ex": "You'd be better off replacing the pump than repairing it again.",
+   "note": "Patrón útil: 'you'd be better off + -ing'. Comparativo de 'well off'. Clase 04/11/2026.",
+   "ph": "/ˌbetər ˈɒf/"
+  },
+  {
+   "id": "ev20",
+   "term": "a quiet weekend",
+   "type": "Collocation",
+   "cat": "everyday",
+   "en": "a weekend without special activities or events; relaxed and calm",
+   "es": "Un fin de semana tranquilo",
+   "ex": "I had a quiet weekend. I just stayed at home and relaxed.",
+   "note": "Frase de la clase del 04/11/2026. Se puede ampliar con: 'I just stayed at home and relaxed'.",
+   "ph": "/ə ˈkwaɪət ˌwiːkˈend/"
+  },
+  {
+   "id": "w01",
+   "term": "Effluent",
+   "type": "Sustantivo Técn.",
+   "cat": "water",
+   "en": "treated water discharged to the receiving water body",
+   "es": "Efluente — agua tratada descargada al medio receptor",
+   "ex": "The effluent from the WWTP met EU discharge standards for BOD and TSS.",
+   "ph": "/ˈefluənt/"
+  },
+  {
+   "id": "w02",
+   "term": "Influent",
+   "type": "Sustantivo Técn.",
+   "cat": "water",
+   "en": "raw incoming water or wastewater entering treatment",
+   "es": "Afluente — agua bruta de entrada al sistema de tratamiento",
+   "ex": "Influent BOD was measured at 350 mg/L during peak flow conditions.",
+   "ph": "/ˈɪnfluənt/"
+  },
+  {
+   "id": "w03",
+   "term": "Coagulation",
+   "type": "Proceso",
+   "cat": "water",
+   "en": "chemical destabilisation of suspended colloidal particles",
+   "es": "Coagulación — desestabilización química de partículas coloidales",
+   "ex": "Ferric sulphate was applied for coagulation at the WTP at 40 mg/L dose.",
+   "ph": "/kəʊˌæɡjuˈleɪʃn/"
+  },
+  {
+   "id": "w04",
+   "term": "Flocculation",
+   "type": "Proceso",
+   "cat": "water",
+   "en": "aggregation of destabilised particles into larger settleable flocs",
+   "es": "Floculación — agregación de partículas en flóculos sedimentables",
+   "ex": "Gentle stirring during flocculation promotes floc growth and settling.",
+   "ph": "/ˌflɒkjuˈleɪʃn/"
+  },
+  {
+   "id": "w05",
+   "term": "Turbidity",
+   "type": "Parámetro",
+   "cat": "water",
+   "en": "cloudiness of water due to suspended particles, measured in NTU",
+   "es": "Turbidez — presencia de partículas en suspensión (en NTU)",
+   "ex": "Turbidity was reduced from 45 to 0.3 NTU after rapid sand filtration.",
+   "ph": "/tɜːˈbɪdəti/"
+  },
+  {
+   "id": "w06",
+   "term": "BOD (Biochem. O₂ Demand)",
+   "type": "Parámetro",
+   "cat": "water",
+   "en": "measure of biodegradable organic pollution in water (mg/L)",
+   "es": "DBO — medida de contaminación orgánica biodegradable del agua",
+   "ex": "BOD₅ of the raw sewage was 280 mg/L; effluent target was <25 mg/L.",
+   "ph": "/ˌbiː əʊ ˈdiː/"
+  },
+  {
+   "id": "w07",
+   "term": "COD (Chemical O₂ Demand)",
+   "type": "Parámetro",
+   "cat": "water",
+   "en": "measure of total chemical oxygen demand in water (mg/L)",
+   "es": "DQO — demanda química de oxígeno total del agua",
+   "ex": "COD removal efficiency reached 92% after secondary biological treatment.",
+   "ph": "/ˌsiː əʊ ˈdiː/"
+  },
+  {
+   "id": "w08",
+   "term": "Activated sludge",
+   "type": "Proceso Biológico",
+   "cat": "water",
+   "en": "aerobic biological treatment using suspended microbial flocs",
+   "es": "Lodos activos — tratamiento biológico aerobio en suspensión",
+   "ex": "The activated sludge process operated at an SRT of 15 days.",
+   "ph": "/ˌæktɪveɪtɪd ˈslʌdʒ/"
+  },
+  {
+   "id": "w09",
+   "term": "Nitrification",
+   "type": "Proceso Biológico",
+   "cat": "water",
+   "en": "biological oxidation of ammonia to nitrate by autotrophic bacteria",
+   "es": "Nitrificación — oxidación biológica de amonio a nitrato",
+   "ex": "Complete nitrification was achieved at 18°C with adequate dissolved oxygen.",
+   "ph": "/ˌnaɪtrɪfɪˈkeɪʃn/"
+  },
+  {
+   "id": "w10",
+   "term": "Denitrification",
+   "type": "Proceso Biológico",
+   "cat": "water",
+   "en": "biological reduction of nitrate to N₂ gas under anoxic conditions",
+   "es": "Desnitrificación — reducción biológica de nitratos a N₂ en anoxia",
+   "ex": "An anoxic zone was designed for denitrification upstream of the aerobic zone.",
+   "ph": "/diːˌnaɪtrɪfɪˈkeɪʃn/"
+  },
+  {
+   "id": "w11",
+   "term": "MBR (Membrane Bioreactor)",
+   "type": "Tecnología",
+   "cat": "water",
+   "en": "combined biological treatment and membrane filtration system",
+   "es": "Biorreactor de membrana — combina biología y filtración por membrana",
+   "ex": "The MBR produced effluent suitable for agricultural irrigation water reuse.",
+   "ph": "/ˌem biː ˈɑː/"
+  },
+  {
+   "id": "w12",
+   "term": "RO (Reverse Osmosis)",
+   "type": "Tecnología",
+   "cat": "water",
+   "en": "high-pressure membrane process for desalination or purification",
+   "es": "Ósmosis inversa — separación a alta presión por membrana semipermeable",
+   "ex": "RO was applied for desalination of brackish groundwater at the site.",
+   "ph": "/ˌɑːr ˈəʊ/ · reverse osmosis /rɪˌvɜːs ɒzˈməʊsɪs/"
+  },
+  {
+   "id": "w13",
+   "term": "Water hammer",
+   "type": "Hidráulica",
+   "cat": "water",
+   "en": "pressure surge from sudden flow velocity changes in pipes",
+   "es": "Golpe de ariete — sobrepresión por cierre brusco de válvulas",
+   "ex": "Water hammer damaged the check valve after an emergency pump shutdown.",
+   "ph": "/ˈwɔːtə ˌhæmə/"
+  },
+  {
+   "id": "w14",
+   "term": "NPSH",
+   "type": "Hidráulica",
+   "cat": "water",
+   "en": "Net Positive Suction Head — pressure at pump inlet to prevent cavitation",
+   "es": "ANPA — altura neta de aspiración positiva (parámetro anti-cavitación)",
+   "ex": "Available NPSH must exceed required NPSH by a safety margin of at least 0.5 m.",
+   "ph": "/ˌen piː es ˈeɪtʃ/"
+  },
+  {
+   "id": "w15",
+   "term": "NRW (Non-Revenue Water)",
+   "type": "Indicador Gestión",
+   "cat": "water",
+   "en": "water lost before reaching customers (leakage + apparent losses)",
+   "es": "Agua no facturada — pérdidas reales y aparentes en la red de distribución",
+   "ex": "NRW exceeded 35%, triggering a district metered area (DMA) audit.",
+   "ph": "/ˌen ɑːr ˈdʌbljuː/"
+  },
+  {
+   "id": "w16",
+   "term": "Alkalinity",
+   "type": "Parámetro",
+   "cat": "water",
+   "en": "water's capacity to neutralise acids (buffering capacity, mg/L CaCO₃)",
+   "es": "Alcalinidad — capacidad tampón del agua para neutralizar ácidos",
+   "ex": "Low alkalinity (<80 mg/L CaCO₃) inhibited nitrification in the bioreactor.",
+   "ph": "/ˌælkəˈlɪnəti/"
+  },
+  {
+   "id": "w17",
+   "term": "SRT (Sludge Retention Time)",
+   "type": "Parámetro",
+   "cat": "water",
+   "en": "mean cell residence time of biomass in the biological system",
+   "es": "TRS — tiempo de retención de lodos; edad del lodo en el sistema",
+   "ex": "SRT was set at 20 days to ensure stable and complete nitrification.",
+   "ph": "/ˌes ɑː ˈtiː/"
+  },
+  {
+   "id": "w18",
+   "term": "Head loss",
+   "type": "Hidráulica",
+   "cat": "water",
+   "en": "energy loss due to friction and fittings in a pipe system (metres)",
+   "es": "Pérdida de carga — energía perdida por rozamiento en tuberías",
+   "ex": "Head loss across the rapid sand filter was 2.5 m at design flow.",
+   "ph": "/ˈhed lɒs/"
+  },
+  {
+   "id": "w19",
+   "term": "TSS (Total Suspended Solids)",
+   "type": "Parámetro",
+   "cat": "water",
+   "en": "total concentration of solids in suspension in water (mg/L)",
+   "es": "SST — sólidos en suspensión totales del agua en mg/L",
+   "ex": "TSS in the effluent must be below 35 mg/L per the discharge permit.",
+   "ph": "/ˌtiː es ˈes/"
+  },
+  {
+   "id": "w20",
+   "term": "EBPR",
+   "type": "Proceso",
+   "cat": "water",
+   "en": "Enhanced Biological Phosphorus Removal using anaerobic/aerobic cycling",
+   "es": "Eliminación biológica de fósforo potenciada — ciclo anaerobio/aerobio",
+   "ex": "EBPR achieved effluent P concentrations consistently below 1 mg/L.",
+   "ph": "/ˌiː biː piː ˈɑː/"
+  },
+  {
+   "id": "s01",
+   "term": "ELV (End-of-Life Vehicle)",
+   "type": "Término Legal",
+   "cat": "scrapping",
+   "en": "vehicle at the end of its operational life requiring managed disposal",
+   "es": "VFU — Vehículo al Final de su Vida Útil (Dir. 2000/53/CE)",
+   "ex": "Directive 2000/53/EC governs ELV management across all EU member states.",
+   "ph": "/ˌiː el ˈviː/"
+  },
+  {
+   "id": "s02",
+   "term": "Depollution",
+   "type": "Proceso",
+   "cat": "scrapping",
+   "en": "removal of all hazardous materials from a vehicle before dismantling",
+   "es": "Descontaminación — extracción de materiales peligrosos del VFU",
+   "ex": "Depollution includes draining all fluids, removing batteries and pyrotechnics.",
+   "ph": "/ˌdiːpəˈluːʃn/"
+  },
+  {
+   "id": "s03",
+   "term": "Certificate of Destruction",
+   "type": "Doc. Legal",
+   "cat": "scrapping",
+   "en": "official document confirming proper ELV end-of-life processing",
+   "es": "Certificado de Destrucción — documento oficial de baja del VFU",
+   "ex": "The CoD must be issued free of charge to the vehicle's last registered owner.",
+   "ph": "/səˈtɪfɪkət əv dɪˈstrʌkʃn/"
+  },
+  {
+   "id": "s04",
+   "term": "ASR (Automotive Shredder Residue)",
+   "type": "Residuo",
+   "cat": "scrapping",
+   "en": "non-metallic residue from vehicle shredding (fluff)",
+   "es": "Fluff — fracción no metálica residual del fragmentado del vehículo",
+   "ex": "ASR contains plastics, foam and glass requiring landfill or thermal treatment.",
+   "ph": "/ˌeɪ es ˈɑː/"
+  },
+  {
+   "id": "s05",
+   "term": "Catalytic converter",
+   "type": "Componente",
+   "cat": "scrapping",
+   "en": "emission control device with recoverable precious metals (Pt, Pd, Rh)",
+   "es": "Catalizador — contiene metales preciosos (Pt, Pd, Rh) recuperables",
+   "ex": "Catalytic converters are selectively dismantled before shredding.",
+   "ph": "/ˌkætəˈlɪtɪk kənˈvɜːtə/"
+  },
+  {
+   "id": "s06",
+   "term": "Refrigerant recovery",
+   "type": "Proceso",
+   "cat": "scrapping",
+   "en": "mandatory extraction of HFCs from vehicle AC before shredding",
+   "es": "Recuperación de refrigerantes — extracción obligatoria de HFCs del A/C",
+   "ex": "Refrigerant recovery must be performed by a certified technician only.",
+   "ph": "/rɪˈfrɪdʒərənt rɪˈkʌvəri/"
+  },
+  {
+   "id": "s07",
+   "term": "Pyrotechnic components",
+   "type": "Comp. Peligroso",
+   "cat": "scrapping",
+   "en": "airbags and seatbelt pretensioners requiring safe deactivation",
+   "es": "Componentes pirotécnicos — airbags y pretensores a neutralizar",
+   "ex": "Pyrotechnic components must be deactivated electrically or physically before shredding.",
+   "ph": "/ˌpaɪrəʊˈteknɪk kəmˈpəʊnənts/"
+  },
+  {
+   "id": "s08",
+   "term": "REACH Regulation",
+   "type": "Marco Legal",
+   "cat": "scrapping",
+   "en": "EU regulation controlling hazardous chemical substances in products",
+   "es": "Reglamento REACH — control de sustancias peligrosas en la UE",
+   "ex": "REACH restricts hazardous substances in vehicle components: Pb, Cd, Cr(VI), Hg.",
+   "ph": "/riːtʃ/"
+  },
+  {
+   "id": "s09",
+   "term": "Selective dismantling",
+   "type": "Proceso",
+   "cat": "scrapping",
+   "en": "manual removal of high-value or hazardous components before shredding",
+   "es": "Desmontaje selectivo — extracción manual de componentes de valor",
+   "ex": "Selective dismantling of electronics recovers rare earth materials.",
+   "ph": "/sɪˈlektɪv dɪsˈmæntlɪŋ/"
+  },
+  {
+   "id": "s10",
+   "term": "Hazardous waste",
+   "type": "Clasificación",
+   "cat": "scrapping",
+   "en": "waste requiring specialised management due to its dangerous properties",
+   "es": "Residuo peligroso — exige gestión especializada por sus propiedades",
+   "ex": "Used engine oil is classified as hazardous waste under EU Directive 2008/98/EC.",
+   "ph": "/ˈhæzədəs weɪst/"
+  },
+  {
+   "id": "s11",
+   "term": "Reuse / Recycling rate",
+   "type": "Indicador KPI",
+   "cat": "scrapping",
+   "en": "% of vehicle weight reused/recovered (EU target ≥95%, recycling ≥85%)",
+   "es": "Tasa de reutilización/reciclaje — objetivo europeo del 95%/85% en peso",
+   "ex": "EU ELV Directive requires 95% reuse/recovery and 85% reuse/recycling by weight.",
+   "ph": "/ˌriːˈjuːs/ · /riːˈsaɪklɪŋ reɪt/"
+  },
+  {
+   "id": "s12",
+   "term": "Ferrous scrap",
+   "type": "Material",
+   "cat": "scrapping",
+   "en": "iron-based metallic fraction recovered from vehicle shredding (~70% wt)",
+   "es": "Chatarra férrica — fracción metálica principal del VFU (~70% del peso)",
+   "ex": "Ferrous scrap is the primary economic output of ELV shredding operations.",
+   "ph": "/ˈferəs skræp/"
+  },
+  {
+   "id": "s13",
+   "term": "Non-ferrous metals",
+   "type": "Material",
+   "cat": "scrapping",
+   "en": "aluminium, copper, zinc recovered from ELV dismantling and shredding",
+   "es": "Metales no férricos — Al, Cu, Zn recuperados del desguace",
+   "ex": "Non-ferrous metals have high economic value and are fully recyclable.",
+   "ph": "/ˌnɒn ˈferəs ˈmetlz/"
+  },
+  {
+   "id": "c01",
+   "term": "Stakeholder",
+   "type": "Sustantivo",
+   "cat": "communication",
+   "en": "person or entity with an interest in a project or organisation",
+   "es": "Parte interesada — actor con interés en un proyecto u organización",
+   "ex": "Key stakeholders include local authorities, clients, and environmental regulators.",
+   "ph": "/ˈsteɪkhəʊldə/"
+  },
+  {
+   "id": "c02",
+   "term": "Procurement",
+   "type": "Sustantivo",
+   "cat": "communication",
+   "en": "process of acquiring goods or services through competitive tendering",
+   "es": "Contratación — proceso de obtención de bienes o servicios",
+   "ex": "The procurement process must comply with EU public tender rules.",
+   "ph": "/prəˈkjʊəmənt/"
+  },
+  {
+   "id": "c03",
+   "term": "Tender",
+   "type": "Sustantivo",
+   "cat": "communication",
+   "en": "formal offer to supply goods or services at a stated price",
+   "es": "Licitación — propuesta formal con precio para un contrato",
+   "ex": "We submitted a tender for the WWTP upgrade project.",
+   "ph": "/ˈtendə/"
+  },
+  {
+   "id": "c04",
+   "term": "KPI",
+   "type": "Acrónimo",
+   "cat": "communication",
+   "en": "Key Performance Indicator — measurable value demonstrating achievement",
+   "es": "Indicador Clave de Rendimiento — métrica de evaluación del desempeño",
+   "ex": "Treatment efficiency and energy per m³ are core KPIs for the plant.",
+   "ph": "/ˌkeɪ piː ˈaɪ/"
+  },
+  {
+   "id": "c05",
+   "term": "Due diligence",
+   "type": "Sustantivo",
+   "cat": "communication",
+   "en": "thorough investigation or audit carried out before a business decision",
+   "es": "Diligencia debida — auditoría exhaustiva previa a una decisión clave",
+   "ex": "Environmental due diligence was conducted before acquiring the site.",
+   "ph": "/ˌdjuː ˈdɪlɪdʒəns/"
+  },
+  {
+   "id": "c06",
+   "term": "Compliance",
+   "type": "Sustantivo",
+   "cat": "communication",
+   "en": "conformity with laws, regulations, or contractual requirements",
+   "es": "Cumplimiento normativo — conformidad con leyes y requisitos legales",
+   "ex": "Regulatory compliance with IED and WFD is non-negotiable for our plant.",
+   "ph": "/kəmˈplaɪəns/"
+  },
+  {
+   "id": "c07",
+   "term": "Scope of work",
+   "type": "Documento",
+   "cat": "communication",
+   "en": "formal description of all work to be performed under a contract",
+   "es": "Alcance del trabajo — descripción detallada del trabajo contratado",
+   "ex": "The scope of work clearly defined the contractor's obligations and deliverables.",
+   "ph": "/ˈskəʊp əv wɜːk/"
+  },
+  {
+   "id": "c08",
+   "term": "Benchmark",
+   "type": "Sustantivo",
+   "cat": "communication",
+   "en": "standard reference point used to measure and compare performance",
+   "es": "Referencia comparativa — valor estándar para evaluar el rendimiento",
+   "ex": "We benchmarked our energy consumption against EU BREF best practices.",
+   "ph": "/ˈbentʃmɑːk/"
+  },
+  {
+   "id": "c09",
+   "term": "Deliverable",
+   "type": "Gestión Proyectos",
+   "cat": "communication",
+   "en": "specific tangible output of a project, milestone, or contract",
+   "es": "Entregable — resultado tangible y verificable de un proyecto",
+   "ex": "The final deliverable was a detailed technical feasibility report.",
+   "ph": "/dɪˈlɪvərəbl/"
+  },
+  {
+   "id": "c10",
+   "term": "MoU (Memorandum of Understanding)",
+   "type": "Acuerdo",
+   "cat": "communication",
+   "en": "non-binding agreement outlining terms of cooperation between parties",
+   "es": "Memorando de Entendimiento — acuerdo marco no vinculante entre partes",
+   "ex": "An MoU was signed with the municipality for biogas utilisation from the WWTP.",
+   "ph": "/ˌem əʊ ˈjuː/"
+  },
+  {
+   "id": "d01",
+   "term": "Technical report",
+   "type": "Tipo Documento",
+   "cat": "documentation",
+   "en": "formal document presenting findings, analysis and recommendations",
+   "es": "Informe técnico — documento formal con análisis y conclusiones",
+   "ex": "A technical report was submitted to the environmental competent authority.",
+   "ph": "/ˈteknɪkl rɪˈpɔːt/"
+  },
+  {
+   "id": "d02",
+   "term": "Executive summary",
+   "type": "Sección",
+   "cat": "documentation",
+   "en": "concise overview of a longer document for senior decision-makers",
+   "es": "Resumen ejecutivo — síntesis del documento para la alta dirección",
+   "ex": "The executive summary highlighted key treatment performance results.",
+   "ph": "/ɪɡˌzekjətɪv ˈsʌməri/"
+  },
+  {
+   "id": "d03",
+   "term": "Appendix",
+   "type": "Sección",
+   "cat": "documentation",
+   "en": "supplementary material placed at the end of a technical document",
+   "es": "Anexo — material complementario al final del informe técnico",
+   "ex": "Raw analytical data and calibration certificates were included in the appendix.",
+   "ph": "/əˈpendɪks/"
+  },
+  {
+   "id": "d04",
+   "term": "P&ID",
+   "type": "Plano Técnico",
+   "cat": "documentation",
+   "en": "Piping & Instrumentation Diagram — shows all process equipment and instruments",
+   "es": "Diagrama de tuberías e instrumentación — plano de referencia del proceso",
+   "ex": "The P&ID showed all valves, sensors and control loops in the treatment plant.",
+   "ph": "/ˌpiː ənd ˌaɪ ˈdiː/"
+  },
+  {
+   "id": "d05",
+   "term": "Terms of Reference (ToR)",
+   "type": "Documento",
+   "cat": "documentation",
+   "en": "document defining objectives, scope and responsibilities of a project",
+   "es": "Términos de referencia — define objetivos, alcance y responsabilidades",
+   "ex": "The ToR was prepared for the environmental impact assessment (EIA).",
+   "ph": "/ˌtɜːmz əv ˈrefrəns/"
+  },
+  {
+   "id": "d06",
+   "term": "Issued for Construction (IFC)",
+   "type": "Estado Doc.",
+   "cat": "documentation",
+   "en": "final approved drawing or document ready for construction use",
+   "es": "Emitido para Construcción — estado final y aprobado de un documento",
+   "ex": "All drawings were stamped IFC before civil works commenced on site.",
+   "ph": "/ˌaɪ ef ˈsiː/"
+  },
+  {
+   "id": "d07",
+   "term": "Specification",
+   "type": "Documento",
+   "cat": "documentation",
+   "en": "detailed technical description of materials, methods and performance requirements",
+   "es": "Especificación técnica — descripción detallada de requisitos y materiales",
+   "ex": "The equipment specification defined all performance guarantees and warranties.",
+   "ph": "/ˌspesɪfɪˈkeɪʃn/"
+  },
+  {
+   "id": "d08",
+   "term": "Abstract",
+   "type": "Sección",
+   "cat": "documentation",
+   "en": "brief summary of a scientific paper or technical report (150–300 words)",
+   "es": "Resumen / Abstract — síntesis de un artículo o informe científico",
+   "ex": "The abstract summarised the main findings of the water quality modelling study.",
+   "ph": "/ˈæbstrækt/"
+  },
+  {
+   "id": "m01",
+   "term": "Agenda",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "structured list of items to be discussed during a meeting",
+   "es": "Orden del día — lista estructurada de temas de la reunión",
+   "ex": "Please review the agenda before tomorrow's technical coordination meeting.",
+   "ph": "/əˈdʒendə/"
+  },
+  {
+   "id": "m02",
+   "term": "Minutes",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "official written record of a meeting's proceedings and decisions",
+   "es": "Acta de reunión — registro oficial de lo tratado y acordado",
+   "ex": "The minutes were circulated to all attendees within 24 hours.",
+   "ph": "/ˈmɪnɪts/"
+  },
+  {
+   "id": "m03",
+   "term": "Action items",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "specific tasks assigned to individuals during a meeting with deadlines",
+   "es": "Compromisos / tareas — acciones asignadas con responsable y plazo",
+   "ex": "The action items included submitting the ELV compliance report by Friday.",
+   "ph": "/ˈækʃn ˌaɪtəmz/"
+  },
+  {
+   "id": "m04",
+   "term": "Follow-up",
+   "type": "Sust./Verbo",
+   "cat": "meetings",
+   "en": "subsequent action or communication after an initial contact or meeting",
+   "es": "Seguimiento — acción posterior a una reunión o contacto inicial",
+   "ex": "I will follow up on the permit renewal application next week.",
+   "ph": "/ˈfɒləʊ ʌp/"
+  },
+  {
+   "id": "m05",
+   "term": "AOB (Any Other Business)",
+   "type": "Término Reunión",
+   "cat": "meetings",
+   "en": "final agenda item for topics not covered elsewhere in the meeting",
+   "es": "Ruegos y preguntas — último punto del orden del día",
+   "ex": "Under AOB, the team raised the issue of the delayed equipment delivery.",
+   "ph": "/ˌeɪ əʊ ˈbiː/"
+  },
+  {
+   "id": "m06",
+   "term": "Quorum",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "minimum number of people required for a meeting to be officially valid",
+   "es": "Quórum — número mínimo de asistentes para validez de la reunión",
+   "ex": "The meeting could not proceed as there was no quorum present.",
+   "ph": "/ˈkwɔːrəm/"
+  },
+  {
+   "id": "m07",
+   "term": "Chairperson",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "person who leads, moderates and facilitates a meeting",
+   "es": "Presidente / Moderador — quien dirige y modera la reunión",
+   "ex": "As chairperson, she kept the technical discussion on track and on time.",
+   "ph": "/ˈtʃeəpɜːsn/"
+  },
+  {
+   "id": "m08",
+   "term": "Consensus",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "general agreement reached among all members of a group",
+   "es": "Consenso — acuerdo general entre todos los miembros del grupo",
+   "ex": "The team reached consensus on the wastewater treatment technology selection.",
+   "ph": "/kənˈsensəs/"
+  },
+  {
+   "id": "m09",
+   "term": "Briefing",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "short informational meeting to update a team or group",
+   "es": "Sesión informativa breve — reunión corta de puesta al día",
+   "ex": "A daily site briefing was held each morning to track construction progress.",
+   "ph": "/ˈbriːfɪŋ/"
+  },
+  {
+   "id": "m10",
+   "term": "Conference call",
+   "type": "Sustantivo",
+   "cat": "meetings",
+   "en": "telephone or video meeting connecting participants in different locations",
+   "es": "Conferencia / Videollamada — reunión a distancia con múltiples sedes",
+   "ex": "We held a conference call with the Barcelona supplier to review the tender.",
+   "ph": "/ˈkɒnfərəns kɔːl/"
+  }
+ ],
+ "changelog": [
+  {
+   "version": "2026.11.05",
+   "date": "2026-11-05",
+   "notes": "Primera versión de la app: 263 términos importados de TechVocab Pro, con fonética IPA en todos."
+  }
+ ]
+}
