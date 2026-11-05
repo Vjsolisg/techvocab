@@ -16,6 +16,6 @@
 El progreso (dominadas, aciertos/fallos) se guarda en el dispositivo y se conserva entre versiones, porque va ligado al `id` de cada término. **No reutilizar ni cambiar ids existentes.**
 
 ## Instalar en iPhone / iPad (versión PWA)
-1. Subir el contenido de `dist/pwa/` a un hosting HTTPS.
+1. Se publica solo: cada cambio en `main` se valida, se compila y se sube a la rama `gh-pages` (GitHub Pages → Deploy from a branch → gh-pages / root).
 2. Abrir la URL en **Safari** → botón Compartir → **Añadir a pantalla de inicio**.
 3. Se abre a pantalla completa y funciona sin conexión.
