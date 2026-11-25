@@ -1,7 +1,7 @@
 {
- "version": "2026.11.25",
+ "version": "2026.11.25.2",
  "updated": "2026-11-25",
- "notes": "+20 términos: gramática (5), documentación técnica (4), VFU/residuos (5) y aguas/energía (6). Corregidos 2 ejemplos sobre el nuevo Reglamento (UE) 2026/1738 de VFU.",
+ "notes": "Fusión: 18 términos de tus chats del 20-25/11 + 20 términos de la tarea semanal (gramática, documentación, VFU, aguas/energía) + 2 ejemplos corregidos (Reglamento UE 2026/1738).",
  "CATS": {
   "general": {
    "label": "General English",
@@ -673,6 +673,7 @@
    "en": "to understand or solve something after careful reflection",
    "es": "Entender o resolver algo tras reflexión o análisis técnico",
    "ex": "The team figured out the root cause of the membrane fouling issue.",
+   "note": "Separable: 'figure it out' / 'figure out the problem'; con pronombre va en medio. Find out = obtener información de fuera; figure out = deducirlo uno mismo. Chat 18/11/2026.",
    "ph": "/ˈfɪɡə aʊt/"
   },
   {
@@ -2263,6 +2264,42 @@
    "ph": "/ˌwel ˈɒf/"
   },
   {
+   "id": "voc11",
+   "term": "Burst",
+   "type": "Verbo irregular / Sustantivo",
+   "cat": "vocabulary",
+   "en": "To break open suddenly and violently, usually from internal pressure; also a sudden short outbreak (a burst of activity)",
+   "es": "Reventar, estallar; reventón (de una tubería); ráfaga o arrebato",
+   "ex": "A burst pipe flooded the pumping station.",
+   "confusionWith": "BRUSH (cepillo) / BUSH (arbusto, casquillo)",
+   "note": "Irregular: burst – burst – burst. Técnico: burst main (rotura de conducción), burst disc (disco de rotura), burst pressure (presión de rotura). 'Bursh' no existe. Chat 18/11/2026.",
+   "ph": "/bɜːst/"
+  },
+  {
+   "id": "voc12",
+   "term": "Brush",
+   "type": "Sustantivo / Verbo",
+   "cat": "vocabulary",
+   "en": "A tool with bristles for cleaning, painting or smoothing; to clean or touch lightly with it",
+   "es": "Cepillo, brocha; cepillar, rozar",
+   "ex": "Clean the electrode with a soft brush.",
+   "confusionWith": "BURST (reventar) / BUSH (arbusto, casquillo)",
+   "note": "Regular: brushed. Técnico: wire brush (cepillo de alambre), carbon brush (escobilla de motor). Pronunciación /brʌʃ/ con 'a' corta. Chat 18/11/2026.",
+   "ph": "/brʌʃ/"
+  },
+  {
+   "id": "voc13",
+   "term": "Bush / Bushing",
+   "type": "Sustantivo",
+   "cat": "vocabulary",
+   "en": "A low woody plant with many stems; in mechanics, a metal or rubber sleeve that reduces friction or vibration",
+   "es": "Arbusto, mata; en mecánica: casquillo, buje, silentblock",
+   "ex": "The worn suspension bush caused a knocking noise on the ELV.",
+   "confusionWith": "BRUSH (cepillo) / BURST (reventar)",
+   "note": "Falso amigo técnico: en mecánica 'bush' no es arbusto. Colocaciones: suspension bush, shaft bushing, worn bush. /bʊʃ/ con 'u' corta y cerrada. Chat 18/11/2026.",
+   "ph": "/bʊʃ/ · /ˈbʊʃɪŋ/"
+  },
+  {
    "id": "ev01",
    "term": "stalls",
    "type": "Sustantivo / Verbo",
@@ -2481,6 +2518,237 @@
    "ex": "I had a quiet weekend. I just stayed at home and relaxed.",
    "note": "Frase de la clase del 04/11/2026. Se puede ampliar con: 'I just stayed at home and relaxed'.",
    "ph": "/ə ˈkwaɪət ˌwiːkˈend/"
+  },
+  {
+   "id": "ev21",
+   "term": "caveat",
+   "type": "Sustantivo",
+   "cat": "everyday",
+   "en": "A warning or condition that must be taken into account before accepting a statement or agreement",
+   "es": "Salvedad, advertencia o condición que matiza una afirmación o un acuerdo",
+   "ex": "The tender is acceptable, with one caveat: the supplier must guarantee spare parts for ten years.",
+   "note": "Muy común en informes y contratos: 'with the caveat that…', 'one important caveat is…'. Plural: caveats.",
+   "ph": "/ˈkæviæt/ · /ˈkeɪviæt/"
+  },
+  {
+   "id": "ev22",
+   "term": "can't stand it · won't tolerate it",
+   "type": "Expresión",
+   "cat": "everyday",
+   "en": "can't stand: to dislike something so much that you cannot bear it | won't tolerate: to refuse to accept unacceptable behaviour",
+   "es": "No soportarlo (rechazo personal) | No pienso tolerarlo (postura firme)",
+   "ex": "I can't stand the noise, and I won't tolerate unsafe practices on site.",
+   "note": "'I don't tolerate it' es correcto pero frío; mejor 'I won't / can't tolerate it'. Tras 'stand' va sustantivo o -ing: I can't stand waiting. Apóstrofo ' y no ´. Chat 18/11/2026.",
+   "ph": "/aɪ kɑːnt stænd ɪt/ · /aɪ wəʊnt ˈtɒləreɪt ɪt/"
+  },
+  {
+   "id": "ev23",
+   "term": "can't get a word in edgeways",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "to be unable to speak in a conversation because someone else talks all the time",
+   "es": "No poder meter baza; no dejar hablar",
+   "ex": "Every time I talk to him, I can't get a word in edgeways.",
+   "note": "Variante americana: edgewise. Se usa casi siempre en negativa (can't / couldn't). Chat 18/11/2026.",
+   "ph": "/aɪ kɑːnt ɡet ə ˈwɜːd ɪn ˈedʒweɪz/"
+  },
+  {
+   "id": "ev24",
+   "term": "sideways",
+   "type": "Adverbio / Adjetivo",
+   "cat": "everyday",
+   "en": "toward or from the side; (informal) going wrong",
+   "es": "De lado, lateralmente; (coloq.) torcerse, salir mal",
+   "ex": "The car slid sideways on the ice. / The project went sideways.",
+   "note": "Sufijo -ways (-wise en EE. UU.): edgeways, lengthways, crossways. Técnico: sideways load (carga lateral), sideways displacement. En mercados: 'moved sideways' = sin tendencia. Chat 18/11/2026.",
+   "ph": "/ˈsaɪdweɪz/"
+  },
+  {
+   "id": "ev25",
+   "term": "on a knife edge",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "in a critical situation where the result could go either way",
+   "es": "Al filo de la navaja; en la cuerda floja; muy ajustado",
+   "ex": "The plant is operating on a knife edge: one more pump failure and we exceed the discharge limit.",
+   "note": "Como adjetivo lleva guion: a knife-edge vote. Sinónimo más sencillo: touch and go. La k de knife no se pronuncia. Chat 18/11/2026.",
+   "ph": "/ɒn ə ˈnaɪf edʒ/"
+  },
+  {
+   "id": "ev26",
+   "term": "you could cut the tension with a knife",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "the atmosphere is so tense that it feels almost physical",
+   "es": "Se podía cortar el ambiente con un cuchillo",
+   "ex": "After the argument, you could cut the tension with a knife.",
+   "note": "Forma habitual con 'could' (con 'can' es posible pero menos natural). También con 'atmosphere'. Chat 18/11/2026.",
+   "ph": "/juː kʊd kʌt ðə ˈtenʃn wɪð ə naɪf/"
+  },
+  {
+   "id": "ev27",
+   "term": "cheat / cheating",
+   "type": "Verbo regular",
+   "cat": "everyday",
+   "en": "to act dishonestly to gain an advantage; (cheat on someone) to be unfaithful",
+   "es": "Hacer trampa; engañar; ser infiel (cheat on)",
+   "ex": "He was caught cheating in the exam.",
+   "note": "cheat at (juego), cheat on (pareja), cheat someone out of (estafar). /tʃiːt/ con 'i' larga, no /tʃɪt/. Técnico: emissions cheating (defeat device). Chat 18/11/2026.",
+   "ph": "/tʃiːt/ · /ˈtʃiːtɪŋ/"
+  },
+  {
+   "id": "ev28",
+   "term": "to con · conned · conning",
+   "type": "Verbo informal",
+   "cat": "everyday",
+   "en": "to trick someone, usually by first gaining their trust, in order to get money or an advantage",
+   "es": "Timar, estafar, engañar para sacar algo",
+   "ex": "A fake supplier conned us out of 2,000 euros.",
+   "note": "Estructuras: con someone / con someone out of something / con someone into doing. Familia: a con (timo), con man, con artist /ˌkɒn ˈɑːtɪst/, ex-con. Viene de 'confidence'. Registro coloquial; en informe formal: defrauded, misled. Chat 18/11/2026.",
+   "ph": "/kɒn/ · /ˈkɒnɪŋ/ · /ˈkɒn ˌɑːtɪst/"
+  },
+  {
+   "id": "ev29",
+   "term": "take advantage of",
+   "type": "Verb Phrase",
+   "cat": "everyday",
+   "en": "(1) to make good use of an opportunity | (2) to treat someone unfairly for your own benefit",
+   "es": "(1) Aprovechar una oportunidad | (2) Aprovecharse de alguien",
+   "ex": "Take advantage of the low demand to do the maintenance.",
+   "note": "Con cosa o situación es neutro o positivo; con persona es negativo. Estructura: take advantage of + sustantivo o -ing. Chat 18/11/2026.",
+   "ph": "/teɪk ədˈvɑːntɪdʒ əv/"
+  },
+  {
+   "id": "ev30",
+   "term": "make the most of",
+   "type": "Verb Phrase",
+   "cat": "everyday",
+   "en": "to use an opportunity or resource as fully as possible",
+   "es": "Sacar el máximo partido a",
+   "ex": "Let's make the most of the shutdown to inspect the tanks.",
+   "note": "Siempre positivo y más enfático que 'take advantage of'. Lleva 'the' antes de 'most'. Chat 18/11/2026.",
+   "ph": "/meɪk ðə ˈməʊst əv/"
+  },
+  {
+   "id": "ev31",
+   "term": "wing it",
+   "type": "Idiom informal",
+   "cat": "everyday",
+   "en": "to do something without preparation, improvising as you go",
+   "es": "Improvisar, sin preparación",
+   "ex": "I can't just wing it; I need to prepare the audit.",
+   "note": "Origen teatral: actuar 'desde las alas' (wings). Con 'just' suena más natural: I can't just wing it. Chat 18/11/2026.",
+   "ph": "/wɪŋ ɪt/"
+  },
+  {
+   "id": "ev32",
+   "term": "improvise",
+   "type": "Verbo",
+   "cat": "everyday",
+   "en": "to create or do something on the spot, without preparation, using what is available",
+   "es": "Improvisar",
+   "ex": "The pump failed, so we had to improvise a temporary bypass.",
+   "note": "Neutro y válido en informes. Derivados: improvisation, improvised repair. Se escribe -ise también en inglés americano. Parecido: makeshift (de fortuna). En entorno regulado una solución improvisada puede ser un riesgo. Chat 18/11/2026.",
+   "ph": "/ˈɪmprəvaɪz/"
+  },
+  {
+   "id": "ev33",
+   "term": "muddle through",
+   "type": "Phrasal Verb",
+   "cat": "everyday",
+   "en": "to manage to get through a difficult situation without a clear method or proper resources",
+   "es": "Arreglárselas como se pueda; ir tirando; salir del paso",
+   "ex": "We have no spare parts, so we'll have to muddle through until the delivery arrives.",
+   "note": "Intransitivo, sin objeto directo. Más desordenado que 'improvise'. /ˈmʌdl/ con la 'u' de cup. Chat 18/11/2026.",
+   "ph": "/ˈmʌdl θruː/"
+  },
+  {
+   "id": "ev34",
+   "term": "make it up as you go along",
+   "type": "Idiom",
+   "cat": "everyday",
+   "en": "to improvise a plan or action step by step while doing it",
+   "es": "Improvisar sobre la marcha; ir inventándolo según se hace",
+   "ex": "There was no procedure, so we made it up as we went along.",
+   "note": "Variante corta: as you go. Cambia el pronombre y el tiempo (as we went along). Cuidado: sugiere que no hay método ni procedimiento. Chat 18/11/2026.",
+   "ph": "/meɪk ɪt ʌp əz juː ɡəʊ əˈlɒŋ/"
+  },
+  {
+   "id": "ev35",
+   "term": "feel free to ask questions as I go along",
+   "type": "Fórmula de presentación",
+   "cat": "everyday",
+   "en": "polite formula inviting people to ask questions at any moment during a talk",
+   "es": "No dudes en preguntar mientras avanzo",
+   "ex": "Feel free to ask any questions as I go along.",
+   "note": "feel /fiːl/ no es fell /fel/ (pasado de fall). 'I' siempre en mayúscula. Aquí 'as I go along' = durante el proceso, sin matiz de improvisar. Variante: Feel free to interrupt me. Chat 18/11/2026.",
+   "ph": "/fiːl friː tuː ɑːsk/"
+  },
+  {
+   "id": "ev36",
+   "term": "skip",
+   "type": "Verbo / Sustantivo",
+   "cat": "everyday",
+   "en": "(1) to omit or miss something | (2) to move with light hops | (3) UK noun: a large open container for waste",
+   "es": "Saltarse, omitir; faltar; dar saltitos | (UK) contenedor de obra",
+   "ex": "Put the scrap metal in the skip. / Never skip a step in the SOP.",
+   "note": "Regular con doble p: skipped, skipping. En EE. UU. el contenedor es 'dumpster'. Expresiones: skip it, skip town, skip over, skip a beat. Chat 18/11/2026.",
+   "ph": "/skɪp/"
+  },
+  {
+   "id": "ev37",
+   "term": "wheelbarrow",
+   "type": "Sustantivo",
+   "cat": "everyday",
+   "en": "a small hand-propelled cart with one wheel and two handles for carrying loads",
+   "es": "Carretilla de mano",
+   "ex": "Use the wheelbarrow to carry the sand to the filter.",
+   "note": "wheel + barrow; la 'h' no suena. 'Wail' /weɪl/ es otra palabra (gemir). Falso amigo: carretilla elevadora = forklift; también sack truck (carretilla de dos ruedas) y pallet truck (transpaleta). Chat 18/11/2026.",
+   "ph": "/ˈwiːlˌbærəʊ/"
+  },
+  {
+   "id": "ev38",
+   "term": "plank · board · beam",
+   "type": "Sustantivos (madera)",
+   "cat": "everyday",
+   "en": "plank: a long, flat, thick piece of wood | board: a flat piece of wood, usually thinner | beam: a long, strong structural piece",
+   "es": "Tablón | tabla | viga",
+   "ex": "Lay a plank across the trench.",
+   "note": "Se escribe wood, no 'wook'. wood /wʊd/ se pronuncia igual que would. Madera de construcción: timber (UK) / lumber (US). Chat 18/11/2026.",
+   "ph": "/plæŋk/ · /bɔːd/ · /biːm/"
+  },
+  {
+   "id": "ev39",
+   "term": "gobsmacked",
+   "type": "Adjetivo informal (UK)",
+   "cat": "everyday",
+   "en": "utterly astonished; so surprised that you cannot speak",
+   "es": "Atónito, alucinado",
+   "ex": "I was gobsmacked when I saw the bill.",
+   "note": "gob (boca) + smacked (golpeado). Sinónimos: flabbergasted, speechless. Se usa con be o feel + by / at / that. Chat 18/11/2026.",
+   "ph": "/ˈɡɒbsmækt/"
+  },
+  {
+   "id": "ev40",
+   "term": "gob",
+   "type": "Sustantivo / Verbo (argot UK)",
+   "cat": "everyday",
+   "en": "(slang) mouth; a lump of a soft substance; (verb) to spit",
+   "es": "Boca (vulgar); pegote, gargajo; escupir",
+   "ex": "Put a gob of grease on the shaft before assembly.",
+   "note": "'Shut your gob' es vulgar; en neutro: mouth. Derivados: gobby (bocazas), gobstopper. Chat 18/11/2026.",
+   "ph": "/ɡɒb/"
+  },
+  {
+   "id": "ev41",
+   "term": "shovel · spade · pickaxe · rake · bucket",
+   "type": "Sustantivos (herramientas)",
+   "cat": "everyday",
+   "en": "common hand tools for digging and site work",
+   "es": "Pala | pala de punta | pico | rastrillo | cubo",
+   "ex": "Pass me the shovel and the bucket.",
+   "note": "Herramientas del bloque de la wheelbarrow. Chat 18/11/2026.",
+   "ph": "/ˈʃʌvl/ · /speɪd/ · /ˈpɪkæks/ · /reɪk/ · /ˈbʌkɪt/"
   },
   {
    "id": "w01",
@@ -3093,6 +3361,204 @@
    "ph": "/ˈkɒnfərəns kɔːl/"
   },
   {
+   "id": "ev42",
+   "term": "due to the fact that",
+   "type": "Expresión",
+   "cat": "everyday",
+   "en": "a wordy way of saying 'because'; prefer 'because', 'since' or 'due to' + noun",
+   "es": "Debido a que (forma larga; mejor 'because' o 'due to' + sustantivo)",
+   "ex": "The pump tripped because the suction level was low.",
+   "note": "Ortografía: 'due', no 'do'. 'The pump trip was due to low suction level' también es correcto. Chat 25/11/2026.",
+   "ph": "/ðə ˈdjuː tə ðə fækt ðæt/"
+  },
+  {
+   "id": "ev43",
+   "term": "remarkable",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "worth noticing, usually in a positive way",
+   "es": "Notable, extraordinario",
+   "ex": "The membrane showed a remarkable recovery after cleaning.",
+   "note": "Escala de reacción: impressive → remarkable → surprised → taken aback → shocking. Chat 25/11/2026.",
+   "ph": "/rɪˈmɑːkəbl/"
+  },
+  {
+   "id": "ev44",
+   "term": "shocking",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "very surprising or upsetting; extremely bad",
+   "es": "Chocante, escandaloso",
+   "ex": "The condition of the pump was shocking.",
+   "note": "Ortografía: shock + ing = shocking (con 'c'). Shocked = cómo te sientes; shocking = lo que lo causa. Técnico: shock chlorination (cloración de choque). Chat 25/11/2026.",
+   "ph": "/ˈʃɒkɪŋ/"
+  },
+  {
+   "id": "ev45",
+   "term": "impressive",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "earning admiration because of quality, size or skill",
+   "es": "Impresionante",
+   "ex": "The new WTP has an impressive removal rate.",
+   "note": "Ortografía: doble 's' (impress → impressive). Impressed = cómo te sientes. /ɪmˈpresɪv/ con acento en -PRES-. Chat 25/11/2026.",
+   "ph": "/ɪmˈpresɪv/"
+  },
+  {
+   "id": "ev46",
+   "term": "surprised / surprising",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "surprised: feeling something unexpected | surprising: causing that feeling",
+   "es": "Sorprendido / sorprendente",
+   "ex": "I was surprised by the results; the results were surprising.",
+   "note": "Participio en -ed = cómo te sientes; en -ing = lo que lo causa. Chat 25/11/2026.",
+   "ph": "/səˈpraɪzd/ · /səˈpraɪzɪŋ/"
+  },
+  {
+   "id": "ev47",
+   "term": "taken aback",
+   "type": "Expresión (pasiva)",
+   "cat": "everyday",
+   "en": "so surprised that you cannot react at first",
+   "es": "Quedarse atónito, descolocado",
+   "ex": "I was taken aback by the price of the new membrane.",
+   "note": "Se usa casi siempre en pasiva: be taken aback. Más fuerte que 'surprised'. Chat 25/11/2026.",
+   "ph": "/ˌteɪkən əˈbæk/"
+  },
+  {
+   "id": "ev48",
+   "term": "stingy",
+   "type": "Adjetivo informal",
+   "cat": "everyday",
+   "en": "unwilling to spend money, even when you can afford it",
+   "es": "Tacaño, rácano",
+   "ex": "The client was stingy with the maintenance budget.",
+   "note": "/ˈstɪndʒi/ con 'g' suave, no 'sting'. Distinto de 'poor' (no tener dinero). Chat 25/11/2026.",
+   "ph": "/ˈstɪndʒi/"
+  },
+  {
+   "id": "ev49",
+   "term": "poor",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "(1) having little money | (2) of low quality",
+   "es": "Pobre; deficiente, de mala calidad",
+   "ex": "The poor results were due to a faulty sensor.",
+   "note": "Colectivo: the poor. Con cosas significa 'de baja calidad': poor results, poor quality. Chat 25/11/2026.",
+   "ph": "/pɔː/ · /pʊə/"
+  },
+  {
+   "id": "ev50",
+   "term": "housekeeping",
+   "type": "Sustantivo incontable",
+   "cat": "everyday",
+   "en": "keeping a place clean and orderly",
+   "es": "Orden y limpieza",
+   "ex": "Good housekeeping reduces the risk of accidents on site.",
+   "note": "Ortografía: house + keeping (no 'hosekeeping'). Muy usado en seguridad industrial. Incontable: sin plural ni 'a'. Chat 25/11/2026.",
+   "ph": "/ˈhaʊskiːpɪŋ/"
+  },
+  {
+   "id": "ev51",
+   "term": "mattress",
+   "type": "Sustantivo",
+   "cat": "everyday",
+   "en": "the soft pad you sleep on",
+   "es": "Colchón",
+   "ex": "The hotel mattress was very comfortable.",
+   "note": "Doble 't' y doble 's'. /ˈmætrɪs/. Chat 25/11/2026.",
+   "ph": "/ˈmætrɪs/"
+  },
+  {
+   "id": "ev52",
+   "term": "heavenly",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "wonderful or delicious, as if from heaven",
+   "es": "Celestial, divino",
+   "ex": "The coffee at the hotel was heavenly.",
+   "note": "Es adjetivo, no adverbio. /ˈhevənli/. Chat 25/11/2026.",
+   "ph": "/ˈhevənli/"
+  },
+  {
+   "id": "ev53",
+   "term": "pure bliss",
+   "type": "Colocación",
+   "cat": "everyday",
+   "en": "perfect happiness and peace",
+   "es": "Pura felicidad",
+   "ex": "After the audit, a quiet weekend was pure bliss.",
+   "note": "Ortografía: bliss, con doble 's'. Incontable. 'i' corta. Chat 25/11/2026.",
+   "ph": "/ˌpjʊə ˈblɪs/"
+  },
+  {
+   "id": "ev54",
+   "term": "strange",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "unusual or unexpected, hard to explain",
+   "es": "Extraño, raro",
+   "ex": "There was a strange noise coming from the centrifuge.",
+   "note": "Ortografía: strange, sin 'ex' (no 'extrange'). Falso amigo: strange ≠ extranjero (foreign). Chat 25/11/2026.",
+   "ph": "/streɪndʒ/"
+  },
+  {
+   "id": "ev55",
+   "term": "nerd",
+   "type": "Sustantivo informal",
+   "cat": "everyday",
+   "en": "someone passionate about technical or academic subjects",
+   "es": "Friki, cerebrito",
+   "ex": "He is a bit of a nerd about chlorine kinetics.",
+   "note": "Parecido a 'geek', que suele sugerir una afición (tecnología, juegos). Pronunciación /nɜːd/. Chat 25/11/2026.",
+   "ph": "/nɜːd/"
+  },
+  {
+   "id": "ev56",
+   "term": "scammer · scam",
+   "type": "Sustantivo / Verbo",
+   "cat": "everyday",
+   "en": "a person who tricks others to get money or data; the trick itself",
+   "es": "Estafador; estafa",
+   "ex": "Be careful: this email looks like a scam.",
+   "note": "To scam someone out of 500 euros = estafarle 500 euros. Formal: fraudster. Relacionado: con artist, phishing, pig butchering. Chat 25/11/2026.",
+   "ph": "/ˈskæmə/ · /skæm/"
+  },
+  {
+   "id": "ev57",
+   "term": "Christmas market",
+   "type": "Colocación",
+   "cat": "everyday",
+   "en": "an outdoor holiday market with craft, food and drink stalls",
+   "es": "Mercadillo de Navidad",
+   "ex": "We went to the Christmas market and had mulled wine.",
+   "note": "Ortografía: la 't' no se pronuncia: /ˈkrɪsməs/. Vocabulario: stall, mulled wine, roasted chestnuts, ornaments, fairy lights. Chat 20/11/2026.",
+   "ph": "/ˈkrɪsməs ˈmɑːkɪt/"
+  },
+  {
+   "id": "ev58",
+   "term": "in depth / in-depth",
+   "type": "Adverbio / Adjetivo",
+   "cat": "everyday",
+   "en": "thoroughly (after a verb); thorough (before a noun)",
+   "es": "En profundidad / exhaustivo",
+   "ex": "We reviewed the OPEX report in depth. It was an in-depth review.",
+   "note": "'In depth' sin guion detrás del verbo; 'in-depth' con guion antes del sustantivo. No se dice 'on depth' (calco de 'en profundidad'). Chat 20/11/2026.",
+   "ph": "/ɪn ˈdepθ/"
+  },
+  {
+   "id": "ev59",
+   "term": "comfortably off",
+   "type": "Adjetivo",
+   "cat": "everyday",
+   "en": "having enough money to live well without being rich",
+   "es": "Con una situación económica holgada",
+   "ex": "They are not rich, but they are comfortably off.",
+   "note": "Escala: get by < comfortably off / well off < rich < wealthy. Alternativas: financially comfortable, well-to-do, do well for yourself. Chat 22/11/2026.",
+   "ph": "/ˈkʌmftəbli ɒf/"
+  },
+  {
    "id": "gr04",
    "term": "SINCE vs FOR",
    "type": "Grammar Rule",
@@ -3304,9 +3770,19 @@
  ],
  "changelog": [
   {
+   "version": "2026.11.25.2",
+   "date": "2026-11-25",
+   "notes": "+20 términos de la tarea semanal: gramática (since/for, present perfect, incontables, affect/effect, pasiva), documentación (method statement, as-built, O&M manual, datasheet), VFU (shredder, hulk, batería de tracción, piezas reutilizadas, RAP/EPR) y aguas/energía (deshidratación de fangos, digestión anaerobia, CHP, tratamiento cuaternario, neutralidad energética, cloro residual). Corregidos los ejemplos de «kick in» (pv_in05) y «ELV» (s01): el Reglamento (UE) 2026/1738 deroga la Directiva 2000/53/CE y se aplica desde septiembre de 2028. Total 325."
+  },
+  {
    "version": "2026.11.25",
    "date": "2026-11-25",
-   "notes": "+20 términos: gramática (since/for, present perfect, incontables, affect/effect, pasiva), documentación (method statement, as-built, O&M manual, datasheet), VFU (shredder, hulk, batería de tracción, piezas reutilizadas, RAP/EPR con Reglamento (UE) 2026/1738) y aguas/energía (deshidratación de fangos, digestión anaerobia, CHP, tratamiento cuaternario y neutralidad energética según Directiva (UE) 2024/3019, cloro residual). Correcciones: los ejemplos de «kick in» (pv_in05) y «ELV» (s01) se actualizan al Reglamento (UE) 2026/1738, que deroga la Directiva 2000/53/CE y se aplica desde septiembre de 2028."
+   "notes": "+18 términos (reacciones: remarkable, shocking, impressive, taken aback; stingy, nerd, scammer, Christmas market, in depth, comfortably off…). Total 305, con fonética IPA en todos."
+  },
+  {
+   "version": "2026.11.19",
+   "date": "2026-11-19",
+   "notes": "+24 términos (burst/brush/bush, expresiones de improvisar, knife edge, con, gobsmacked, wheelbarrow, caveat…) y nota ampliada en \"figure out\". Total 287, con fonética IPA en todos."
   },
   {
    "version": "2026.11.05",
