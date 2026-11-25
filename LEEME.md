@@ -19,3 +19,15 @@ El progreso (dominadas, aciertos/fallos) se guarda en el dispositivo y se conser
 1. Se publica solo: cada cambio en `main` se valida, se compila y se sube a la rama `gh-pages` (GitHub Pages → Deploy from a branch → gh-pages / root).
 2. Abrir la URL en **Safari** → botón Compartir → **Añadir a pantalla de inicio**.
 3. Se abre a pantalla completa y funciona sin conexión.
+
+## Sincronización con el proyecto English Teacher
+El proyecto English Teacher es la **fuente principal**: escribe el vocabulario en el artefacto
+https://claude.ai/artifact/WKftAcbadRJXpCU734Zjn3 (archivo `vocab.json` + datos embebidos en la página).
+
+Cada vez que el artefacto se republica, la sesión de Claude que mantiene este repo:
+1. Lee el `vocab.json` del artefacto.
+2. `python3 -I tools/sync.py <vocab_del_artefacto.json>` → fusiona (el artefacto manda; no se borra ningún id; si hace falta, sube la versión).
+3. `node tools/validate.js && node tools/build.js`, commit y push a `main` → la Action publica en GitHub Pages.
+4. Si `republish_artifact` es `true`, republica el artefacto con el `vocab.json` fusionado para que el proyecto vea lo mismo.
+
+Además hay una comprobación diaria de respaldo por si algún aviso no llegara.
