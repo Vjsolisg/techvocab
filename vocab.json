@@ -1,7 +1,7 @@
 {
- "version": "2026.11.05",
- "updated": "2026-11-05",
- "notes": "Versión inicial importada desde TechVocabPro.jsx",
+ "version": "2026.11.25",
+ "updated": "2026-11-25",
+ "notes": "+20 términos: gramática (5), documentación técnica (4), VFU/residuos (5) y aguas/energía (6). Corregidos 2 ejemplos sobre el nuevo Reglamento (UE) 2026/1738 de VFU.",
  "CATS": {
   "general": {
    "label": "General English",
@@ -926,7 +926,7 @@
    "prep": "IN",
    "en": "to begin to have an effect or come into force",
    "es": "Entrar en vigor; comenzar a surtir efecto",
-   "ex": "The new EU ELV directive requirements will kick in from January 2027.",
+   "ex": "The main obligations of the new EU ELV Regulation (EU) 2026/1738 will kick in from September 2028.",
    "ph": "/kɪk ɪn/"
   },
   {
@@ -2689,7 +2689,7 @@
    "cat": "scrapping",
    "en": "vehicle at the end of its operational life requiring managed disposal",
    "es": "VFU — Vehículo al Final de su Vida Útil (Dir. 2000/53/CE)",
-   "ex": "Directive 2000/53/EC governs ELV management across all EU member states.",
+   "ex": "Directive 2000/53/EC still governs ELV management until Regulation (EU) 2026/1738 starts to apply in 2028.",
    "ph": "/ˌiː el ˈviː/"
   },
   {
@@ -3091,9 +3091,223 @@
    "es": "Conferencia / Videollamada — reunión a distancia con múltiples sedes",
    "ex": "We held a conference call with the Barcelona supplier to review the tender.",
    "ph": "/ˈkɒnfərəns kɔːl/"
+  },
+  {
+   "id": "gr04",
+   "term": "SINCE vs FOR",
+   "type": "Grammar Rule",
+   "cat": "grammar",
+   "en": "Use 'since' with a point in time and 'for' with a duration, usually with the present perfect",
+   "es": "'Since' con un punto de inicio en el tiempo; 'for' con una duración. Normalmente con present perfect",
+   "ex": "The digester has been running since March / for eight months without a major stoppage.",
+   "rule": "✓ since + 2019 / Monday / the upgrade | ✓ for + three years / two weeks | ✗ NOT 'since three years'",
+   "confusionWith": "AGO (past simple: 'three years ago')",
+   "ph": "/sɪns/ · /fɔː/"
+  },
+  {
+   "id": "gr05",
+   "term": "Present perfect vs Past simple",
+   "type": "Grammar Rule",
+   "cat": "grammar",
+   "en": "Present perfect links a past action to now (no finished time stated); past simple refers to a finished, specified time",
+   "es": "El present perfect conecta el pasado con el presente (sin tiempo terminado); el past simple se usa con un momento pasado concreto y cerrado",
+   "ex": "We have reduced energy consumption by 12% this year. We replaced the blowers in 2024.",
+   "rule": "✓ have + participle: this year, so far, already, yet | ✓ past simple: yesterday, in 2024, last month | ✗ NOT 'We have replaced them in 2024'",
+   "confusionWith": "Spanish pretérito perfecto ('hemos cambiado ayer')",
+   "ph": "/ˌpreznt ˈpɜːfɪkt/"
+  },
+  {
+   "id": "gr06",
+   "term": "Uncountable nouns: equipment, sludge, information",
+   "type": "Grammar Rule",
+   "cat": "grammar",
+   "en": "Many technical nouns are uncountable in English: no plural -s and no 'a/an'; use 'a piece of', 'an item of', 'some' or a unit",
+   "es": "Muchos sustantivos técnicos son incontables en inglés: sin plural en -s ni 'a/an'; se usa 'a piece of', 'an item of', 'some' o una unidad",
+   "ex": "The contractor delivered the equipment on Monday, but we still need more information about sludge disposal.",
+   "rule": "✓ equipment, information, advice, sludge, waste, feedback, research | ✓ two items of equipment, 30 tonnes of sludge | ✗ NOT 'equipments', 'informations', 'an advice'",
+   "note": "'Data' takes either singular or plural verb in technical English: 'the data is/are'.",
+   "ph": "/ʌnˈkaʊntəbl naʊnz/"
+  },
+  {
+   "id": "gr07",
+   "term": "AFFECT vs EFFECT",
+   "type": "Grammar Rule",
+   "cat": "grammar",
+   "en": "'Affect' is normally a verb (to influence); 'effect' is normally a noun (the result). 'To effect' as a verb means to bring about",
+   "es": "'Affect' suele ser verbo (influir/afectar); 'effect' suele ser sustantivo (efecto/resultado). 'To effect' como verbo significa llevar a cabo",
+   "ex": "Low temperatures affect nitrification; the effect is a rise in effluent ammonia.",
+   "rule": "✓ X affects Y | ✓ X has an effect on Y | ✓ to effect a change (formal) | ✗ NOT 'has an affect on'",
+   "confusionWith": "EFFECT (noun)",
+   "ph": "/əˈfekt/ · /ɪˈfekt/"
+  },
+  {
+   "id": "gr08",
+   "term": "Passive voice in technical writing",
+   "type": "Grammar Rule",
+   "cat": "grammar",
+   "en": "Use the passive (be + past participle) when the action or result matters more than who did it, e.g. in methods and reports",
+   "es": "Se usa la pasiva (be + participio) cuando importa la acción o el resultado más que quién la realiza, p. ej. en métodos e informes",
+   "ex": "Samples were collected every two hours and analysed for COD and ammonium.",
+   "rule": "✓ Methods, procedures, results | ✓ add 'by + agent' only if relevant | ✗ Avoid long chains of passives in emails: prefer 'we' for actions and commitments",
+   "ph": "/ˈpæsɪv vɔɪs/"
+  },
+  {
+   "id": "d09",
+   "term": "Method statement",
+   "type": "Documento",
+   "cat": "documentation",
+   "en": "document describing step by step how a specific task will be carried out safely, with resources, hazards and controls",
+   "es": "Procedimiento de trabajo — documento que describe paso a paso cómo se ejecutará una tarea de forma segura, con medios, riesgos y medidas de control",
+   "ex": "The contractor must submit a method statement before entering the digester for cleaning.",
+   "ph": "/ˈmeθəd ˌsteɪtmənt/"
+  },
+  {
+   "id": "d10",
+   "term": "As-built drawings",
+   "type": "Plano Técnico",
+   "cat": "documentation",
+   "en": "final drawings showing the installation exactly as it was constructed, including changes made on site",
+   "es": "Planos as-built / de obra ejecutada — reflejan la instalación tal como se construyó, con los cambios hechos en obra",
+   "ex": "Handover will not be accepted until the as-built drawings of the new pumping station are delivered.",
+   "ph": "/ˌæz ˈbɪlt ˈdrɔːɪŋz/"
+  },
+  {
+   "id": "d11",
+   "term": "O&M manual",
+   "type": "Documento",
+   "cat": "documentation",
+   "en": "Operation and Maintenance manual: instructions for operating, maintaining and troubleshooting a plant or equipment",
+   "es": "Manual de operación y mantenimiento (O&M) — instrucciones para operar, mantener y resolver averías de una planta o equipo",
+   "ex": "Check the O&M manual for the recommended backwash frequency of the sand filters.",
+   "ph": "/ˌəʊ ən ˈem ˈmænjuəl/"
+  },
+  {
+   "id": "d12",
+   "term": "Datasheet",
+   "type": "Documento",
+   "cat": "documentation",
+   "en": "document summarising the technical characteristics and performance of a product or component",
+   "es": "Hoja de datos / ficha técnica — resume las características técnicas y prestaciones de un producto o componente",
+   "ex": "Please attach the datasheet of the proposed blower, including power consumption at the duty point.",
+   "ph": "/ˈdeɪtəʃiːt/"
+  },
+  {
+   "id": "s14",
+   "term": "Shredder",
+   "type": "Tecnología",
+   "cat": "scrapping",
+   "en": "large machine that tears depolluted vehicle hulks and scrap into small fragments so that metals can be separated",
+   "es": "Fragmentadora (shredder) — máquina que tritura carrocerías descontaminadas y chatarra para separar los metales",
+   "ex": "Depolluted hulks are compacted and sent to the shredder, where ferrous metals are recovered magnetically.",
+   "ph": "/ˈʃredə/"
+  },
+  {
+   "id": "s15",
+   "term": "Hulk (vehicle hulk)",
+   "type": "Residuo",
+   "cat": "scrapping",
+   "en": "the remaining body shell of a vehicle after depollution and removal of reusable parts",
+   "es": "Carrocería / casco del vehículo — lo que queda tras la descontaminación y el desmontaje de piezas",
+   "ex": "We compacted forty hulks this week before shipping them to the shredding plant.",
+   "ph": "/hʌlk/"
+  },
+  {
+   "id": "s16",
+   "term": "Traction battery",
+   "type": "Comp. Peligroso",
+   "cat": "scrapping",
+   "en": "high-voltage battery that powers an electric or hybrid vehicle; it must be isolated and removed by trained staff",
+   "es": "Batería de tracción — batería de alta tensión de vehículos eléctricos o híbridos; debe aislarse y extraerse por personal formado",
+   "ex": "Before dismantling the hybrid, the technician checked that the traction battery was isolated and wore insulated gloves.",
+   "ph": "/ˈtrækʃn ˈbætri/"
+  },
+  {
+   "id": "s17",
+   "term": "Used spare parts (reuse)",
+   "type": "Sustantivo",
+   "cat": "scrapping",
+   "en": "components removed from end-of-life vehicles, checked and sold for reuse in other vehicles",
+   "es": "Piezas de segunda mano / recuperadas — componentes extraídos de VFU, revisados y vendidos para su reutilización",
+   "ex": "Sales of used spare parts such as alternators and headlamps now cover a large share of the yard's revenue.",
+   "ph": "/juːzd ˈspeə pɑːts/"
+  },
+  {
+   "id": "s18",
+   "term": "Extended Producer Responsibility (EPR)",
+   "type": "Marco Legal",
+   "cat": "scrapping",
+   "en": "policy principle that makes producers financially and organisationally responsible for their products when they become waste",
+   "es": "Responsabilidad ampliada del productor (RAP) — obliga a los productores a responsabilizarse, financiera y organizativamente, de sus productos cuando se convierten en residuo",
+   "ex": "Under Regulation (EU) 2026/1738, vehicle producers will finance the take-back and treatment of end-of-life vehicles through EPR.",
+   "ph": "/ɪkˈstendɪd prəˈdjuːsə rɪˌspɒnsəˈbɪləti/"
+  },
+  {
+   "id": "w21",
+   "term": "Sludge dewatering",
+   "type": "Proceso",
+   "cat": "water",
+   "en": "reduction of the water content of sludge by mechanical means (centrifuge, belt or screw press) to cut its volume",
+   "es": "Deshidratación de fangos — reducción del contenido de agua del fango por medios mecánicos (centrífuga, filtro banda o tornillo) para reducir su volumen",
+   "ex": "After upgrading the centrifuge, sludge dewatering reached 24% dry solids and transport costs fell.",
+   "ph": "/slʌdʒ diːˈwɔːtərɪŋ/"
+  },
+  {
+   "id": "w22",
+   "term": "Anaerobic digestion",
+   "type": "Proceso Biológico",
+   "cat": "water",
+   "en": "biological breakdown of organic matter without oxygen, producing biogas (mainly methane and CO₂) and stabilised sludge",
+   "es": "Digestión anaerobia — degradación biológica de la materia orgánica sin oxígeno que produce biogás (principalmente metano y CO₂) y fango estabilizado",
+   "ex": "Anaerobic digestion at the WWTP produces enough biogas to cover a large part of the plant's electricity demand.",
+   "ph": "/ˌænəˈrəʊbɪk daɪˈdʒestʃən/"
+  },
+  {
+   "id": "w23",
+   "term": "CHP (Combined Heat and Power)",
+   "type": "Tecnología",
+   "cat": "water",
+   "en": "cogeneration: simultaneous production of electricity and useful heat from one fuel, such as biogas",
+   "es": "Cogeneración — producción simultánea de electricidad y calor útil a partir de un combustible, como el biogás",
+   "ex": "Heat recovered from the CHP engine keeps the digesters at mesophilic temperature.",
+   "ph": "/ˌsiː eɪtʃ ˈpiː/"
+  },
+  {
+   "id": "w24",
+   "term": "Quaternary treatment",
+   "type": "Proceso",
+   "cat": "water",
+   "en": "advanced treatment stage that removes a broad range of micropollutants (e.g. pharmaceuticals) from urban wastewater, typically by ozonation or activated carbon",
+   "es": "Tratamiento cuaternario — etapa avanzada que elimina un amplio espectro de microcontaminantes (p. ej. fármacos) de las aguas residuales urbanas, normalmente mediante ozono o carbón activo",
+   "ex": "Directive (EU) 2024/3019 requires quaternary treatment in plants of 150,000 p.e. and above, phased in up to 2045.",
+   "ph": "/kwəˈtɜːnəri ˈtriːtmənt/"
+  },
+  {
+   "id": "w25",
+   "term": "Energy neutrality",
+   "type": "Indicador Gestión",
+   "cat": "water",
+   "en": "situation in which the renewable energy produced (on or off site) equals the total annual energy used by the treatment plants",
+   "es": "Neutralidad energética — la energía renovable producida (in situ o fuera) iguala el consumo energético anual total de las depuradoras",
+   "ex": "The recast Urban Wastewater Treatment Directive sets a national energy neutrality target for plants of 10,000 p.e. and above by 2045.",
+   "ph": "/ˈenədʒi njuːˈtræləti/"
+  },
+  {
+   "id": "w26",
+   "term": "Chlorine residual",
+   "type": "Parámetro",
+   "cat": "water",
+   "en": "concentration of chlorine remaining in treated water after the contact time, which protects it in the distribution network",
+   "es": "Cloro residual — concentración de cloro que queda en el agua tratada tras el tiempo de contacto y la protege en la red de distribución",
+   "ex": "Free chlorine residual at the end of the network dropped, so we increased the dose at the reservoir outlet.",
+   "ph": "/ˈklɔːriːn rɪˈzɪdjuəl/"
   }
  ],
  "changelog": [
+  {
+   "version": "2026.11.25",
+   "date": "2026-11-25",
+   "notes": "+20 términos: gramática (since/for, present perfect, incontables, affect/effect, pasiva), documentación (method statement, as-built, O&M manual, datasheet), VFU (shredder, hulk, batería de tracción, piezas reutilizadas, RAP/EPR con Reglamento (UE) 2026/1738) y aguas/energía (deshidratación de fangos, digestión anaerobia, CHP, tratamiento cuaternario y neutralidad energética según Directiva (UE) 2024/3019, cloro residual). Correcciones: los ejemplos de «kick in» (pv_in05) y «ELV» (s01) se actualizan al Reglamento (UE) 2026/1738, que deroga la Directiva 2000/53/CE y se aplica desde septiembre de 2028."
+  },
   {
    "version": "2026.11.05",
    "date": "2026-11-05",
